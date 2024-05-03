@@ -1,18 +1,12 @@
+import re
 from flask import Flask, jsonify, request
 from flask_cors import CORS
-from flask_socketio import SocketIO
 import subprocess
-import dns.resolver
-import asyncio
-import aiohttp
-import os
 import json
-from multiprocessing import Pool
-from concurrent.futures import ThreadPoolExecutor
+import os
 
 app = Flask(__name__)
 CORS(app)
-socketio = SocketIO(app, cors_allowed_origins="*") 
 
 def find_subdomains_assetfinder(domain):
     subdomains = set()
@@ -41,92 +35,79 @@ def find_subdomains_subfinder(domain):
                 subdomains.add(subdomain)
         return subdomains
     except Exception as e:
+        print(f"Error running Subfinder: {e}")
         return set()
 
 def find_subdomains(domain):
-    with Pool(2) as p:
-        subdomains_assetfinder, subdomains_subfinder = p.starmap(find_subdomains_func, [(domain, 'assetfinder'), (domain, 'subfinder')])
-    subdomains = subdomains_assetfinder.union(subdomains_subfinder)
-    for subdomain in subdomains:
-        socketio.emit('subdomain_found', {'subdomain': subdomain})
-    return subdomains
+    subdomains_assetfinder = find_subdomains_assetfinder(domain)
+    subdomains_subfinder = find_subdomains_subfinder(domain)
+    return list(subdomains_assetfinder.union(subdomains_subfinder))
 
+def strip_ansi_codes(text):
+    ansi_escape = re.compile(r'\x1B(?:[@-Z\\-_]|\[[0-?]*[ -/]*[@-~])')
+    return ansi_escape.sub('', text)
 
-def find_subdomains_func(domain, tool):
-    if tool == 'assetfinder':
-        return find_subdomains_assetfinder(domain)
-    elif tool == 'subfinder':
-        return find_subdomains_subfinder(domain)
+def validate_subdomains(subdomains):
+    with open('subdomains.txt', 'w') as f:
+        f.write('\n'.join(f'http://{sub}' for sub in subdomains))
 
-async def resolve_dns(subdomain):
-    try:
-        return dns.resolver.resolve(subdomain, 'A')
-    except Exception as e:
-        return None
-
-async def check_http_status(session, subdomain):
-    url = f"http://{subdomain}"
-    try:
-        async with session.head(url, timeout=5) as response:
-            return response.status
-    except aiohttp.ClientError as e:
-        return None
-    except asyncio.TimeoutError:
-        return None
-    
-async def validate_subdomains(subdomains):
+    result = subprocess.run(['httpx', '-status-code', '-l', 'subdomains.txt'], capture_output=True, text=True)
     validated_subdomains = []
-    async with aiohttp.ClientSession() as session:
-        dns_tasks = [resolve_dns(subdomain) for subdomain in subdomains]
-        resolved_results = await asyncio.gather(*dns_tasks)
-        for subdomain, result in zip(subdomains, resolved_results):
-            if result:
-                http_status = await check_http_status(session, subdomain)
-                if http_status:
-                    validated_subdomain = {
-                        'subdomain': subdomain,
-                        'dns_resolved': True,
-                        'http_status': http_status
-                    }
-                    validated_subdomains.append(validated_subdomain)
-                    socketio.emit('subdomain_validated', validated_subdomain)
+    for line in result.stdout.splitlines():
+        if 'http' in line:
+            parts = line.split()
+            url = parts[0]
+            status_code = strip_ansi_codes(parts[1].strip('[]'))
+            validated_subdomains.append({
+                'subdomain': url,
+                'status_code': status_code
+            })
     return validated_subdomains
 
-def save_subdomains_to_file(domain, subdomains):
-    file_path = 'subdomains.json'
-    data = {}
-
-def validate_and_save_subdomains(domain, subdomains):
-    validated_subdomains = asyncio.run(validate_subdomains(subdomains))
-    save_subdomains_to_file(domain, validated_subdomains, 'validated_subdomains.json')
-
-def save_subdomains_to_file(domain, subdomains, filename):
-    file_path = filename
-    data = {}
-
-    if os.path.exists(file_path):
-        with open(file_path, 'r') as file:
+def fetch_wayback_urls(validated_subdomains):
+    wayback_data = {}
+    for subdomain in validated_subdomains:
+        if subdomain['status_code'] == '200':
             try:
-                data = json.load(file)
+                result = subprocess.run(['waybackurls', subdomain['subdomain']], capture_output=True, text=True)
+                urls = result.stdout.splitlines()
+                wayback_data[subdomain['subdomain']] = urls
+            except Exception as e:
+                print(f"Error running waybackurls for {subdomain['subdomain']}: {e}")
+    return wayback_data
+
+def save_data_to_file(domain, data, filename):
+    if os.path.exists(filename):
+        with open(filename, 'r+') as file:
+            try:
+                existing_data = json.load(file)
             except json.JSONDecodeError:
-                pass
-
-    data[domain] = subdomains
-
-    with open(file_path, 'w') as file:
-        json.dump(data, file)
+                existing_data = {}
+            existing_data[domain] = data
+            file.seek(0)
+            json.dump(existing_data, file, indent=4)
+            file.truncate()
+    else:
+        with open(filename, 'w') as file:
+            json.dump({domain: data}, file, indent=4)
 
 @app.route('/subdomains', methods=['POST'])
 def get_subdomains():
-    data = request.get_json()
-    domain = data['domain']
+    domain = request.json.get('domain')
+    if not domain:
+        return jsonify({'error': 'Domain is required'}), 400
+
     subdomains = find_subdomains(domain)
-    save_subdomains_to_file(domain, list(subdomains), 'found_subdomains.json')
+    validated_subdomains = validate_subdomains(subdomains)
+    wayback_data = fetch_wayback_urls(validated_subdomains)
+    save_data_to_file(domain, validated_subdomains, 'validated_subdomains.json')
+    save_data_to_file(domain, wayback_data, 'wayback_urls.json')
 
-    executor = ThreadPoolExecutor(max_workers=1)
-    executor.submit(validate_and_save_subdomains, domain, subdomains)
-
-    return jsonify(list(subdomains))
+    return jsonify({
+        'domain': domain,
+        'validated_subdomains': validated_subdomains,
+        'wayback_urls': wayback_data
+    })
 
 if __name__ == '__main__':
     app.run(debug=True)
