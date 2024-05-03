@@ -50,6 +50,7 @@ def strip_ansi_codes(text):
 def validate_subdomains(subdomains):
     with open('subdomains.txt', 'w') as f:
         f.write('\n'.join(f'http://{sub}' for sub in subdomains))
+        
 
     result = subprocess.run(['httpx', '-status-code', '-l', 'subdomains.txt'], capture_output=True, text=True)
     validated_subdomains = []
