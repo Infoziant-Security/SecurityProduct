@@ -1,0 +1,9 @@
+{
+    "mohankumar.construction": {
+        "https://cpanel.mohankumar.construction": [],
+        "https://webmail.mohankumar.construction": [],
+        "https://mohankumar.construction": [
+            "https://mohankumar.construction/wp-login.php?redirect_to=FUZZ&reauth=FUZZ"
+        ]
+    }
+}

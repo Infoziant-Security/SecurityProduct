@@ -1,71 +1,35 @@
 {
-    "panimalar.ac.in": [
+    "mohankumar.construction": [
         {
-            "subdomain": "https://coe.panimalar.ac.in",
-            "status_code": "200"
-        },
-        {
-            "subdomain": "https://webmail.panimalar.ac.in",
-            "status_code": "200"
-        },
-        {
-            "subdomain": "https://cpcontacts.panimalar.ac.in",
-            "status_code": "503"
-        },
-        {
-            "subdomain": "https://panimalar1.panimalar.ac.in",
-            "status_code": "200"
-        },
-        {
-            "subdomain": "https://www.panimalar1.panimalar.ac.in",
-            "status_code": "200"
-        },
-        {
-            "subdomain": "https://webdisk.panimalar.ac.in",
+            "subdomain": "https://cpcalendars.mohankumar.construction",
             "status_code": "401"
         },
         {
-            "subdomain": "https://www.panimalar.panimalar.ac.in",
+            "subdomain": "https://cpcontacts.mohankumar.construction",
+            "status_code": "401"
+        },
+        {
+            "subdomain": "https://webdisk.mohankumar.construction",
+            "status_code": "401"
+        },
+        {
+            "subdomain": "https://www.mohankumar.construction",
+            "status_code": "301"
+        },
+        {
+            "subdomain": "https://cpanel.mohankumar.construction",
             "status_code": "200"
         },
         {
-            "subdomain": "https://www.coe.panimalar.ac.in",
+            "subdomain": "https://webmail.mohankumar.construction",
             "status_code": "200"
         },
         {
-            "subdomain": "https://cpanel.panimalar.ac.in",
-            "status_code": "200"
+            "subdomain": "https://mail.mohankumar.construction",
+            "status_code": "301"
         },
         {
-            "subdomain": "https://cpanel.coe.panimalar.ac.in",
-            "status_code": "200"
-        },
-        {
-            "subdomain": "https://webmail.coe.panimalar.ac.in",
-            "status_code": "200"
-        },
-        {
-            "subdomain": "https://panimalar.ac.in",
-            "status_code": "200"
-        },
-        {
-            "subdomain": "https://panimalar.panimalar.ac.in",
-            "status_code": "200"
-        },
-        {
-            "subdomain": "https://cpcalendars.panimalar.ac.in",
-            "status_code": "503"
-        },
-        {
-            "subdomain": "https://www.panimalar.ac.in",
-            "status_code": "200"
-        },
-        {
-            "subdomain": "https://mail.panimalar.ac.in",
-            "status_code": "200"
-        },
-        {
-            "subdomain": "https://mail.coe.panimalar.ac.in",
+            "subdomain": "https://mohankumar.construction",
             "status_code": "200"
         }
     ]
