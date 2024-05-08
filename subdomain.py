@@ -6,8 +6,9 @@ import logging
 from flask import Flask, jsonify, request
 from flask_cors import CORS
 from logging.config import dictConfig
+import asyncio
 
-# Configure logging
+
 dictConfig({
     'version': 1,
     'formatters': {'default': {
@@ -28,7 +29,7 @@ CORS(app, resources={r"/api/*": {"origins": "*"}})
 
 def run_subprocess(command):
     try:
-        return subprocess.run(command, capture_output=True, text=True, check=True)
+        return subprocess.run(command, capture_output=True, text=True, check=True, encoding='utf-8')
     except subprocess.CalledProcessError as e:
         logging.error(f"Subprocess {command} failed with {e}")
         return None
@@ -75,9 +76,12 @@ def fetch_wayback_urls(validated_subdomains):
             if result:
                 urls = result.stdout.splitlines()
                 wayback_data[subdomain['subdomain']] = urls
+            else:
+                logging.error(f"Failed to fetch wayback URLs for {subdomain['subdomain']}")
     return wayback_data
 
-def fetch_paramspider_urls(validated_subdomains):
+
+async def fetch_paramspider_urls_async(validated_subdomains):
     paramspider_data = {}
     for subdomain in validated_subdomains:
         if subdomain['status_code'] == '200':
@@ -94,7 +98,6 @@ def fetch_paramspider_urls(validated_subdomains):
             else:
                 logging.error(f"ParamSpider failed for {subdomain['subdomain']}")
     return paramspider_data
-
 
 def save_data_to_file(domain, data, filename):
     path = os.path.join(os.getenv('DATA_DIR', './'), filename)
@@ -120,7 +123,7 @@ def get_subdomains():
     subdomains = list(subdomains_assetfinder.union(subdomains_subfinder))
     validated_subdomains = validate_subdomains(subdomains)
     wayback_data = fetch_wayback_urls(validated_subdomains)
-    paramspider_data = fetch_paramspider_urls(validated_subdomains)
+    paramspider_data = asyncio.run(fetch_paramspider_urls_async(validated_subdomains))
     save_data_to_file(domain, validated_subdomains, 'validated_subdomains.json')
     save_data_to_file(domain, wayback_data, 'wayback_urls.json')
     save_data_to_file(domain, paramspider_data, 'paramspider_urls.json')

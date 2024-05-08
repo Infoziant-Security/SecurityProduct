@@ -1,35 +1,27 @@
 {
-    "mohankumar.construction": [
+    "kitcbe.com": [
         {
-            "subdomain": "https://cpcalendars.mohankumar.construction",
-            "status_code": "401"
-        },
-        {
-            "subdomain": "https://cpcontacts.mohankumar.construction",
-            "status_code": "401"
-        },
-        {
-            "subdomain": "https://webdisk.mohankumar.construction",
-            "status_code": "401"
-        },
-        {
-            "subdomain": "https://www.mohankumar.construction",
-            "status_code": "301"
-        },
-        {
-            "subdomain": "https://cpanel.mohankumar.construction",
+            "subdomain": "https://www.kitcbe.com",
             "status_code": "200"
         },
         {
-            "subdomain": "https://webmail.mohankumar.construction",
+            "subdomain": "https://portal.kitcbe.com",
             "status_code": "200"
         },
         {
-            "subdomain": "https://mail.mohankumar.construction",
-            "status_code": "301"
+            "subdomain": "https://icstem.kitcbe.com",
+            "status_code": "200"
         },
         {
-            "subdomain": "https://mohankumar.construction",
+            "subdomain": "https://scholarshiptest.kitcbe.com",
+            "status_code": "200"
+        },
+        {
+            "subdomain": "https://icaimsre.kitcbe.com",
+            "status_code": "200"
+        },
+        {
+            "subdomain": "https://kitcbe.com",
             "status_code": "200"
         }
     ]
