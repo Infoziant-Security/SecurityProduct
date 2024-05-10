@@ -1,0 +1,28 @@
+{
+    "kitcbe.com": [
+        {
+            "subdomain": "https://scholarshiptest.kitcbe.com",
+            "status_code": "200"
+        },
+        {
+            "subdomain": "https://kitcbe.com",
+            "status_code": "200"
+        },
+        {
+            "subdomain": "https://portal.kitcbe.com",
+            "status_code": "200"
+        },
+        {
+            "subdomain": "https://www.kitcbe.com",
+            "status_code": "200"
+        },
+        {
+            "subdomain": "https://icstem.kitcbe.com",
+            "status_code": "200"
+        },
+        {
+            "subdomain": "https://icaimsre.kitcbe.com",
+            "status_code": "200"
+        }
+    ]
+}

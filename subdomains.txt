@@ -1,4 +1,3 @@
-http://infoziant.com
-http://app.infoziant.com
-http://www.infoziant.com
-http://www.app.infoziant.com
+http://*.xssgame.com
+http://www.xssgame.com
+http://xssgame.com

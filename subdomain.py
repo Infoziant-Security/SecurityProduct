@@ -34,6 +34,7 @@ def run_subprocess(command):
         logging.error(f"Subprocess {command} failed with {e}")
         return None
 
+
 def strip_ansi_codes(text):
     ansi_escape = re.compile(r'\x1B(?:[@-Z\\-_]|\[[0-?]*[ -/]*[@-~])')
     return ansi_escape.sub('', text)
@@ -53,11 +54,12 @@ def find_subdomains(domain, tool):
 def run_dalfox_scan(url):
     command = ['dalfox', 'url', url]
     try:
-        result = subprocess.run(command, capture_output=True, text=True, check=True)
+        result = subprocess.run(command, capture_output=True, text=True, check=True, encoding='utf-8')
         return result.stdout
     except subprocess.CalledProcessError as e:
         logging.error(f"Dalfox scanning failed for {url} with error {e}")
         return None
+
     
 def extract_xss_vulnerable_urls(dalfox_output):
     vulnerable_urls = []
@@ -75,7 +77,7 @@ def extract_xss_vulnerable_urls(dalfox_output):
 
 def update_json_file(domain, data, filename):
     path = os.path.join(os.getenv('DATA_DIR', './'), filename)
-    with open(path, 'a+') as file:
+    with open(path, 'a+', encoding='utf-8') as file:
         file.seek(0)
         try:
             existing_data = json.load(file)
@@ -126,7 +128,7 @@ async def fetch_paramspider_urls_async(validated_subdomains):
             if result:
                 output_file_path = f"results/{domain_name}.txt"
                 if os.path.exists(output_file_path):
-                    with open(output_file_path, 'r') as file:
+                    with open(output_file_path, 'r', encoding='utf-8') as file:
                         urls = file.readlines()
                     paramspider_data[subdomain['subdomain']] = [url.strip() for url in urls]
                 else:
@@ -137,7 +139,7 @@ async def fetch_paramspider_urls_async(validated_subdomains):
 
 def save_data_to_file(domain, data, filename):
     path = os.path.join(os.getenv('DATA_DIR', './'), filename)
-    with open(path, 'a+') as file:
+    with open(path, 'a+', encoding='utf-8') as file:    
         file.seek(0)
         try:
             existing_data = json.load(file)
