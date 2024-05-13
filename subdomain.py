@@ -51,42 +51,6 @@ def find_subdomains(domain, tool):
                 subdomains.add(subdomain)
     return subdomains
 
-def run_dalfox_scan(url):
-    command = ['dalfox', 'url', url]
-    try:
-        result = subprocess.run(command, capture_output=True, text=True, check=True, encoding='utf-8')
-        return result.stdout
-    except subprocess.CalledProcessError as e:
-        logging.error(f"Dalfox scanning failed for {url} with error {e}")
-        return None
-
-    
-def extract_xss_vulnerable_urls(dalfox_output):
-    vulnerable_urls = []
-    lines = dalfox_output.split('\n')
-    for line in lines:
-        if '[POC]' in line:
-            start = line.find('http')
-            if start != -1:
-                end = line.find(' ', start)
-                if end == -1:
-                    end = len(line)
-                vulnerable_url = line[start:end]
-                vulnerable_urls.append(vulnerable_url)
-    return vulnerable_urls
-
-def update_json_file(domain, data, filename):
-    path = os.path.join(os.getenv('DATA_DIR', './'), filename)
-    with open(path, 'a+', encoding='utf-8') as file:
-        file.seek(0)
-        try:
-            existing_data = json.load(file)
-        except json.JSONDecodeError:
-            existing_data = {}
-        existing_data[domain] = data
-        file.seek(0)
-        json.dump(existing_data, file, indent=4)
-        file.truncate()
 
 def validate_subdomains(subdomains):
     with open('subdomains.txt', 'w') as f:
@@ -149,7 +113,44 @@ def save_data_to_file(domain, data, filename):
         file.seek(0)
         json.dump(existing_data, file, indent=4)
         file.truncate()
+        
+def run_dalfox(input_file, output_file):
+    command = ['dalfox', 'file', input_file, '-o', output_file]
+    try:
+        subprocess.run(command, check=True)
+        logging.info(f"Dalfox scanning completed for {input_file}")
+    except subprocess.CalledProcessError as e:
+        logging.error(f"Dalfox scanning failed for {input_file} with error {e}")
 
+
+def process_paramspider_results():
+    results_dir = './results'
+    dalfox_results_dir = './dalfox_results'
+    os.makedirs(dalfox_results_dir, exist_ok=True)
+
+    for filename in os.listdir(results_dir):
+        if filename.endswith('.txt'):
+            input_path = os.path.join(results_dir, filename)
+            output_path = os.path.join(dalfox_results_dir, f'dalfox_{filename}')
+            run_dalfox(input_path, output_path)
+
+
+def aggregate_dalfox_results():
+    dalfox_results_dir = './dalfox_results'
+    aggregate_file_path = os.path.join(dalfox_results_dir, 'aggregate_results.txt')
+    
+    with open(aggregate_file_path, 'w') as aggregate_file:
+        for filename in os.listdir(dalfox_results_dir):
+            if filename.startswith('dalfox_') and filename.endswith('.txt'):
+                file_path = os.path.join(dalfox_results_dir, filename)
+                with open(file_path, 'r') as file:
+                    results = file.read()
+                    if results.strip():  # Only write if there's content
+                        aggregate_file.write(f"Results from {filename}:\n{results}\n\n")
+
+
+
+        
 @app.route('/api/subdomains', methods=['POST'])
 def get_subdomains():
     domain = request.json.get('domain')
@@ -160,27 +161,22 @@ def get_subdomains():
     subdomains_subfinder = find_subdomains(domain, 'subfinder')
     subdomains = list(subdomains_assetfinder.union(subdomains_subfinder))
     validated_subdomains = validate_subdomains(subdomains)
-    wayback_data = fetch_wayback_urls(validated_subdomains)
-    paramspider_data = asyncio.run(fetch_paramspider_urls_async(validated_subdomains))
-    xss_vulnerable_urls = []
-    for url in paramspider_data.values():
-        for u in url:
-            dalfox_output = run_dalfox_scan(u)
-            if dalfox_output:
-                xss_urls = extract_xss_vulnerable_urls(dalfox_output)
-                xss_vulnerable_urls.extend(xss_urls)
-
     save_data_to_file(domain, validated_subdomains, 'validated_subdomains.json')
+    wayback_data = fetch_wayback_urls(validated_subdomains)
     save_data_to_file(domain, wayback_data, 'wayback_urls.json')
+    paramspider_data = asyncio.run(fetch_paramspider_urls_async(validated_subdomains))
     save_data_to_file(domain, paramspider_data, 'paramspider_urls.json')
-    save_data_to_file(domain, xss_vulnerable_urls, 'xss_vulnerable_urls.json')
+    process_paramspider_results()
+    aggregate_dalfox_results()
+
+
 
     return jsonify({
         'domain': domain,
         'validated_subdomains': validated_subdomains,
         'wayback_urls': wayback_data,
         'paramspider_urls': paramspider_data,
-        'xss_vulnerable_urls': xss_vulnerable_urls
+        'message': 'Scanning and aggregation completed'
     })
 
 if __name__ == '__main__':
