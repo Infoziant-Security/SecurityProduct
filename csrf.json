@@ -1,0 +1,100 @@
+{
+    "insecure_forms": [
+      "https://github.com [/]",
+      "https://github.com [/search/feedback]",
+      "https://github.com [/search/custom_scopes]",
+      "https://github.com [/signup]",
+      "https://github.com/about [/]",
+      "https://github.com/collections [/]",
+      "https://github.com/solutions/ci-cd [/]",
+      "https://github.com/pricing [/]",
+      "https://github.com/features/copilot [/]",
+      "https://github.com/homebrew [/]",
+      "https://github.com/about/press [/]",
+      "https://github.com/enterprise [/]",
+      "https://github.com/git-guides [/]",
+      "https://github.com/premium-support [/]",
+      "https://github.com/organizations/enterprise_plan [/]",
+      "https://github.com/customer-stories [/]",
+      "https://github.com/about/diversity [/]",
+      "https://github.com/github/roadmap [/]",
+      "https://github.com/sponsors [/]",
+      "https://github.com/features/security/code [/]",
+      "https://github.com/team [/]",
+      "https://github.com/features/issues [/]",
+      "https://github.com/security [/]",
+      "https://github.com/features/security/software-supply-chain [/]",
+      "https://github.com/sitemap [/]",
+      "https://github.com/trending [/]",
+      "https://github.com/features [/]",
+      "https://github.com/directus [/]",
+      "https://github.com/chaynhq [/]",
+      "https://github.community [munity/]",
+      "https://github.com/features/packages [/]",
+      "https://github.com/topics [/]",
+      "https://github.com/github [/]",
+      "https://github.com/commandpost [/]",
+      "https://github.com/solutions/devops [/]",
+      "https://github.com/mobile [/]",
+      "https://github.com/readme [/]",
+      "https://github.com/enterprise/advanced-security [/]",
+      "https://github.com/features/codespaces [/]",
+      "https://github.com/features/discussions [/]",
+      "https://github.com/features/code-review [/]",
+      "https://github.com/features/actions [/]"
+    ],
+    "token_analysis": {
+      "hash_types": [
+        "Snefru-256",
+        "SHA-256",
+        "RIPEMD-256",
+        "Haval-256",
+        "GOST R 34.11-94",
+        "GOST CryptoPro S-Box",
+        "SHA3-256",
+        "Skein-256",
+        "Skein-512(256)",
+        "Ventrilo",
+        "sha256($pass.$salt)",
+        "sha256($salt.$pass)",
+        "sha256(unicode($pass).$salt)",
+        "sha256($salt.unicode($pass))",
+        "HMAC-SHA256 (key = $pass)",
+        "HMAC-SHA256 (key = $salt)",
+        "Cisco Type 7",
+        "BigCrypt"
+      ],
+      "similarity_percentage": 27,
+      "common_substrings": {
+        "6e7": [
+          "6a86e7923905c21364573e685207c548dfa2b56162ae76c86820b62fe1112fe4",
+          "66d8532ca826ba70b0609186ff6e86f5da2ca312d6e7ad0a7e36c339281175f1"
+        ],
+        "13f": [
+          "bVGfHaADj1ya_Hy4Gzs4LvQqHusXn4SWd60nW7HZP-WJfDcpEpmX2gEhsEAcZfmqWsmDvNDflqD13fINnir_ig",
+          "cc92522e1b29b2328f69e2c670dc5ea953ecf254f02513f253bfe8f4f38f6aff"
+        ]
+      }
+    },
+    "csrf_protection_status": {
+      "simultaneous_requests": "Same tokens were issued for simultaneous requests.",
+      "mobile_browser": "CSRF protection is enabled for mobile browsers as well.",
+      "missing_token_parameter": "It didn't work",
+      "missing_token_value": "It didn't work",
+      "fake_token": "It didn't work"
+    },
+    "randomness_tests": {
+      "monobit_frequency_test": "random",
+      "block_frequency_test": "random",
+      "runs_test": "non-random",
+      "spectral_test": "random",
+      "overlapping_template_matching_test": "random",
+      "serial_test": "random",
+      "cumulative_sums_test": "random",
+      "random_excursions_variant_test": "random",
+      "linear_complexity_test": "random",
+      "maurers_universal_statistic_test": "random",
+      "random_excursions_test": "random"
+    }
+  }
+  

@@ -1,0 +1,18 @@
+{
+    "github.com": {
+      "RandomnessTests": {
+        "MonobitFrequencyTest": "random",
+        "BlockFrequencyTest": "random",
+        "RunsTest": "non-random",
+        "SpectralTest": "random",
+        "OverlappingTemplateMatchingTest": "random",
+        "SerialTest": "random",
+        "CumulativeSumsTest": "random",
+        "ApproximateEntropyTest": "non-random",
+        "RandomExcursionsVariantTest": "random",
+        "LinearComplexityTest": "random",
+        "RandomExcursionsTest": "random"
+      }
+    }
+  }
+  
