@@ -8,7 +8,6 @@ from flask_cors import CORS
 from logging.config import dictConfig
 import asyncio
 
-
 dictConfig({
     'version': 1,
     'formatters': {'default': {
@@ -34,7 +33,6 @@ def run_subprocess(command):
         logging.error(f"Subprocess {command} failed with {e}")
         return None
 
-
 def strip_ansi_codes(text):
     ansi_escape = re.compile(r'\x1B(?:[@-Z\\-_]|\[[0-?]*[ -/]*[@-~])')
     return ansi_escape.sub('', text)
@@ -50,7 +48,6 @@ def find_subdomains(domain, tool):
             if subdomain.endswith(domain):
                 subdomains.add(subdomain)
     return subdomains
-
 
 def validate_subdomains(subdomains):
     with open('subdomains.txt', 'w') as f:
@@ -82,7 +79,6 @@ def fetch_wayback_urls(validated_subdomains):
                 logging.error(f"Failed to fetch wayback URLs for {subdomain['subdomain']}")
     return wayback_data
 
-
 async def fetch_paramspider_urls_async(validated_subdomains):
     paramspider_data = {}
     for subdomain in validated_subdomains:
@@ -113,7 +109,7 @@ def save_data_to_file(domain, data, filename):
         file.seek(0)
         json.dump(existing_data, file, indent=4)
         file.truncate()
-        
+
 def run_dalfox(input_file, output_file):
     command = ['dalfox', 'file', input_file, '-o', output_file]
     try:
@@ -121,7 +117,6 @@ def run_dalfox(input_file, output_file):
         logging.info(f"Dalfox scanning completed for {input_file}")
     except subprocess.CalledProcessError as e:
         logging.error(f"Dalfox scanning failed for {input_file} with error {e}")
-
 
 def process_paramspider_results():
     results_dir = './results'
@@ -133,7 +128,6 @@ def process_paramspider_results():
             input_path = os.path.join(results_dir, filename)
             output_path = os.path.join(dalfox_results_dir, f'dalfox_{filename}')
             run_dalfox(input_path, output_path)
-
 
 def aggregate_dalfox_results():
     dalfox_results_dir = './dalfox_results'
@@ -148,9 +142,23 @@ def aggregate_dalfox_results():
                     if results.strip():  # Only write if there's content
                         aggregate_file.write(f"Results from {filename}:\n{results}\n\n")
 
+def run_bolt(subdomain):
+    command = ['python', 'bolt.py', '-u', subdomain, '-l', '2']
+    try:
+        result = run_subprocess(command)
+        if result:
+            output = result.stdout
+            # Assuming bolt.py outputs JSON formatted results to stdout
+            try:
+                data = json.loads(output)
+                return data
+            except json.JSONDecodeError:
+                logging.error(f"Failed to parse JSON output from bolt.py for {subdomain}")
+                return None
+    except subprocess.CalledProcessError as e:
+        logging.error(f"Running bolt.py for {subdomain} failed with error: {e}")
+        return None
 
-
-        
 @app.route('/api/subdomains', methods=['POST'])
 def get_subdomains():
     domain = request.json.get('domain')
@@ -169,13 +177,22 @@ def get_subdomains():
     process_paramspider_results()
     aggregate_dalfox_results()
 
+    # Run bolt.py for each subdomain with status code 200
+    bolt_results = {}
+    for subdomain in validated_subdomains:
+        if subdomain['status_code'] == '200':
+            bolt_result = run_bolt(subdomain['subdomain'])
+            if bolt_result:
+                bolt_results[subdomain['subdomain']] = bolt_result
 
+    save_data_to_file(domain, bolt_results, 'bolt_results.json')
 
     return jsonify({
         'domain': domain,
         'validated_subdomains': validated_subdomains,
         'wayback_urls': wayback_data,
         'paramspider_urls': paramspider_data,
+        'bolt_results': bolt_results,
         'message': 'Scanning and aggregation completed'
     })
 
