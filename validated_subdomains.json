@@ -92,4 +92,81 @@
             "status_code": "200"
         }
     ]
+}{
+    "infoziant.com": [
+        {
+            "subdomain": "https://www.infoziant.com",
+            "status_code": "301"
+        },
+        {
+            "subdomain": "https://infoziant.com",
+            "status_code": "200"
+        }
+    ]
+}{
+    "infoziant.com": [
+        {
+            "subdomain": "https://www.infoziant.com",
+            "status_code": "301"
+        },
+        {
+            "subdomain": "https://infoziant.com",
+            "status_code": "200"
+        }
+    ]
+}{
+    "infoziant.com": [
+        {
+            "subdomain": "https://www.infoziant.com",
+            "status_code": "301"
+        },
+        {
+            "subdomain": "https://infoziant.com",
+            "status_code": "200"
+        }
+    ]
+}{
+    "infoziant.com": [
+        {
+            "subdomain": "https://www.infoziant.com",
+            "status_code": "301"
+        },
+        {
+            "subdomain": "https://infoziant.com",
+            "status_code": "200"
+        }
+    ]
+}{
+    "infoziant.com": [
+        {
+            "subdomain": "https://www.infoziant.com",
+            "status_code": "301"
+        },
+        {
+            "subdomain": "https://infoziant.com",
+            "status_code": "200"
+        }
+    ]
+}{
+    "infoziant.com": [
+        {
+            "subdomain": "https://www.infoziant.com",
+            "status_code": "301"
+        },
+        {
+            "subdomain": "https://infoziant.com",
+            "status_code": "200"
+        }
+    ]
+}{
+    "infoziant.com": [
+        {
+            "subdomain": "https://www.infoziant.com",
+            "status_code": "301"
+        },
+        {
+            "subdomain": "https://infoziant.com",
+            "status_code": "200"
+        }
+    ]
 }

@@ -144,9 +144,13 @@ def aggregate_dalfox_results():
 
 def run_bolt(subdomain):
     command = ['python', 'bolt.py', '-u', subdomain, '-l', '2']
+    original_cwd = os.getcwd()
+    bolt_directory = os.path.join(original_cwd, 'bolt')
     try:
-        result = run_subprocess(command)
-        if result:
+        os.chdir(bolt_directory)
+        result = subprocess.run(command, capture_output=True, text=True, check=True, encoding='utf-8')
+        os.chdir(original_cwd)  # Return to the original directory
+        if result.returncode == 0:
             output = result.stdout
             # Assuming bolt.py outputs JSON formatted results to stdout
             try:
@@ -155,9 +159,15 @@ def run_bolt(subdomain):
             except json.JSONDecodeError:
                 logging.error(f"Failed to parse JSON output from bolt.py for {subdomain}")
                 return None
+        else:
+            logging.error(f"Running bolt.py for {subdomain} failed with error: {result.stderr}")
+            return None
     except subprocess.CalledProcessError as e:
         logging.error(f"Running bolt.py for {subdomain} failed with error: {e}")
         return None
+    finally:
+        os.chdir(original_cwd)  # Ensure we return to the original directory even if an error occurs
+
 
 @app.route('/api/subdomains', methods=['POST'])
 def get_subdomains():
@@ -172,10 +182,10 @@ def get_subdomains():
     save_data_to_file(domain, validated_subdomains, 'validated_subdomains.json')
     wayback_data = fetch_wayback_urls(validated_subdomains)
     save_data_to_file(domain, wayback_data, 'wayback_urls.json')
-    paramspider_data = asyncio.run(fetch_paramspider_urls_async(validated_subdomains))
-    save_data_to_file(domain, paramspider_data, 'paramspider_urls.json')
-    process_paramspider_results()
-    aggregate_dalfox_results()
+    #paramspider_data = asyncio.run(fetch_paramspider_urls_async(validated_subdomains))
+    #save_data_to_file(domain, paramspider_data, 'paramspider_urls.json')
+    #process_paramspider_results()
+    #aggregate_dalfox_results()
 
     # Run bolt.py for each subdomain with status code 200
     bolt_results = {}
@@ -191,7 +201,7 @@ def get_subdomains():
         'domain': domain,
         'validated_subdomains': validated_subdomains,
         'wayback_urls': wayback_data,
-        'paramspider_urls': paramspider_data,
+        #'paramspider_urls': paramspider_data,
         'bolt_results': bolt_results,
         'message': 'Scanning and aggregation completed'
     })
