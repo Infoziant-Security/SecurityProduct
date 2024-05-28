@@ -7,7 +7,21 @@ from flask import Flask, jsonify, request
 from flask_cors import CORS
 from logging.config import dictConfig
 import asyncio
-
+from urllib.request import Request, urlopen
+import argparse
+from sys import exit
+import urllib
+import requests
+import urllib.request
+from termcolor import colored
+from urllib.parse import urlparse
+import random
+from time import sleep
+import time
+from selenium import webdriver
+import sys
+from selenium.webdriver.chrome.options import Options
+from selenium.common.exceptions import NoSuchElementException
 dictConfig({
     'version': 1,
     'formatters': {'default': {
@@ -97,6 +111,16 @@ async def fetch_paramspider_urls_async(validated_subdomains):
                 logging.error(f"ParamSpider failed for {subdomain['subdomain']}")
     return paramspider_data
 
+def save_urls_to_txt(paramspider_data, filename):
+    try:
+        with open(filename, 'w') as file:
+            for subdomain, urls in paramspider_data.items():
+                for url in urls:
+                    file.write(url + '\n')
+        logging.info(f"URLs successfully saved to {filename}")
+    except Exception as e:
+        logging.error(f"Error writing to file {filename}: {e}")
+        
 def save_data_to_file(domain, data, filename):
     path = os.path.join(os.getenv('DATA_DIR', './'), filename)
     with open(path, 'a+', encoding='utf-8') as file:    
@@ -109,6 +133,16 @@ def save_data_to_file(domain, data, filename):
         file.seek(0)
         json.dump(existing_data, file, indent=4)
         file.truncate()
+
+def save_urls_to_txt(wayback_data, filename):
+    try:
+        with open(filename, 'w') as file:
+            for subdomain, urls in wayback_data.items():
+                for url in urls:
+                    file.write(url + '\n')
+        logging.info(f"URLs successfully saved to {filename}")
+    except Exception as e:
+        logging.error(f"Error writing to file {filename}: {e}")
 
 def run_dalfox(input_file, output_file):
     command = ['dalfox', 'file', input_file, '-o', output_file]
@@ -142,32 +176,159 @@ def aggregate_dalfox_results():
                     if results.strip():  # Only write if there's content
                         aggregate_file.write(f"Results from {filename}:\n{results}\n\n")
 
-def run_bolt(subdomain):
-    command = ['python', 'bolt.py', '-u', subdomain, '-l', '2']
-    original_cwd = os.getcwd()
-    bolt_directory = os.path.join(original_cwd, 'bolt')
-    try:
-        os.chdir(bolt_directory)
-        result = subprocess.run(command, capture_output=True, text=True, check=True, encoding='utf-8')
-        os.chdir(original_cwd)  # Return to the original directory
-        if result.returncode == 0:
-            output = result.stdout
-            # Assuming bolt.py outputs JSON formatted results to stdout
-            try:
-                data = json.loads(output)
-                return data
-            except json.JSONDecodeError:
-                logging.error(f"Failed to parse JSON output from bolt.py for {subdomain}")
-                return None
-        else:
-            logging.error(f"Running bolt.py for {subdomain} failed with error: {result.stderr}")
-            return None
-    except subprocess.CalledProcessError as e:
-        logging.error(f"Running bolt.py for {subdomain} failed with error: {e}")
-        return None
-    finally:
-        os.chdir(original_cwd)  # Ensure we return to the original directory even if an error occurs
 
+def run_bolt(subdomain):
+    bolt_data = {}
+    if subdomain['status_code'] == '200':
+        bolt_dir = 'Bolt'
+        if os.path.isdir(bolt_dir):
+            os.chdir(bolt_dir)
+            result = run_subprocess(['python', 'bolt.py', '-u', subdomain['subdomain'], 'l', '2'])
+            os.chdir('..')
+            if result:
+                bolt_data[subdomain['subdomain']] = result.stdout
+            else:
+                logging.error(f"Failed to run Bolt for {subdomain['subdomain']}")
+        else:
+            logging.error(f"Bolt directory '{bolt_dir}' does not exist")
+    return bolt_data
+
+def run_see_surf(subdomain):
+    see_surf_data = {}
+    if subdomain['status_code'] == '200':
+        see_surf_dir = 'See-SURF'
+        if os.path.isdir(see_surf_dir):
+            os.chdir(see_surf_dir)
+            result = run_subprocess(['python', 'see-surf.py', '-H', subdomain['subdomain']])
+            os.chdir('..')
+            if result:
+                see_surf_data[subdomain['subdomain']] = result.stdout
+            else:
+                logging.error(f"Failed to run See-SURF for {subdomain['subdomain']}")
+        else:
+            logging.error(f"See-SURF directory '{see_surf_dir}' does not exist")
+    return see_surf_data
+
+def process_bolt_and_see_surf(validated_subdomains):
+    bolt_results = {}
+    see_surf_results = {}
+    for subdomain in validated_subdomains:
+        if subdomain['status_code'] == '200':
+            bolt_output = run_bolt(subdomain)
+            if bolt_output:
+                bolt_results.update(bolt_output)
+            see_surf_output = run_see_surf(subdomain)
+            if see_surf_output:
+                see_surf_results.update(see_surf_output)
+    return bolt_results, see_surf_results
+
+def execute_clickjack():
+    logging.info("Execution started")
+    vuln=False
+    d = open("wayback_urls.txt", 'r')
+    hdr = {'User-Agent': 'Mozilla/5.0'}
+    try:
+        for target in d.readlines():
+            
+            t = target.strip('\n')
+            if (("http") or ("https")) not in t:
+                t = "https://"+t  
+            try:
+                req = Request(t, headers=hdr)
+                data = urlopen(req, timeout=10)
+                filename = urlparse(t).netloc
+                headers = data.info()
+                if not (("X-Frame-Options") or ("x-frame-options")) in headers:
+                    vuln = True
+                    print(colored(f"Target: {t} is Vulnerable", "green"))
+                    print(colored(f"Generating {filename}.html POC File", "yellow"))
+                    poc = """
+                        <html>
+                        <head><title>Clickjack POC page</title></head>
+                        <body>
+                        <p>Website is vulnerable to clickjacking!</p>
+                        <iframe src="{}" width="500" height="500"></iframe>
+                        </body>
+                        </html>
+                        """.format(t)
+                    if ":" in filename:
+                        url = filename.split(':')
+                        filename=url[0]              
+                    with open(filename+".html", "w") as pf:
+                        pf.write(poc)
+                    print(colored(f"Clickjacking POC file Created SuccessFully, Open {filename}.html to get the POC", "blue"))
+                else:
+                    vuln == False
+                    print(colored(f"Target: {t} is not Vulnerable", "red"))
+                    print("Testing Other Url's in the List")
+            except KeyboardInterrupt as k:
+                print("No Worries , I'm here to handle your KeyBoard Interrupts \n")
+            except urllib.error.URLError as e:
+                # handling HTTP 403 Forbidden timeout...
+                print(f"Target {t} has some HTTP Errors via http:// lets let https:// ", exception)
+            except requests.HTTPError as exception:
+                print(f"Target {t} has some HTTP Errors :--> ", exception)
+            except Exception as e:
+                print("Exception Occured with Description ----> ", e)
+                raise("Target Didn't Responsed")
+        print("All Targets Tested Successfully !!")
+    except exception as e:
+        print(e)
+        print("[*] Usage: python3 clickJackPoc.py -f <file_name>")
+        print("[*] The Code might not worked for you , please retry & try --help option to know more")
+        exit(0)
+
+
+def check_lfi_vulnerability(url):
+    print("Trying payloads list, please wait...")
+    chrome_options = Options()
+    chrome_options.add_argument('--headless')
+    chrome_options.add_argument('--no-sandbox')
+    chrome_options.add_argument('--disable-dev-shm-usage')
+    browser = webdriver.Chrome(options=chrome_options)
+    browser.maximize_window()
+    count = 0
+    vulnerable_urls = []
+    with open("lfi.txt", "r", encoding="UTF-8") as file:
+        payloads = file.readlines()
+        try:
+            while count < len(payloads):
+                target_url = url + payloads[count]
+                browser.get(target_url)
+                print("Testing: "+ payloads[count])
+                time.sleep(random.randint(1, 3))
+                count += 1
+                if "root:x:0:0:root" in browser.page_source:
+                    vulnerable_urls.append(target_url)
+                    print("Vuln Url: " +target_url)
+                if count == len(payloads):
+                    browser.close()
+        except:
+            raise 
+
+    browser.quit()
+    return vulnerable_urls
+
+def run_LFI_Finder():
+    with open("paramspider_urls.txt", "r") as f:
+        urls = f.readlines()
+        for url in urls:
+            url=str(url).strip()
+            if url == "":
+                continue
+            elif url[-1] == '/' or url[-1] == '\\':
+                url=url[:-1]
+            print("Checking Vulnerablities for the url: "+url)
+            vulnarablities=check_lfi_vulnerability(url)
+            print("Vulnerable urls are: ")
+            for v in vulnarablities:
+                print(v)
+    return "Thank you"
+
+
+def run_clickjack():
+    execute_clickjack()
+    return "Thank you"
 
 @app.route('/api/subdomains', methods=['POST'])
 def get_subdomains():
@@ -182,29 +343,30 @@ def get_subdomains():
     save_data_to_file(domain, validated_subdomains, 'validated_subdomains.json')
     wayback_data = fetch_wayback_urls(validated_subdomains)
     save_data_to_file(domain, wayback_data, 'wayback_urls.json')
-    #paramspider_data = asyncio.run(fetch_paramspider_urls_async(validated_subdomains))
-    #save_data_to_file(domain, paramspider_data, 'paramspider_urls.json')
-    #process_paramspider_results()
-    #aggregate_dalfox_results()
-
-    # Run bolt.py for each subdomain with status code 200
-    bolt_results = {}
-    for subdomain in validated_subdomains:
-        if subdomain['status_code'] == '200':
-            bolt_result = run_bolt(subdomain['subdomain'])
-            if bolt_result:
-                bolt_results[subdomain['subdomain']] = bolt_result
-
-    save_data_to_file(domain, bolt_results, 'bolt_results.json')
+    save_urls_to_txt(wayback_data, 'wayback_urls.txt')
+    paramspider_data = asyncio.run(fetch_paramspider_urls_async(validated_subdomains))
+    save_data_to_file(domain, paramspider_data, 'paramspider_urls.json')
+    save_urls_to_txt(paramspider_data, 'paramspider_urls.txt')
+    process_paramspider_results()
+    aggregate_dalfox_results()
+    #bolt_results, see_surf_results = process_bolt_and_see_surf(validated_subdomains)
+    #save_data_to_file(domain, bolt_results, 'bolt_results.json')
+    #save_data_to_file(domain, see_surf_results, 'see_surf_results.json')
+    run_clickjack()
+    run_LFI_Finder()
 
     return jsonify({
         'domain': domain,
         'validated_subdomains': validated_subdomains,
         'wayback_urls': wayback_data,
-        #'paramspider_urls': paramspider_data,
-        'bolt_results': bolt_results,
-        'message': 'Scanning and aggregation completed'
+        'paramspider_urls': paramspider_data,
+        'aggregation': 'Scanning and aggregation completed',
+        #'bolt_results': bolt_results,
+        #'see_surf_results': see_surf_results,
     })
+    
+
+
 
 if __name__ == '__main__':
     app.run(debug=os.getenv('DEBUG', 'False') == 'True')
