@@ -1,0 +1,9 @@
+{
+    "testphp.vulnweb.com": {
+        "http://testphp.vulnweb.com": "Requirement already satisfied: fuzzywuzzy in c:\\automation\\venv\\lib\\site-packages (0.18.0)\n\n      BOLT  \n    \n fuzzywuzzy library is not installed, installing now.\n fuzzywuzzy has been installed, please restart Bolt.\n"
+    }
+}{
+    "testphp.vulnweb.com": {
+        "http://testphp.vulnweb.com": "Requirement already satisfied: fuzzywuzzy in c:\\automation\\venv\\lib\\site-packages (0.18.0)\n\n      BOLT  \n    \n fuzzywuzzy library is not installed, installing now.\n fuzzywuzzy has been installed, please restart Bolt.\n"
+    }
+}

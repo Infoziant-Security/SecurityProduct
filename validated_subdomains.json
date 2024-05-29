@@ -1,0 +1,8 @@
+{
+    "testphp.vulnweb.com": [
+        {
+            "subdomain": "http://testphp.vulnweb.com",
+            "status_code": "200"
+        }
+    ]
+}
