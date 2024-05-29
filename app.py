@@ -111,7 +111,7 @@ async def fetch_paramspider_urls_async(validated_subdomains):
                 logging.error(f"ParamSpider failed for {subdomain['subdomain']}")
     return paramspider_data
 
-def save_urls_to_txt(paramspider_data, filename):
+def save_urls_to_txt1(paramspider_data, filename):
     try:
         with open(filename, 'w') as file:
             for subdomain, urls in paramspider_data.items():
@@ -183,12 +183,22 @@ def run_bolt(subdomain):
         bolt_dir = 'Bolt'
         if os.path.isdir(bolt_dir):
             os.chdir(bolt_dir)
-            result = run_subprocess(['python', 'bolt.py', '-u', subdomain['subdomain'], 'l', '2'])
-            os.chdir('..')
-            if result:
+            try:
+                result = subprocess.run(
+                    ['python3', 'bolt.py', '-u', subdomain['subdomain'], '-l', '2'],
+                    capture_output=True,
+                    text=True,
+                    check=True
+                )
                 bolt_data[subdomain['subdomain']] = result.stdout
-            else:
-                logging.error(f"Failed to run Bolt for {subdomain['subdomain']}")
+            except subprocess.CalledProcessError as e:
+                logging.error(f"Failed to run Bolt for {subdomain['subdomain']}: {e.stderr}")
+            except FileNotFoundError as e:
+                logging.error(f"File not found: {e}")
+            except Exception as e:
+                logging.error(f"An unexpected error occurred: {e}")
+            finally:
+                os.chdir('..')
         else:
             logging.error(f"Bolt directory '{bolt_dir}' does not exist")
     return bolt_data
@@ -199,15 +209,27 @@ def run_see_surf(subdomain):
         see_surf_dir = 'See-SURF'
         if os.path.isdir(see_surf_dir):
             os.chdir(see_surf_dir)
-            result = run_subprocess(['python', 'see-surf.py', '-H', subdomain['subdomain']])
-            os.chdir('..')
-            if result:
+            try:
+                result = subprocess.run(
+                    subd = subdomain['subdomain']
+                    ['python3', 'see-surf.py', '-H', 'subd'],
+                    capture_output=True,
+                    text=True,
+                    check=True
+                )
                 see_surf_data[subdomain['subdomain']] = result.stdout
-            else:
-                logging.error(f"Failed to run See-SURF for {subdomain['subdomain']}")
+            except subprocess.CalledProcessError as e:
+                logging.error(f"Failed to run See-SURF for {subdomain['subdomain']}: {e.stderr}")
+            except FileNotFoundError as e:
+                logging.error(f"File not found: {e}")
+            except Exception as e:
+                logging.error(f"An unexpected error occurred: {e}")
+            finally:
+                os.chdir('..')
         else:
             logging.error(f"See-SURF directory '{see_surf_dir}' does not exist")
     return see_surf_data
+
 
 def process_bolt_and_see_surf(validated_subdomains):
     bolt_results = {}
@@ -224,60 +246,66 @@ def process_bolt_and_see_surf(validated_subdomains):
 
 def execute_clickjack():
     logging.info("Execution started")
-    vuln=False
-    d = open("wayback_urls.txt", 'r')
     hdr = {'User-Agent': 'Mozilla/5.0'}
-    try:
-        for target in d.readlines():
-            
-            t = target.strip('\n')
-            if (("http") or ("https")) not in t:
-                t = "https://"+t  
-            try:
-                req = Request(t, headers=hdr)
-                data = urlopen(req, timeout=10)
-                filename = urlparse(t).netloc
-                headers = data.info()
-                if not (("X-Frame-Options") or ("x-frame-options")) in headers:
-                    vuln = True
-                    print(colored(f"Target: {t} is Vulnerable", "green"))
-                    print(colored(f"Generating {filename}.html POC File", "yellow"))
-                    poc = """
+    results = []
+
+    with open("wayback_urls.txt", 'r') as d:
+        try:
+            for target in d.readlines():
+                t = target.strip('\n')
+                if not t.startswith(("http://", "https://")):
+                    t = "https://" + t
+
+                try:
+                    req = Request(t, headers=hdr)
+                    data = urlopen(req, timeout=10)
+                    headers = data.info()
+
+                    if "X-Frame-Options" not in headers and "x-frame-options" not in headers:
+                        print(colored(f"Target: {t} is Vulnerable", "green"))
+                        filename = urlparse(t).netloc
+                        poc = f"""
                         <html>
                         <head><title>Clickjack POC page</title></head>
                         <body>
                         <p>Website is vulnerable to clickjacking!</p>
-                        <iframe src="{}" width="500" height="500"></iframe>
+                        <iframe src="{t}" width="500" height="500"></iframe>
                         </body>
                         </html>
-                        """.format(t)
-                    if ":" in filename:
-                        url = filename.split(':')
-                        filename=url[0]              
-                    with open(filename+".html", "w") as pf:
-                        pf.write(poc)
-                    print(colored(f"Clickjacking POC file Created SuccessFully, Open {filename}.html to get the POC", "blue"))
-                else:
-                    vuln == False
-                    print(colored(f"Target: {t} is not Vulnerable", "red"))
-                    print("Testing Other Url's in the List")
-            except KeyboardInterrupt as k:
-                print("No Worries , I'm here to handle your KeyBoard Interrupts \n")
-            except urllib.error.URLError as e:
-                # handling HTTP 403 Forbidden timeout...
-                print(f"Target {t} has some HTTP Errors via http:// lets let https:// ", exception)
-            except requests.HTTPError as exception:
-                print(f"Target {t} has some HTTP Errors :--> ", exception)
-            except Exception as e:
-                print("Exception Occured with Description ----> ", e)
-                raise("Target Didn't Responsed")
-        print("All Targets Tested Successfully !!")
-    except exception as e:
-        print(e)
-        print("[*] Usage: python3 clickJackPoc.py -f <file_name>")
-        print("[*] The Code might not worked for you , please retry & try --help option to know more")
-        exit(0)
+                        """
+                        if ":" in filename:
+                            filename = filename.split(':')[0]
+                        
+                        with open(filename + ".html", "w") as pf:
+                            pf.write(poc)
 
+                        print(colored(f"Clickjacking POC file Created Successfully, Open {filename}.html to get the POC", "blue"))
+                        
+                        results.append({"url": t, "status": "Vulnerable"})
+                    else:
+                        print(colored(f"Target: {t} is not Vulnerable", "red"))
+                        results.append({"url": t, "status": "Not Vulnerable"})
+                        
+                except KeyboardInterrupt:
+                    print("No Worries, I'm here to handle your Keyboard Interrupts\n")
+                except urllib.error.URLError as e:
+                    print(f"Target {t} has some HTTP Errors via http://, lets try https:// ", e)
+                except requests.HTTPError as exception:
+                    print(f"Target {t} has some HTTP Errors :--> ", exception)
+                except Exception as e:
+                    print("Exception Occurred with Description ----> ", e)
+                    raise Exception("Target Didn't Respond")
+
+            print("All Targets Tested Successfully!!")
+
+        except Exception as e:
+            print(e)
+    
+    with open("vulnerability_results.json", "w") as json_file:
+        json.dump(results, json_file, indent=4)
+        print("Results written to vulnerability_results.json")
+
+        
 
 def check_lfi_vulnerability(url):
     print("Trying payloads list, please wait...")
@@ -325,11 +353,6 @@ def run_LFI_Finder():
                 print(v)
     return "Thank you"
 
-
-def run_clickjack():
-    execute_clickjack()
-    return "Thank you"
-
 @app.route('/api/subdomains', methods=['POST'])
 def get_subdomains():
     domain = request.json.get('domain')
@@ -341,26 +364,26 @@ def get_subdomains():
     subdomains = list(subdomains_assetfinder.union(subdomains_subfinder))
     validated_subdomains = validate_subdomains(subdomains)
     save_data_to_file(domain, validated_subdomains, 'validated_subdomains.json')
-    wayback_data = fetch_wayback_urls(validated_subdomains)
-    save_data_to_file(domain, wayback_data, 'wayback_urls.json')
-    save_urls_to_txt(wayback_data, 'wayback_urls.txt')
-    paramspider_data = asyncio.run(fetch_paramspider_urls_async(validated_subdomains))
-    save_data_to_file(domain, paramspider_data, 'paramspider_urls.json')
-    save_urls_to_txt(paramspider_data, 'paramspider_urls.txt')
-    process_paramspider_results()
-    aggregate_dalfox_results()
+    #wayback_data = fetch_wayback_urls(validated_subdomains)
+    #save_data_to_file(domain, wayback_data, 'wayback_urls.json')
+    #save_urls_to_txt(wayback_data, 'wayback_urls.txt')
+    #paramspider_data = asyncio.run(fetch_paramspider_urls_async(validated_subdomains))
+    #save_data_to_file(domain, paramspider_data, 'paramspider_urls.json')
+    #save_urls_to_txt1(paramspider_data, 'paramspider_urls.txt')
+    #process_paramspider_results()
+    #aggregate_dalfox_results()
+    execute_clickjack()
+    #run_LFI_Finder()
     #bolt_results, see_surf_results = process_bolt_and_see_surf(validated_subdomains)
     #save_data_to_file(domain, bolt_results, 'bolt_results.json')
     #save_data_to_file(domain, see_surf_results, 'see_surf_results.json')
-    run_clickjack()
-    run_LFI_Finder()
 
     return jsonify({
         'domain': domain,
         'validated_subdomains': validated_subdomains,
-        'wayback_urls': wayback_data,
-        'paramspider_urls': paramspider_data,
-        'aggregation': 'Scanning and aggregation completed',
+        #'wayback_urls': wayback_data,
+        #'paramspider_urls': paramspider_data,
+        #'aggregation': 'Scanning and aggregation completed',
         #'bolt_results': bolt_results,
         #'see_surf_results': see_surf_results,
     })
