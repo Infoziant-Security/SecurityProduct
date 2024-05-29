@@ -8,20 +8,17 @@ from flask_cors import CORS
 from logging.config import dictConfig
 import asyncio
 from urllib.request import Request, urlopen
-import argparse
-from sys import exit
 import urllib
 import requests
-import urllib.request
 from termcolor import colored
 from urllib.parse import urlparse
 import random
-from time import sleep
 import time
 from selenium import webdriver
-import sys
 from selenium.webdriver.chrome.options import Options
 from selenium.common.exceptions import NoSuchElementException
+
+# Configure logging
 dictConfig({
     'version': 1,
     'formatters': {'default': {
@@ -120,7 +117,7 @@ def save_urls_to_txt1(paramspider_data, filename):
         logging.info(f"URLs successfully saved to {filename}")
     except Exception as e:
         logging.error(f"Error writing to file {filename}: {e}")
-        
+
 def save_data_to_file(domain, data, filename):
     path = os.path.join(os.getenv('DATA_DIR', './'), filename)
     with open(path, 'a+', encoding='utf-8') as file:    
@@ -175,6 +172,26 @@ def aggregate_dalfox_results():
                     results = file.read()
                     if results.strip():  # Only write if there's content
                         aggregate_file.write(f"Results from {filename}:\n{results}\n\n")
+                        
+def run_ssrf_finder(input_file):
+    command = f'type {input_file} | .\\ssrf-finder.exe'
+    result = subprocess.run(command, shell=True, capture_output=True, text=True)
+    return result.stdout, result.stderr
+
+def process_ssrf_output(output):
+    results = []
+    lines = output.split('\n')
+    for line in lines:
+        if line.strip() == "":
+            continue
+        if "response code:" in line or "failed to fetch:" in line:
+            parts = line.split(' ', 1)
+            if len(parts) == 2:
+                results.append({
+                    "url": parts[1],
+                    "message": parts[0]
+                })
+    return results                        
 
 
 def run_bolt(subdomain):
@@ -182,13 +199,15 @@ def run_bolt(subdomain):
     if subdomain['status_code'] == '200':
         bolt_dir = 'Bolt'
         if os.path.isdir(bolt_dir):
+            current_dir = os.getcwd()  # Save the current working directory
             os.chdir(bolt_dir)
             try:
                 result = subprocess.run(
-                    ['python3', 'bolt.py', '-u', subdomain['subdomain'], '-l', '2'],
+                    ['python', 'bolt.py', '-u', subdomain['subdomain'], '-l', '2'],
                     capture_output=True,
                     text=True,
-                    check=True
+                    check=True,
+                    encoding='utf-8'  # Ensure subprocess uses utf-8 encoding
                 )
                 bolt_data[subdomain['subdomain']] = result.stdout
             except subprocess.CalledProcessError as e:
@@ -198,51 +217,22 @@ def run_bolt(subdomain):
             except Exception as e:
                 logging.error(f"An unexpected error occurred: {e}")
             finally:
-                os.chdir('..')
+                os.chdir(current_dir)  # Change back to the original directory
         else:
             logging.error(f"Bolt directory '{bolt_dir}' does not exist")
     return bolt_data
 
-def run_see_surf(subdomain):
-    see_surf_data = {}
-    if subdomain['status_code'] == '200':
-        see_surf_dir = 'See-SURF'
-        if os.path.isdir(see_surf_dir):
-            os.chdir(see_surf_dir)
-            try:
-                result = subprocess.run(
-                    subd = subdomain['subdomain']
-                    ['python3', 'see-surf.py', '-H', 'subd'],
-                    capture_output=True,
-                    text=True,
-                    check=True
-                )
-                see_surf_data[subdomain['subdomain']] = result.stdout
-            except subprocess.CalledProcessError as e:
-                logging.error(f"Failed to run See-SURF for {subdomain['subdomain']}: {e.stderr}")
-            except FileNotFoundError as e:
-                logging.error(f"File not found: {e}")
-            except Exception as e:
-                logging.error(f"An unexpected error occurred: {e}")
-            finally:
-                os.chdir('..')
-        else:
-            logging.error(f"See-SURF directory '{see_surf_dir}' does not exist")
-    return see_surf_data
 
-
-def process_bolt_and_see_surf(validated_subdomains):
+def process_bolt(validated_subdomains):
     bolt_results = {}
-    see_surf_results = {}
     for subdomain in validated_subdomains:
         if subdomain['status_code'] == '200':
             bolt_output = run_bolt(subdomain)
             if bolt_output:
                 bolt_results.update(bolt_output)
-            see_surf_output = run_see_surf(subdomain)
-            if see_surf_output:
-                see_surf_results.update(see_surf_output)
-    return bolt_results, see_surf_results
+    return bolt_results
+
+
 
 def execute_clickjack():
     logging.info("Execution started")
@@ -305,8 +295,6 @@ def execute_clickjack():
         json.dump(results, json_file, indent=4)
         print("Results written to vulnerability_results.json")
 
-        
-
 def check_lfi_vulnerability(url):
     print("Trying payloads list, please wait...")
     chrome_options = Options()
@@ -323,16 +311,16 @@ def check_lfi_vulnerability(url):
             while count < len(payloads):
                 target_url = url + payloads[count]
                 browser.get(target_url)
-                print("Testing: "+ payloads[count])
+                print("Testing: " + payloads[count])
                 time.sleep(random.randint(1, 3))
                 count += 1
                 if "root:x:0:0:root" in browser.page_source:
                     vulnerable_urls.append(target_url)
-                    print("Vuln Url: " +target_url)
+                    print("Vuln Url: " + target_url)
                 if count == len(payloads):
                     browser.close()
-        except:
-            raise 
+        except Exception as e:
+            logging.error(f"An error occurred while checking LFI vulnerability: {e}")
 
     browser.quit()
     return vulnerable_urls
@@ -341,15 +329,15 @@ def run_LFI_Finder():
     with open("paramspider_urls.txt", "r") as f:
         urls = f.readlines()
         for url in urls:
-            url=str(url).strip()
+            url = str(url).strip()
             if url == "":
                 continue
             elif url[-1] == '/' or url[-1] == '\\':
-                url=url[:-1]
-            print("Checking Vulnerablities for the url: "+url)
-            vulnarablities=check_lfi_vulnerability(url)
+                url = url[:-1]
+            print("Checking Vulnerabilities for the url: " + url)
+            vulnerabilities = check_lfi_vulnerability(url)
             print("Vulnerable urls are: ")
-            for v in vulnarablities:
+            for v in vulnerabilities:
                 print(v)
     return "Thank you"
 
@@ -364,28 +352,36 @@ def get_subdomains():
     subdomains = list(subdomains_assetfinder.union(subdomains_subfinder))
     validated_subdomains = validate_subdomains(subdomains)
     save_data_to_file(domain, validated_subdomains, 'validated_subdomains.json')
-    #wayback_data = fetch_wayback_urls(validated_subdomains)
-    #save_data_to_file(domain, wayback_data, 'wayback_urls.json')
-    #save_urls_to_txt(wayback_data, 'wayback_urls.txt')
-    #paramspider_data = asyncio.run(fetch_paramspider_urls_async(validated_subdomains))
-    #save_data_to_file(domain, paramspider_data, 'paramspider_urls.json')
-    #save_urls_to_txt1(paramspider_data, 'paramspider_urls.txt')
+    wayback_data = fetch_wayback_urls(validated_subdomains)
+    save_data_to_file(domain, wayback_data, 'wayback_urls.json')
+    save_urls_to_txt(wayback_data, 'wayback_urls.txt')
+    paramspider_data = asyncio.run(fetch_paramspider_urls_async(validated_subdomains))
+    save_data_to_file(domain, paramspider_data, 'paramspider_urls.json')
+    save_urls_to_txt1(paramspider_data, 'paramspider_urls.txt')
     #process_paramspider_results()
     #aggregate_dalfox_results()
-    execute_clickjack()
+    #execute_clickjack()
     #run_LFI_Finder()
-    #bolt_results, see_surf_results = process_bolt_and_see_surf(validated_subdomains)
-    #save_data_to_file(domain, bolt_results, 'bolt_results.json')
-    #save_data_to_file(domain, see_surf_results, 'see_surf_results.json')
-
+    bolt_results = process_bolt(validated_subdomains)
+    save_data_to_file(domain, bolt_results, 'bolt_results.json')
+    save_data_to_file(domain, see_surf_results, 'see_surf_results.json')
+    
+    stdout, stderr = run_ssrf_finder('paramspider_urls.txt')
+    if stderr:
+        logging.error(f'SSRF Finder execution failed: {stderr}')
+    ssrf_results = process_ssrf_output(stdout)
+    save_data_to_file(domain, ssrf_results, 'ssrf_finder_results.json')
+    
+    bolt_results = process_bolt(validated_subdomains)
+    save_data_to_file(domain, bolt_results, 'bolt_results.json')
+    
     return jsonify({
         'domain': domain,
         'validated_subdomains': validated_subdomains,
-        #'wayback_urls': wayback_data,
-        #'paramspider_urls': paramspider_data,
-        #'aggregation': 'Scanning and aggregation completed',
-        #'bolt_results': bolt_results,
-        #'see_surf_results': see_surf_results,
+        'wayback_urls': wayback_data,
+        'paramspider_urls': paramspider_data,
+        'ssrf_results': ssrf_results,
+        'bolt_results': bolt_results,
     })
     
 

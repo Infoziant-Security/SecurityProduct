@@ -1,0 +1,7 @@
+https://panimalar.ac.in/enquiry/captcha/get_captcha.php?rand=FUZZ
+https://panimalar.ac.in/wp-json/oembed/1.0/embed?url=FUZZ
+https://panimalar.ac.in/wp-json/oembed/1.0/embed?url=FUZZ&format=FUZZ
+http://panimalar.ac.in/Prospectus/magazine.swf?xml_path=FUZZ
+https://www.panimalar.ac.in/enquiry/captcha/get_captcha.php?rand=FUZZ
+http://panimalar.ac.in/prospectus/Prospectus.swf?xml_path=FUZZ
+https://www.panimalar.ac.in/captcha/get_captcha.php?rand=FUZZ
