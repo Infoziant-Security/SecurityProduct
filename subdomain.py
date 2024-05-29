@@ -1,3 +1,4 @@
+from CORScanner.cors_scan import cors_check
 import re
 import subprocess
 import json
@@ -6,6 +7,7 @@ import logging
 from flask import Flask, jsonify, request
 from flask_cors import CORS
 from logging.config import dictConfig
+import httpx
 
 # Configure logging
 dictConfig({
@@ -50,6 +52,7 @@ def find_subdomains(domain, tool):
     return subdomains
 
 def validate_subdomains(subdomains):
+    
     with open('subdomains.txt', 'w') as f:
         f.write('\n'.join(f'http://{sub}' for sub in subdomains))
 
@@ -66,6 +69,18 @@ def validate_subdomains(subdomains):
                     'status_code': status_code
                 })
     return validated_subdomains
+
+def validate_wayback_urls(wayback_urls):
+    validated_wayback_urls = {}
+    f = open("wayback_urls.txt", "r")
+    data=f.read()
+    wayback_data= data.split("\n")
+    for u in wayback_data:
+        r = httpx.get(u)
+        app.logger.info(f'{u}-{r}')
+        validated_wayback_urls[u]=r.status_code
+    
+    return validated_wayback_urls
 
 def fetch_wayback_urls(validated_subdomains):
     wayback_data = {}
@@ -109,9 +124,52 @@ def save_data_to_file(domain, data, filename):
         json.dump(existing_data, file, indent=4)
         file.truncate()
 
-@app.route('/api/subdomains', methods=['POST'])
+def find_403_from_wayback(wayback_dict):
+    wayback_403={}
+    for u in wayback_dict:
+        if('403' in str(wayback_dict[u])):
+            result=subprocess.run(['bypass-403.sh',u],shell=True, stdout=subprocess.PIPE)
+            wayback_403[u]=str(result)
+    app.logger.info(wayback_403)
+    return wayback_403
+
+def read_wayback_urls(filename):
+    f = open(filename)
+    wayback_data=json.load(f)
+    f.close()
+    return wayback_data
+
+def execute_cors_scaner(filename):
+    f = open(filename, "r")
+    data=f.read()
+    subdomain_list= data.split("\n")
+    cors_result={}
+    for u in subdomain_list:
+        ret = subprocess.run(["cors","-u",u],stdout=subprocess.PIPE)
+        # ret = cors_check(u, 0)
+        cors_result[u]=str(ret)
+        app.logger.info(ret)
+    return cors_result
+
+@app.route('/api/corsand403', methods=['GET', 'POST'])
+def check_cors_and_403():
+    #403 Bypass check
+    # wayback_data=read_wayback_urls('wayback_urls.json')
+    # app.logger.info("Wayback data extracted")
+    # validated_wayback_urls=validate_wayback_urls(list(wayback_data.values()))
+    # wayback_403_data = find_403_from_wayback(validated_wayback_urls)
+    # app.logger.info("Wayback 403 Bypass check executed")
+    #CORS Scanner
+    cors_scanner_result=execute_cors_scaner('subdomains.txt')
+    save_data_to_file('domain', cors_scanner_result, 'cors_scanner_result.json')
+    return 'Wayback 403 Bypass check executed'
+
+
+
+@app.route('/api/subdomains', methods=['GET', 'POST'])
 def get_subdomains():
     domain = request.json.get('domain')
+    
     if not domain:
         return jsonify({'error': 'Domain is required'}), 400
 

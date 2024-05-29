@@ -1,0 +1,28 @@
+ 
+403,5664  --> https://monitoring.mindbodyonline.com/
+403,5664  --> https://monitoring.mindbodyonline.com/%2e/
+403,5664  --> https://monitoring.mindbodyonline.com//.
+403,5664  --> https://monitoring.mindbodyonline.com////
+403,5664  --> https://monitoring.mindbodyonline.com/.//./
+403,5664  --> https://monitoring.mindbodyonline.com/ -H X-Original-URL: 
+403,5664  --> https://monitoring.mindbodyonline.com/ -H X-Custom-IP-Authorization: 127.0.0.1
+403,5664  --> https://monitoring.mindbodyonline.com/ -H X-Forwarded-For: http://127.0.0.1
+403,5664  --> https://monitoring.mindbodyonline.com/ -H X-Forwarded-For: 127.0.0.1:80
+403,5664  --> https://monitoring.mindbodyonline.com -H X-rewrite-url: 
+403,5664  --> https://monitoring.mindbodyonline.com/%20
+403,5664  --> https://monitoring.mindbodyonline.com/%09
+403,5664  --> https://monitoring.mindbodyonline.com/?
+403,5664  --> https://monitoring.mindbodyonline.com/.html
+403,5664  --> https://monitoring.mindbodyonline.com//?anything
+403,5664  --> https://monitoring.mindbodyonline.com/#
+403,5664  --> https://monitoring.mindbodyonline.com/ -H Content-Length:0 -X POST
+403,5664  --> https://monitoring.mindbodyonline.com//*
+403,5664  --> https://monitoring.mindbodyonline.com/.php
+403,5664  --> https://monitoring.mindbodyonline.com/.json
+405,155  --> https://monitoring.mindbodyonline.com/  -X TRACE
+403,5664  --> https://monitoring.mindbodyonline.com/ -H X-Host: 127.0.0.1
+403,5664  --> https://monitoring.mindbodyonline.com/..;/
+000,0  --> https://monitoring.mindbodyonline.com/;/
+405,155  --> https://monitoring.mindbodyonline.com/ -X TRACE
+403,5664  --> https://monitoring.mindbodyonline.com/ -H X-Forwarded-Host: 127.0.0.1
+Way back machine:

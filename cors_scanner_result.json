@@ -1,0 +1,144 @@
+{
+    "domain": {
+        "http://webdisk.mohankumar.construction": {},
+        "http://cpcalendars.mohankumar.construction": {},
+        "http://cpcontacts.mohankumar.construction": {},
+        "http://webmail.mohankumar.construction": {},
+        "http://www.mohankumar.construction": {},
+        "http://mail.mohankumar.construction": {},
+        "http://cpanel.mohankumar.construction": {},
+        "http://mohankumar.construction": {}
+    }
+}{
+    "domain": {
+        "http://webdisk.mohankumar.construction": {},
+        "http://cpcalendars.mohankumar.construction": {},
+        "http://cpcontacts.mohankumar.construction": {},
+        "http://webmail.mohankumar.construction": {},
+        "http://www.mohankumar.construction": {},
+        "http://mail.mohankumar.construction": {},
+        "http://cpanel.mohankumar.construction": {},
+        "http://mohankumar.construction": {}
+    }
+}{
+    "domain": {
+        "http://webdisk.mohankumar.construction": {},
+        "http://cpcalendars.mohankumar.construction": {},
+        "http://cpcontacts.mohankumar.construction": {},
+        "http://webmail.mohankumar.construction": {},
+        "http://www.mohankumar.construction": {},
+        "http://mail.mohankumar.construction": {},
+        "http://cpanel.mohankumar.construction": {},
+        "http://mohankumar.construction": {}
+    }
+}{
+    "domain": {
+        "http://webdisk.mohankumar.construction": {},
+        "http://cpcalendars.mohankumar.construction": {},
+        "http://cpcontacts.mohankumar.construction": {},
+        "http://webmail.mohankumar.construction": {},
+        "http://www.mohankumar.construction": {},
+        "http://mail.mohankumar.construction": {},
+        "http://cpanel.mohankumar.construction": {},
+        "http://mohankumar.construction": {}
+    }
+}{
+    "domain": {
+        "http://webdisk.mohankumar.construction": {},
+        "http://cpcalendars.mohankumar.construction": {},
+        "http://cpcontacts.mohankumar.construction": {},
+        "http://webmail.mohankumar.construction": {},
+        "http://www.mohankumar.construction": {},
+        "http://mail.mohankumar.construction": {},
+        "http://cpanel.mohankumar.construction": {},
+        "http://mohankumar.construction": {}
+    }
+}{
+    "domain": {
+        "http://webdisk.mohankumar.construction": {},
+        "http://cpcalendars.mohankumar.construction": {},
+        "http://cpcontacts.mohankumar.construction": {},
+        "http://webmail.mohankumar.construction": {},
+        "http://www.mohankumar.construction": {},
+        "http://mail.mohankumar.construction": {},
+        "http://cpanel.mohankumar.construction": {},
+        "http://mohankumar.construction": {}
+    }
+}{
+    "domain": {
+        "http://webdisk.mohankumar.construction": {},
+        "http://cpcalendars.mohankumar.construction": {},
+        "http://cpcontacts.mohankumar.construction": {},
+        "http://webmail.mohankumar.construction": {},
+        "http://www.mohankumar.construction": {},
+        "http://mail.mohankumar.construction": {},
+        "http://cpanel.mohankumar.construction": {},
+        "http://mohankumar.construction": {}
+    }
+}{
+    "domain": {
+        "http://webdisk.mohankumar.construction": {},
+        "http://cpcalendars.mohankumar.construction": {},
+        "http://cpcontacts.mohankumar.construction": {},
+        "http://webmail.mohankumar.construction": {},
+        "http://www.mohankumar.construction": {},
+        "http://mail.mohankumar.construction": {},
+        "http://cpanel.mohankumar.construction": {},
+        "http://mohankumar.construction": {}
+    }
+}{
+    "domain": {
+        "http://webdisk.mohankumar.construction": {},
+        "http://cpcalendars.mohankumar.construction": {},
+        "http://cpcontacts.mohankumar.construction": {},
+        "http://webmail.mohankumar.construction": {},
+        "http://www.mohankumar.construction": {},
+        "http://mail.mohankumar.construction": {},
+        "http://cpanel.mohankumar.construction": {},
+        "http://mohankumar.construction": {}
+    }
+}{
+    "domain": {
+        "http://webdisk.mohankumar.construction": {},
+        "http://cpcalendars.mohankumar.construction": {},
+        "http://cpcontacts.mohankumar.construction": {},
+        "http://webmail.mohankumar.construction": {},
+        "http://www.mohankumar.construction": {},
+        "http://mail.mohankumar.construction": {},
+        "http://cpanel.mohankumar.construction": {},
+        "http://mohankumar.construction": {}
+    }
+}{
+    "domain": {
+        "http://webdisk.mohankumar.construction": {},
+        "http://cpcalendars.mohankumar.construction": {},
+        "http://cpcontacts.mohankumar.construction": {},
+        "http://webmail.mohankumar.construction": {},
+        "http://www.mohankumar.construction": {},
+        "http://mail.mohankumar.construction": {},
+        "http://cpanel.mohankumar.construction": {},
+        "http://mohankumar.construction": {}
+    }
+}{
+    "domain": {
+        "newegg.com": {},
+        "http://webdisk.mohankumar.construction": {},
+        "http://cpcalendars.mohankumar.construction": {},
+        "http://cpcontacts.mohankumar.construction": {},
+        "http://webmail.mohankumar.construction": {},
+        "http://www.mohankumar.construction": {},
+        "http://mail.mohankumar.construction": {},
+        "http://cpanel.mohankumar.construction": {},
+        "http://mohankumar.construction": {}
+    }
+}{
+    "domain": {
+        "newegg.com": {
+    "domain": {
+        "newegg.com": "CompletedProcess(args=['cors', '-u', 'newegg.com'], returncode=0, stdout=b'2024-05-09 15:43:40 WARNING Found misconfiguration! {\"url\": \"http://newegg.com\", \"type\": \"trust_any_subdomain\", \"credentials\": \"true\", \"origin\": \"http://evil.newegg.com\", \"status_code\": 200}\\r\\r\\n')"
+    }
+}{
+    "domain": {
+        "newegg.com": "CompletedProcess(args=['cors', '-u', 'newegg.com'], returncode=0, stdout=b'')"
+    }
+}
