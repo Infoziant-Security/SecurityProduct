@@ -1,6 +1,7 @@
 import re
 import subprocess
 import json
+import httpx
 import os
 import logging
 from flask import Flask, jsonify, request
@@ -341,6 +342,87 @@ def run_LFI_Finder():
                 print(v)
     return "Thank you"
 
+logging.basicConfig(level=logging.INFO)
+app.logger = logging.getLogger(__name__)
+
+
+def validate_wayback_urls(wayback_urls):
+    validated_wayback_urls = {}
+    for u in wayback_urls:
+        try:
+            r = httpx.get(u)
+            app.logger.info(f'{u} - {r.status_code}')
+            validated_wayback_urls[u] = r.status_code
+        except httpx.RequestError as e:
+            app.logger.error(f'Request error for {u}: {e}')
+            validated_wayback_urls[u] = 'Request Error'
+    
+    return validated_wayback_urls
+
+def find_403_from_wayback(wayback_dict):
+    wayback_403 = {}
+    for u in wayback_dict:
+        if '403' in str(wayback_dict[u]):
+            result = subprocess.run(['bypass-403.sh', u], shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+            wayback_403[u] = result.stdout.decode('utf-8')
+    app.logger.info(wayback_403)
+    return wayback_403
+
+def read_wayback_urls(filename):
+    try:
+        with open(filename, 'r') as f:
+            wayback_data = json.load(f)
+        return wayback_data
+    except FileNotFoundError as e:
+        app.logger.error(f'File not found: {e}')
+        return {}
+    except json.JSONDecodeError as e:
+        app.logger.error(f'Error decoding JSON: {e}')
+        return {}
+
+def execute_cors_scaner(filename):
+    cors_result = {}
+    try:
+        with open(filename, 'r') as f:
+            data = f.read()
+        subdomain_list = data.split("\n")
+        for u in subdomain_list:
+            if u:  # Make sure the line is not empty
+                ret = subprocess.run(["cors", "-u", u], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+                cors_result[u] = ret.stdout.decode('utf-8')
+                app.logger.info(ret.stdout.decode('utf-8'))
+    except FileNotFoundError as e:
+        app.logger.error(f'File not found: {e}')
+    except subprocess.CalledProcessError as e:
+        app.logger.error(f'Subprocess error: {e}')
+    return cors_result
+
+def save_data_to_file1(label, data, filename):
+    try:
+        with open(filename, 'w') as f:
+            json.dump(data, f, indent=4)
+        app.logger.info(f'{label} data saved to {filename}')
+    except IOError as e:
+        app.logger.error(f'Error saving file {filename}: {e}')
+
+def check_cors_and_403():
+    # 403 Bypass check
+    wayback_data = read_wayback_urls('wayback_urls.json')
+    app.logger.info("Wayback data extracted")
+    
+    if not wayback_data:
+        app.logger.error("Wayback data is empty or invalid")
+        return "Wayback data extraction failed"
+    
+    validated_wayback_urls = validate_wayback_urls(list(wayback_data.values()))
+    wayback_403_data = find_403_from_wayback(validated_wayback_urls)
+    app.logger.info("Wayback 403 Bypass check executed")
+
+    # CORS Scanner
+    cors_scanner_result = execute_cors_scaner('subdomains.txt')
+    save_data_to_file1('CORS Scanner', cors_scanner_result, 'cors_scanner_result.json')
+    return 'Wayback 403 Bypass check executed'
+
 @app.route('/api/subdomains', methods=['POST'])
 def get_subdomains():
     domain = request.json.get('domain')
@@ -364,7 +446,6 @@ def get_subdomains():
     #run_LFI_Finder()
     bolt_results = process_bolt(validated_subdomains)
     save_data_to_file(domain, bolt_results, 'bolt_results.json')
-    save_data_to_file(domain, see_surf_results, 'see_surf_results.json')
     
     stdout, stderr = run_ssrf_finder('paramspider_urls.txt')
     if stderr:
@@ -374,6 +455,8 @@ def get_subdomains():
     
     bolt_results = process_bolt(validated_subdomains)
     save_data_to_file(domain, bolt_results, 'bolt_results.json')
+    
+    check_cors_and_403()
     
     return jsonify({
         'domain': domain,
