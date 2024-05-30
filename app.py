@@ -13,6 +13,7 @@ import requests
 from termcolor import colored
 from urllib.parse import urlparse
 import random
+import urllib.error
 import time
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
@@ -172,6 +173,26 @@ def aggregate_dalfox_results():
                     results = file.read()
                     if results.strip():  # Only write if there's content
                         aggregate_file.write(f"Results from {filename}:\n{results}\n\n")
+    process_vulnerability_results(dalfox_results_dir, aggregate_file_path)
+                        
+def process_vulnerability_results(folder_path, file_name):
+    xss_results = []
+    open_redirect_results = []
+
+    file_path = os.path.join(folder_path, file_name)
+    
+    with open(file_path, 'r') as file:
+        for line in file:
+            if '[POC][G][GET][BAV/OR]' in line:
+                open_redirect_results.append(line.strip())
+            elif '[POC][V][GET]' in line:
+                xss_results.append(line.strip())
+    
+    with open(os.path.join(folder_path, 'xss_vulnerabilities.json'), 'w') as xss_file:
+        json.dump(xss_results, xss_file, indent=4)
+    
+    with open(os.path.join(folder_path, 'open_redirect_vulnerabilities.json'), 'w') as open_redirect_file:
+        json.dump(open_redirect_results, open_redirect_file, indent=4)
                         
 def run_ssrf_finder(input_file):
     command = f'type {input_file} | .\\ssrf-finder.exe'
@@ -239,12 +260,25 @@ def execute_clickjack():
     hdr = {'User-Agent': 'Mozilla/5.0'}
     results = []
 
+    # List of common asset file extensions to exclude
+    asset_extensions = ('.jpg', '.jpeg', '.png', '.gif', '.bmp', '.svg', 
+                        '.js', '.css', '.ico', '.woff', '.woff2', 
+                        '.ttf', '.eot', '.otf', '.pdf', '.zip', '.rar', 
+                        '.exe', '.dmg', '.tar.gz', '.mp3', '.mp4', 
+                        '.avi', '.mov', '.mkv', '.flv', '.webm')
+
     with open("wayback_urls.txt", 'r') as d:
         try:
             for target in d.readlines():
                 t = target.strip('\n')
                 if not t.startswith(("http://", "https://")):
                     t = "https://" + t
+
+                # Validate the URL to exclude asset types
+                parsed_url = urlparse(t)
+                if parsed_url.path.endswith(asset_extensions):
+                    print(colored(f"Skipping asset URL: {t}", "yellow"))
+                    continue
 
                 try:
                     req = Request(t, headers=hdr)
@@ -253,7 +287,7 @@ def execute_clickjack():
 
                     if "X-Frame-Options" not in headers and "x-frame-options" not in headers:
                         print(colored(f"Target: {t} is Vulnerable", "green"))
-                        filename = urlparse(t).netloc
+                        filename = parsed_url.netloc
                         poc = f"""
                         <html>
                         <head><title>Clickjack POC page</title></head>
@@ -291,9 +325,9 @@ def execute_clickjack():
         except Exception as e:
             print(e)
     
-    with open("vulnerability_results.json", "w") as json_file:
+    with open("clickjack_results.json", "w") as json_file:
         json.dump(results, json_file, indent=4)
-        print("Results written to vulnerability_results.json")
+        print("Results written to clickjack_results.json")
 
 def check_lfi_vulnerability(url):
     print("Trying payloads list, please wait...")
