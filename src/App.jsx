@@ -19,7 +19,7 @@ function App() {
   };
 
   return (
-    <div>
+    <div> 
       <input 
         type="text" 
         value={domain} 
@@ -27,31 +27,7 @@ function App() {
         placeholder="Enter domain to find subdomains"
       />
       <button onClick={getSubdomains}>Find Subdomains</button>
-      <h2>Subdomains</h2>
-      {subdomains.length > 0 ? (
-        <ul>
-          {subdomains.map((subdomain, index) => (
-            <li key={index}>
-              {subdomain.subdomain} - Status: {subdomain.status_code}
-            </li>
-          ))}
-        </ul>
-      ) : (
-        <p>No subdomains found or error in fetching subdomains.</p>
-      )}
-      <h2>Wayback URLs</h2>
-      {Object.keys(waybackUrls).length > 0 ? (
-        Object.entries(waybackUrls).map(([key, urls], index) => (
-          <div key={index}>
-            <h3>{key}</h3>
-            <ul>
-              {urls.map((url, idx) => <li key={idx}>{url}</li>)}
-            </ul>
-          </div>
-        ))
-      ) : (
-        <p>No Wayback URLs found or error in fetching URLs.</p>
-      )}
+      
     </div>
   );
 }

@@ -1,0 +1,50 @@
+[
+    {
+        "url": "http://testphp.vulnweb.com/",
+        "status": "Vulnerable"
+    },
+    {
+        "url": "http://testphp.vulnweb.com/AJAX/index.php",
+        "status": "Vulnerable"
+    },
+    {
+        "url": "http://testphp.vulnweb.com/artists.php?artist=1'",
+        "status": "Vulnerable"
+    },
+    {
+        "url": "http://testphp.vulnweb.com/disclaimer.php",
+        "status": "Vulnerable"
+    },
+    {
+        "url": "http://testphp.vulnweb.com/login.php",
+        "status": "Vulnerable"
+    },
+    {
+        "url": "http://testphp.vulnweb.com/showimage.php?file=./pictures/1.jpg",
+        "status": "Vulnerable"
+    },
+    {
+        "url": "http://testphp.vulnweb.com/showimage.php?file=./pictures/2.jpg",
+        "status": "Vulnerable"
+    },
+    {
+        "url": "http://testphp.vulnweb.com/showimage.php?file=./pictures/3.jpg",
+        "status": "Vulnerable"
+    },
+    {
+        "url": "http://testphp.vulnweb.com/showimage.php?file=./pictures/4.jpg",
+        "status": "Vulnerable"
+    },
+    {
+        "url": "http://testphp.vulnweb.com/showimage.php?file=./pictures/5.jpg",
+        "status": "Vulnerable"
+    },
+    {
+        "url": "http://testphp.vulnweb.com/showimage.php?file=./pictures/6.jpg",
+        "status": "Vulnerable"
+    },
+    {
+        "url": "http://testphp.vulnweb.com/showimage.php?file=./pictures/7.jpg",
+        "status": "Vulnerable"
+    }
+]

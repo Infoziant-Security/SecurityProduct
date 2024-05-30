@@ -18,6 +18,8 @@ import time
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 from selenium.common.exceptions import NoSuchElementException
+from bs4 import BeautifulSoup
+from requests.exceptions import ConnectionError
 
 # Configure logging
 dictConfig({
@@ -165,34 +167,45 @@ def aggregate_dalfox_results():
     dalfox_results_dir = './dalfox_results'
     aggregate_file_path = os.path.join(dalfox_results_dir, 'aggregate_results.txt')
     
-    with open(aggregate_file_path, 'w') as aggregate_file:
-        for filename in os.listdir(dalfox_results_dir):
-            if filename.startswith('dalfox_') and filename.endswith('.txt'):
-                file_path = os.path.join(dalfox_results_dir, filename)
-                with open(file_path, 'r') as file:
-                    results = file.read()
-                    if results.strip():  # Only write if there's content
-                        aggregate_file.write(f"Results from {filename}:\n{results}\n\n")
-    process_vulnerability_results(dalfox_results_dir, aggregate_file_path)
-                        
+    logging.info(f"Aggregating results in directory: {dalfox_results_dir}")
+    logging.info(f"Aggregate file path: {aggregate_file_path}")
+    
+    try:
+        with open(aggregate_file_path, 'w') as aggregate_file:
+            for filename in os.listdir(dalfox_results_dir):
+                if filename.startswith('dalfox_') and filename.endswith('.txt'):
+                    file_path = os.path.join(dalfox_results_dir, filename)
+                    logging.info(f"Processing file: {file_path}")
+                    with open(file_path, 'r') as file:
+                        results = file.read()
+                        if results.strip():  # Only write if there's content
+                            aggregate_file.write(f"Results from {filename}:\n{results}\n\n")
+        process_vulnerability_results(dalfox_results_dir, 'aggregate_results.txt')
+    except Exception as e:
+        logging.error(f"Error during aggregation: {e}")
+
 def process_vulnerability_results(folder_path, file_name):
     xss_results = []
     open_redirect_results = []
 
     file_path = os.path.join(folder_path, file_name)
+    logging.info(f"Processing vulnerability results from file: {file_path}")
     
-    with open(file_path, 'r') as file:
-        for line in file:
-            if '[POC][G][GET][BAV/OR]' in line:
-                open_redirect_results.append(line.strip())
-            elif '[POC][V][GET]' in line:
-                xss_results.append(line.strip())
-    
-    with open(os.path.join(folder_path, 'xss_vulnerabilities.json'), 'w') as xss_file:
-        json.dump(xss_results, xss_file, indent=4)
-    
-    with open(os.path.join(folder_path, 'open_redirect_vulnerabilities.json'), 'w') as open_redirect_file:
-        json.dump(open_redirect_results, open_redirect_file, indent=4)
+    try:
+        with open(file_path, 'r') as file:
+            for line in file:
+                if '[POC][G][GET][BAV/OR]' in line:
+                    open_redirect_results.append(line.strip())
+                elif '[POC][V][GET]' in line:
+                    xss_results.append(line.strip())
+        
+        with open(os.path.join(folder_path, 'xss_vulnerabilities.json'), 'w') as xss_file:
+            json.dump(xss_results, xss_file, indent=4)
+        
+        with open(os.path.join(folder_path, 'open_redirect_vulnerabilities.json'), 'w') as open_redirect_file:
+            json.dump(open_redirect_results, open_redirect_file, indent=4)
+    except Exception as e:
+        logging.error(f"Error during vulnerability processing: {e}")
                         
 def run_ssrf_finder(input_file):
     command = f'type {input_file} | .\\ssrf-finder.exe'
@@ -213,46 +226,6 @@ def process_ssrf_output(output):
                     "message": parts[0]
                 })
     return results                        
-
-
-def run_bolt(subdomain):
-    bolt_data = {}
-    if subdomain['status_code'] == '200':
-        bolt_dir = 'Bolt'
-        if os.path.isdir(bolt_dir):
-            current_dir = os.getcwd()  # Save the current working directory
-            os.chdir(bolt_dir)
-            try:
-                result = subprocess.run(
-                    ['python', 'bolt.py', '-u', subdomain['subdomain'], '-l', '2'],
-                    capture_output=True,
-                    text=True,
-                    check=True,
-                    encoding='utf-8'  # Ensure subprocess uses utf-8 encoding
-                )
-                bolt_data[subdomain['subdomain']] = result.stdout
-            except subprocess.CalledProcessError as e:
-                logging.error(f"Failed to run Bolt for {subdomain['subdomain']}: {e.stderr}")
-            except FileNotFoundError as e:
-                logging.error(f"File not found: {e}")
-            except Exception as e:
-                logging.error(f"An unexpected error occurred: {e}")
-            finally:
-                os.chdir(current_dir)  # Change back to the original directory
-        else:
-            logging.error(f"Bolt directory '{bolt_dir}' does not exist")
-    return bolt_data
-
-
-def process_bolt(validated_subdomains):
-    bolt_results = {}
-    for subdomain in validated_subdomains:
-        if subdomain['status_code'] == '200':
-            bolt_output = run_bolt(subdomain)
-            if bolt_output:
-                bolt_results.update(bolt_output)
-    return bolt_results
-
 
 
 def execute_clickjack():
@@ -395,8 +368,11 @@ def find_403_from_wayback(wayback_dict):
     for u in wayback_dict:
         if '403' in str(wayback_dict[u]):
             result = subprocess.run(['bypass-403.sh', u], shell=True, stdout=subprocess.PIPE)
-            wayback_403[u] = str(result)
+            wayback_403[u] = result.stdout.decode('utf-8').strip()
     app.logger.info(wayback_403)
+    
+    
+    
     return wayback_403
 
 def read_wayback_urls(filename):
@@ -415,61 +391,116 @@ def execute_cors_scanner(filename):
     return cors_result
 
 
-def check_cors_and_403():
+def check403():
     # 403 Bypass check
     wayback_data = read_wayback_urls('wayback_urls.txt')
     app.logger.info("Wayback data extracted")
     validated_wayback_urls = validate_wayback_urls(wayback_data)
     wayback_403_data = find_403_from_wayback(validated_wayback_urls)
     app.logger.info("Wayback 403 Bypass check executed")
-    
-    # CORS Scanner
-    cors_scanner_result = execute_cors_scanner('subdomains.txt')
-    save_data_to_file('domain', cors_scanner_result, 'cors_scanner_result.json')
-    return 'Wayback 403 Bypass check executed'
+    return wayback_403_data
+    return 'Wayback 403 Bypass check executed and results saved'\
+        
+def get_csrf_token(url):
+    try:
+        # Fetch the page content
+        response = requests.get(url)       
+        response.raise_for_status()  # Raise an error for HTTP errors
+        # Parse the HTML content to find the CSRF token
+        soup = BeautifulSoup(response.text, 'html.parser')
+        csrf_token = None
+        # Example: Find CSRF token by looking for <input> tags with specific attributes
+        csrf_input = soup.find('input', {'name': 'csrf_token'})
+        if csrf_input:
+            csrf_token = csrf_input.get('value')
+
+        return csrf_token
+    except ConnectionError:
+        logging.error(f"Failed to establish a connection for URL: {url}")
+        return None
+    except Exception as e:
+        logging.error(f"An error occurred while fetching CSRF token for URL {url}: {e}")
+        return None
+
+def check_csrf_vulnerability(url, csrf_token):
+    headers = {
+        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36'
+    }
+
+    data = {
+        'csrf_token': csrf_token,  # Use the retrieved CSRF token
+        'action': 'test_action'     # Replace with any necessary parameters
+    }
+
+    response = requests.post(url, headers=headers, data=data)
+
+    if response.status_code == 200:
+        return True
+    else:
+        return False
+
+def check_csrf_vulnerabilities(wayback_urls):
+    csrf_results = []
+    for url in wayback_urls:
+        csrf_token = get_csrf_token(url)
+        if csrf_token:
+            is_vulnerable = check_csrf_vulnerability(url, csrf_token)
+            csrf_results.append({
+                'url': url,
+                'csrf_vulnerable': False,
+                'csrf_vulnerable': is_vulnerable
+            })
+        else:
+            csrf_results.append({
+                'url': url,
+                'csrf_vulnerable': True,
+                'prob': 'CSRF token not found'
+            })
+
+    return csrf_results
 
 @app.route('/api/subdomains', methods=['POST'])
 def get_subdomains():
     domain = request.json.get('domain')
     if not domain:
         return jsonify({'error': 'Domain is required'}), 400
-
     subdomains_assetfinder = find_subdomains(domain, 'assetfinder')
     subdomains_subfinder = find_subdomains(domain, 'subfinder')
     subdomains = list(subdomains_assetfinder.union(subdomains_subfinder))
     validated_subdomains = validate_subdomains(subdomains)
     save_data_to_file(domain, validated_subdomains, 'validated_subdomains.json')
-    wayback_data = fetch_wayback_urls(validated_subdomains)
-    save_data_to_file(domain, wayback_data, 'wayback_urls.json')
-    save_urls_to_txt(wayback_data, 'wayback_urls.txt')
-    paramspider_data = asyncio.run(fetch_paramspider_urls_async(validated_subdomains))
-    save_data_to_file(domain, paramspider_data, 'paramspider_urls.json')
-    save_urls_to_txt1(paramspider_data, 'paramspider_urls.txt')
-    process_paramspider_results()
-    aggregate_dalfox_results()
-    execute_clickjack()
+    #wayback_data = fetch_wayback_urls(validated_subdomains)
+    #save_data_to_file(domain, wayback_data, 'wayback_urls.json')
+    #save_urls_to_txt(wayback_data, 'wayback_urls.txt')
+    #paramspider_data = asyncio.run(fetch_paramspider_urls_async(validated_subdomains))
+    #save_data_to_file(domain, paramspider_data, 'paramspider_urls.json')
+    #save_urls_to_txt1(paramspider_data, 'paramspider_urls.txt')
+    #wayback_url = read_wayback_urls('wayback_urls.txt')
+    #csrf_results = check_csrf_vulnerabilities(wayback_url)
+    #save_data_to_file(domain, csrf_results, 'csrf_results.json')
+    #process_paramspider_results()
+    #aggregate_dalfox_results()
+    #execute_clickjack()
     #run_LFI_Finder()
-    bolt_results = process_bolt(validated_subdomains)
-    save_data_to_file(domain, bolt_results, 'bolt_results.json')
-    
-    stdout, stderr = run_ssrf_finder('paramspider_urls.txt')
-    if stderr:
-        logging.error(f'SSRF Finder execution failed: {stderr}')
-    ssrf_results = process_ssrf_output(stdout)
-    save_data_to_file(domain, ssrf_results, 'ssrf_finder_results.json')
-    
-    bolt_results = process_bolt(validated_subdomains)
-    save_data_to_file(domain, bolt_results, 'bolt_results.json')
-    
-    check_cors_and_403()
+    #stdout, stderr = run_ssrf_finder('paramspider_urls.txt')
+    #if stderr:
+    #    logging.error(f'SSRF Finder execution failed: {stderr}')
+    #ssrf_results = process_ssrf_output(stdout)
+    #save_data_to_file(domain, ssrf_results, 'ssrf_finder_results.json')
+    #wayback403 = check403()
+    #save_data_to_file(domain, wayback403, 'wayback_urls_403_bypass_result.json')
+    cors_scanner_result = execute_cors_scanner('subdomains.txt')
+    save_data_to_file(domain , cors_scanner_result, 'cors_scanner_result.json')
     
     return jsonify({
         'domain': domain,
         'validated_subdomains': validated_subdomains,
-        'wayback_urls': wayback_data,
-        'paramspider_urls': paramspider_data,
-        'ssrf_results': ssrf_results,
-        'bolt_results': bolt_results,
+        #'wayback_urls': wayback_data,
+        #'paramspider_urls': paramspider_data,
+        #'csrf_results': csrf_results,
+        #'ssrf_results': ssrf_results,
+        #'wayback_403_results': wayback403,
+        'cors_scanner_result': cors_scanner_result,
     })
     
 

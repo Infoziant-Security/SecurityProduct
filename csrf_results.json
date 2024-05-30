@@ -1,0 +1,104 @@
+{
+    "testphp.vulnweb.com": [
+        {
+            "url": "http://testphp.vulnweb.com/",
+            "csrf_vulnerable": false,
+            "error": "CSRF token not found"
+        },
+        {
+            "url": "http://testphp.vulnweb.com/AJAX/index.php",
+            "csrf_vulnerable": false,
+            "error": "CSRF token not found"
+        },
+        {
+            "url": "http://testphp.vulnweb.com/artists.php?artist=1'",
+            "csrf_vulnerable": false,
+            "error": "CSRF token not found"
+        },
+        {
+            "url": "http://testphp.vulnweb.com/disclaimer.php",
+            "csrf_vulnerable": false,
+            "error": "CSRF token not found"
+        },
+        {
+            "url": "http://testphp.vulnweb.com/login.php",
+            "csrf_vulnerable": false,
+            "error": "CSRF token not found"
+        },
+        {
+            "url": "http://testphp.vulnweb.com/privacy.php",
+            "csrf_vulnerable": false,
+            "error": "CSRF token not found"
+        },
+        {
+            "url": "http://testphp.vulnweb.com/robots.txt",
+            "csrf_vulnerable": false,
+            "error": "CSRF token not found"
+        },
+        {
+            "url": "http://testphp.vulnweb.com/showimage.php?file=./pictures/1.jpg",
+            "csrf_vulnerable": false,
+            "error": "CSRF token not found"
+        },
+        {
+            "url": "http://testphp.vulnweb.com/showimage.php?file=./pictures/2.jpg",
+            "csrf_vulnerable": false,
+            "error": "CSRF token not found"
+        },
+        {
+            "url": "http://testphp.vulnweb.com/showimage.php?file=./pictures/3.jpg",
+            "csrf_vulnerable": false,
+            "error": "CSRF token not found"
+        },
+        {
+            "url": "http://testphp.vulnweb.com/showimage.php?file=./pictures/4.jpg",
+            "csrf_vulnerable": false,
+            "error": "CSRF token not found"
+        },
+        {
+            "url": "http://testphp.vulnweb.com/showimage.php?file=./pictures/5.jpg",
+            "csrf_vulnerable": false,
+            "error": "CSRF token not found"
+        },
+        {
+            "url": "http://testphp.vulnweb.com/showimage.php?file=./pictures/6.jpg",
+            "csrf_vulnerable": false,
+            "error": "CSRF token not found"
+        },
+        {
+            "url": "http://testphp.vulnweb.com/showimage.php?file=./pictures/7.jpg",
+            "csrf_vulnerable": false,
+            "error": "CSRF token not found"
+        },
+        {
+            "url": "http://testphp.vulnweb.com/%0A%0A%D9%87%D8%B0%D8%A7",
+            "csrf_vulnerable": false,
+            "error": "CSRF token not found"
+        },
+        {
+            "url": "http://testphp.vulnweb.com:80/%20/listproducts.php?",
+            "csrf_vulnerable": false,
+            "error": "CSRF token not found"
+        },
+        {
+            "url": "http://testphp.vulnweb.com:80/%20HTTP/1.1",
+            "csrf_vulnerable": false,
+            "error": "CSRF token not found"
+        },
+        {
+            "url": "http://testphp.vulnweb.com/%20I%20want%20to%20start%20testing%20on%20stealing%20cookies%20through%20exploit%20xss%20on%20search%20bar%20at%20testphp%20vulnweb",
+            "csrf_vulnerable": false,
+            "error": "CSRF token not found"
+        },
+        {
+            "url": "http://testphp.vulnweb.com:80/%20ip",
+            "csrf_vulnerable": false,
+            "error": "CSRF token not found"
+        },
+        {
+            "url": "http://testphp.vulnweb.com:80/%20Web%20Server",
+            "csrf_vulnerable": false,
+            "error": "CSRF token not found"
+        }
+    ]
+}
