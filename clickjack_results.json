@@ -4,10 +4,6 @@
         "status": "Vulnerable"
     },
     {
-        "url": "http://testphp.vulnweb.com/AJAX/index.php",
-        "status": "Vulnerable"
-    },
-    {
         "url": "http://testphp.vulnweb.com/artists.php?artist=1'",
         "status": "Vulnerable"
     },
@@ -45,6 +41,46 @@
     },
     {
         "url": "http://testphp.vulnweb.com/showimage.php?file=./pictures/7.jpg",
+        "status": "Vulnerable"
+    },
+    {
+        "url": "http://testphp.vulnweb.com:80/.idea",
+        "status": "Vulnerable"
+    },
+    {
+        "url": "http://testphp.vulnweb.com/.idea/.name",
+        "status": "Vulnerable"
+    },
+    {
+        "url": "http://testphp.vulnweb.com:80/.idea/acuart.iml",
+        "status": "Vulnerable"
+    },
+    {
+        "url": "http://testphp.vulnweb.com:80/.idea/encodings.xml",
+        "status": "Vulnerable"
+    },
+    {
+        "url": "http://testphp.vulnweb.com:80/.idea/misc.xml",
+        "status": "Vulnerable"
+    },
+    {
+        "url": "http://testphp.vulnweb.com:80/.idea/modules.xml",
+        "status": "Vulnerable"
+    },
+    {
+        "url": "http://testphp.vulnweb.com:80/.idea/scopes",
+        "status": "Vulnerable"
+    },
+    {
+        "url": "http://testphp.vulnweb.com:80/.idea/scopes/scope_settings.xml",
+        "status": "Vulnerable"
+    },
+    {
+        "url": "http://testphp.vulnweb.com:80/.idea/vcs.xml",
+        "status": "Vulnerable"
+    },
+    {
+        "url": "http://testphp.vulnweb.com:80/.idea/workspace.xml",
         "status": "Vulnerable"
     }
 ]

@@ -469,37 +469,37 @@ def get_subdomains():
     subdomains = list(subdomains_assetfinder.union(subdomains_subfinder))
     validated_subdomains = validate_subdomains(subdomains)
     save_data_to_file(domain, validated_subdomains, 'validated_subdomains.json')
-    #wayback_data = fetch_wayback_urls(validated_subdomains)
-    #save_data_to_file(domain, wayback_data, 'wayback_urls.json')
-    #save_urls_to_txt(wayback_data, 'wayback_urls.txt')
-    #paramspider_data = asyncio.run(fetch_paramspider_urls_async(validated_subdomains))
-    #save_data_to_file(domain, paramspider_data, 'paramspider_urls.json')
-    #save_urls_to_txt1(paramspider_data, 'paramspider_urls.txt')
-    #wayback_url = read_wayback_urls('wayback_urls.txt')
-    #csrf_results = check_csrf_vulnerabilities(wayback_url)
-    #save_data_to_file(domain, csrf_results, 'csrf_results.json')
-    #process_paramspider_results()
-    #aggregate_dalfox_results()
-    #execute_clickjack()
+    wayback_data = fetch_wayback_urls(validated_subdomains)
+    save_data_to_file(domain, wayback_data, 'wayback_urls.json')
+    save_urls_to_txt(wayback_data, 'wayback_urls.txt')
+    paramspider_data = asyncio.run(fetch_paramspider_urls_async(validated_subdomains))
+    save_data_to_file(domain, paramspider_data, 'paramspider_urls.json')
+    save_urls_to_txt1(paramspider_data, 'paramspider_urls.txt')
+    wayback_url = read_wayback_urls('wayback_urls.txt')
+    csrf_results = check_csrf_vulnerabilities(wayback_url)
+    save_data_to_file(domain, csrf_results, 'csrf_results.json')
+    process_paramspider_results()
+    aggregate_dalfox_results()
+    execute_clickjack()
     #run_LFI_Finder()
-    #stdout, stderr = run_ssrf_finder('paramspider_urls.txt')
-    #if stderr:
-    #    logging.error(f'SSRF Finder execution failed: {stderr}')
-    #ssrf_results = process_ssrf_output(stdout)
-    #save_data_to_file(domain, ssrf_results, 'ssrf_finder_results.json')
-    #wayback403 = check403()
-    #save_data_to_file(domain, wayback403, 'wayback_urls_403_bypass_result.json')
+    stdout, stderr = run_ssrf_finder('paramspider_urls.txt')
+    if stderr:
+        logging.error(f'SSRF Finder execution failed: {stderr}')
+    ssrf_results = process_ssrf_output(stdout)
+    save_data_to_file(domain, ssrf_results, 'ssrf_finder_results.json')
+    wayback403 = check403()
+    save_data_to_file(domain, wayback403, 'wayback_urls_403_bypass_result.json')
     cors_scanner_result = execute_cors_scanner('subdomains.txt')
     save_data_to_file(domain , cors_scanner_result, 'cors_scanner_result.json')
     
     return jsonify({
         'domain': domain,
         'validated_subdomains': validated_subdomains,
-        #'wayback_urls': wayback_data,
-        #'paramspider_urls': paramspider_data,
-        #'csrf_results': csrf_results,
-        #'ssrf_results': ssrf_results,
-        #'wayback_403_results': wayback403,
+        'wayback_urls': wayback_data,
+        'paramspider_urls': paramspider_data,
+        'csrf_results': csrf_results,
+        'ssrf_results': ssrf_results,
+        'wayback_403_results': wayback403,
         'cors_scanner_result': cors_scanner_result,
     })
     

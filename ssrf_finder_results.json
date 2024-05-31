@@ -1,35 +1,7 @@
 {
     "testphp.vulnweb.com": [
         {
-            "url": "response code: http://testphp.vulnweb.com/hpp/params.php?aaaa%2F=FUZZ (200 OK)",
-            "message": "200"
-        },
-        {
-            "url": "response code: http://testphp.vulnweb.com/hpp/index.php?pp=FUZZ (200 OK)",
-            "message": "200"
-        },
-        {
-            "url": "response code: http://testphp.vulnweb.com/AJAX/infoartist.php?id=FUZZ&fYij=FUZZ (200 OK)",
-            "message": "200"
-        },
-        {
-            "url": "response code: http://testphp.vulnweb.com/Mod_Rewrite_Shop/details.php?id=FUZZ&mjqN=FUZZ (200 OK)",
-            "message": "200"
-        },
-        {
-            "url": "response code: http://testphp.vulnweb.com/admin/?C=FUZZ (200 OK)",
-            "message": "200"
-        },
-        {
-            "url": "response code: http://testphp.vulnweb.com/index.php?%25id%25=FUZZ&user=FUZZ (200 OK)",
-            "message": "200"
-        },
-        {
-            "url": "response code: http://testphp.vulnweb.com/hpp/?pp=FUZZ (200 OK)",
-            "message": "200"
-        },
-        {
-            "url": "response code: http://testphp.vulnweb.com/artists.php?+artist=FUZZ (200 OK)",
+            "url": "response code: http://testphp.vulnweb.com/comment.php?aid=FUZZ (200 OK)",
             "message": "200"
         },
         {
@@ -37,7 +9,15 @@
             "message": "200"
         },
         {
-            "url": "response code: http://testphp.vulnweb.com/bxss/vuln.php?id=FUZZ (200 OK)",
+            "url": "response code: http://testphp.vulnweb.com/admin/?C=FUZZ (200 OK)",
+            "message": "200"
+        },
+        {
+            "url": "response code: http://testphp.vulnweb.com/?source=FUZZ (200 OK)",
+            "message": "200"
+        },
+        {
+            "url": "response code: http://testphp.vulnweb.com/Mod_Rewrite_Shop/rate.php?id=FUZZ (200 OK)",
             "message": "200"
         },
         {
@@ -45,19 +25,7 @@
             "message": "200"
         },
         {
-            "url": "response code: http://testphp.vulnweb.com/showimage.php?file=FUZZ&size=FUZZ (200 OK)",
-            "message": "200"
-        },
-        {
-            "url": "response code: http://testphp.vulnweb.com/secured/phpinfo.php?=FUZZ (200 OK)",
-            "message": "200"
-        },
-        {
-            "url": "response code: http://testphp.vulnweb.com/listproducts.php?artist=FUZZ (200 OK)",
-            "message": "200"
-        },
-        {
-            "url": "response code: http://testphp.vulnweb.com/artists.php?artist=FUZZ (200 OK)",
+            "url": "response code: http://testphp.vulnweb.com/product.php?pic=FUZZ&tdRI=FUZZ (200 OK)",
             "message": "200"
         },
         {
@@ -65,19 +33,63 @@
             "message": "200"
         },
         {
-            "url": "response code: http://testphp.vulnweb.com/AJAX/infoartist.php?id=FUZZ&YVeN=FUZZ (200 OK)",
+            "url": "response code: http://testphp.vulnweb.com/AJAX/infocateg.php?id=FUZZ (200 OK)",
             "message": "200"
         },
         {
-            "url": "response code: http://testphp.vulnweb.com/listproducts.php?artist=FUZZ&asdf=FUZZ&cat=FUZZ (200 OK)",
+            "url": "response code: http://testphp.vulnweb.com/Mod_Rewrite_Shop/details.php?id=FUZZ&mjqN=FUZZ (200 OK)",
             "message": "200"
         },
         {
-            "url": "response code: http://testphp.vulnweb.com/redir.php?r=FUZZ&user=FUZZ (200 OK)",
+            "url": "response code: http://testphp.vulnweb.com/listproducts.php?artist=FUZZ (200 OK)",
             "message": "200"
         },
         {
-            "url": "response code: http://testphp.vulnweb.com/redir.php?r=FUZZ (200 OK)",
+            "url": "response code: http://testphp.vulnweb.com/search.php?test=FUZZ (200 OK)",
+            "message": "200"
+        },
+        {
+            "url": "response code: http://testphp.vulnweb.com/secured/phpinfo.php?=FUZZ (200 OK)",
+            "message": "200"
+        },
+        {
+            "url": "response code: http://testphp.vulnweb.com/product.php?pic=FUZZ (200 OK)",
+            "message": "200"
+        },
+        {
+            "url": "response code: http://testphp.vulnweb.com/login.php?id=FUZZ&SlFY=FUZZ (200 OK)",
+            "message": "200"
+        },
+        {
+            "url": "response code: http://testphp.vulnweb.com/login.php?id=FUZZ (200 OK)",
+            "message": "200"
+        },
+        {
+            "url": "to fetch: http://testphp.vulnweb.com/redir.php?r=FUZZ&view=FUZZ&task=FUZZ&id=FUZZ (Get \"http://omeg0ivn7k95wloyezah7zcqghm7aw.burpcollaborator.net\": context deadline exceeded (Client.Timeout exceeded while awaiting headers))",
+            "message": "failed"
+        },
+        {
+            "url": "to fetch: http://testphp.vulnweb.com/artists.php?file=FUZZ (Get \"http://testphp.vulnweb.com/artists.php?file=http://omeg0ivn7k95wloyezah7zcqghm7aw.burpcollaborator.net\": context deadline exceeded (Client.Timeout exceeded while awaiting headers))",
+            "message": "failed"
+        },
+        {
+            "url": "to fetch: http://testphp.vulnweb.com/index.php?%25id%25=FUZZ&user=FUZZ (Get \"http://testphp.vulnweb.com/index.php?%25id%25=http://omeg0ivn7k95wloyezah7zcqghm7aw.burpcollaborator.net&user=FUZZ\": context deadline exceeded (Client.Timeout exceeded while awaiting headers))",
+            "message": "failed"
+        },
+        {
+            "url": "to fetch: http://testphp.vulnweb.com/hpp/params.php?aaaa%2F=FUZZ&p=FUZZ&pp=FUZZ (Get \"http://testphp.vulnweb.com/hpp/params.php?aaaa%2F=http://omeg0ivn7k95wloyezah7zcqghm7aw.burpcollaborator.net&p=FUZZ&pp=FUZZ\": context deadline exceeded (Client.Timeout exceeded while awaiting headers))",
+            "message": "failed"
+        },
+        {
+            "url": "to fetch: http://testphp.vulnweb.com/listproducts.php?cat=FUZZ (Get \"http://testphp.vulnweb.com/listproducts.php?cat=http://omeg0ivn7k95wloyezah7zcqghm7aw.burpcollaborator.net\": context deadline exceeded (Client.Timeout exceeded while awaiting headers))",
+            "message": "failed"
+        },
+        {
+            "url": "response code: http://testphp.vulnweb.com/AJAX/infoartist.php?id=FUZZ (200 OK)",
+            "message": "200"
+        },
+        {
+            "url": "response code: http://testphp.vulnweb.com/listproducts.php?id=FUZZ (200 OK)",
             "message": "200"
         }
     ]
