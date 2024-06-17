@@ -1,6 +1,7 @@
 import re
 import subprocess
 import json
+import dns.resolver
 import os
 import logging
 from flask import Flask, jsonify, request
@@ -21,6 +22,151 @@ from selenium.common.exceptions import NoSuchElementException
 from bs4 import BeautifulSoup
 from requests.exceptions import ConnectionError
 
+# Import the refactored RFI tool functions
+"""import pyfiglet
+import http.server
+import socketserver
+import threading
+from colorama import *
+
+# Colors via: https://www.delftstack.com/es/howto/python/python-print-colored-text/
+class bcolors:
+    OK = '\033[92m' # GREEN
+    WARNING = '\033[93m' # YELLOW
+    FAIL = '\033[91m' # RED
+    RESET = '\033[0m' # RESET COLOR
+
+PORTSERVERHTTP = 1221
+Handler = http.server.SimpleHTTPRequestHandler
+linea = "------------------------------------------------------------------------"
+banner = pyfiglet.figlet_format("RFI . PARADISE")
+print(banner)
+print(linea)
+whatis = "Remote File Inclusion Scanner and Exploiter"
+print(whatis.center(70))
+print(linea, "\n")
+
+def server():
+    class quietServer(http.server.SimpleHTTPRequestHandler):
+        def log_message(self, format, *args):
+            pass
+
+    with socketserver.TCPServer(("", PORTSERVERHTTP), quietServer) as httpd:
+        httpd.serve_forever()
+
+thread = threading.Thread(target=server)
+
+def scan_rfi_vulnerability(user, local_ip, url):
+    results = {"vulnerable": False, "details": []}
+    add_bb = url + 'http://textfiles.com/'
+    pet = requests.get(add_bb, timeout=10)
+    c = pet.status_code
+    respuesta = pet.text
+    thread.start()
+    if c == 200:
+        if "On the face" and "of this culture exist to this day" in respuesta:
+            results["details"].append("Possibility of vulnerability detected (1/3 scanned 1/1 vulnerable)")
+            second_scan = url + 'http://walk-in-the-park.de/'
+            ress = requests.get(second_scan)
+            ress2 = ress.text
+            if "Nordic Walking Pluspunkte" and "ller Muskeln beteilig" in ress2:
+                results["details"].append("Possibility of vulnerability detected (2/3 scanned 2/2 vulnerable)")
+                url_tercera_r = url + 'http://' + local_ip + ':1221/etc/passwd'
+                tercerarequest = requests.get(url_tercera_r, timeout=10)
+                url_tercera_r_code = tercerarequest.status_code
+                if url_tercera_r_code == 200:
+                    text_tercera_r = tercerarequest.text
+                    if "root" and "bin" and "sbin" in text_tercera_r:
+                        results["vulnerable"] = True
+                        results["details"].append("Possibility of vulnerability detected (3/3 scanned 3/3 vulnerable)")
+                        return results
+                    else:
+                        commandoo = 'echo pendrive >> /home/' + user + '/s12ingame'
+                        os.system(commandoo)
+                        intenting = url + 'http://' + local_ip + ':1221/s12ingame'
+                        pene = requests.get(intenting, timeout=10)
+                        textpene = pene.text
+                        if "pendrive" in textpene:
+                            results["vulnerable"] = True
+                            results["details"].append("Possibility of vulnerability detected (3/3 scanned 3/3 vulnerable)")
+                        else:
+                            results["details"].append("NO vulnerability detected (3/3 scanned 2/3 vulnerable)")
+                else:
+                    results["details"].append("Error")
+            else:
+                results["details"].append("NO vulnerability detected (2/3 scanned 1/2 vulnerable)")
+                url_tercera_r = url + 'http://' + local_ip + ':1221/etc/passwd'
+                tercerarequest = requests.get(url_tercera_r)
+                url_tercera_r_code = tercerarequest.status_code
+                if url_tercera_r_code == 200:
+                    text_tercera_r = tercerarequest.text
+                    if "root" and "bin" and "sbin" in text_tercera_r:
+                        results["vulnerable"] = True
+                        results["details"].append("Possibility of vulnerability detected (3/3 scanned 3/3 vulnerable)")
+                    else:
+                        commandoo = 'echo pendrive >> /home/' + user + '/s12ingame'
+                        os.system(commandoo)
+                        intenting = url + 'http://' + local_ip + ':1221/s12ingame'
+                        pene = requests.get(intenting)
+                        textpene = pene.text
+                        if "pendrive" in textpene:
+                            results["vulnerable"] = True
+                            results["details"].append("Possibility of vulnerability detected (3/3 scanned 3/3 vulnerable)")
+                        else:
+                            results["details"].append("NO vulnerability detected (3/3 scanned 1/3 vulnerable)")
+        else:
+            results["details"].append("NO vulnerability detected (1/3 scanned 0/1 vulnerable)")
+            second_scan = url + 'http://walk-in-the-park.de/'
+            ress = requests.get(second_scan)
+            ress2 = ress.text
+            if "Nordic Walking Pluspunkte" and "ller Muskeln beteilig" in ress2:
+                results["details"].append("Possibility of vulnerability detected (2/3 scanned 1/2 vulnerable)")
+                url_tercera_r = url + 'http://' + local_ip + ':1221/etc/passwd'
+                tercerarequest = requests.get(url_tercera_r)
+                url_tercera_r_code = tercerarequest.status_code
+                if url_tercera_r_code == 200:
+                    text_tercera_r = tercerarequest.text
+                    if "root" and "bin" and "sbin" in text_tercera_r:
+                        results["vulnerable"] = True
+                        results["details"].append("Possibility of vulnerability detected (3/3 scanned 2/3 vulnerable)")
+                    else:
+                        commandoo = 'echo pendrive >> /home/' + user + '/s12ingame'
+                        os.system(commandoo)
+                        intenting = url + 'http://' + local_ip + ':1221/s12ingame'
+                        pene = requests.get(intenting)
+                        textpene = pene.text
+                        if "pendrive" in textpene:
+                            results["vulnerable"] = True
+                            results["details"].append("Possibility of vulnerability detected (3/3 scanned 2/3 vulnerable)")
+                        else:
+                            results["details"].append("NO vulnerability detected (3/3 scanned 1/3 vulnerable)")
+            else:
+                results["details"].append("NO vulnerability detected (2/3 scanned 0/2 vulnerable)")
+                url_tercera_r = url + 'http://' + local_ip + ':1221/etc/passwd'
+                tercerarequest = requests.get(url_tercera_r)
+                url_tercera_r_code = tercerarequest.status_code
+                if url_tercera_r_code == 200:
+                    text_tercera_r = tercerarequest.text
+# Continuing from the previous code...
+
+                    if "root" and "bin" and "sbin" in text_tercera_r:
+                        results["vulnerable"] = True
+                        results["details"].append("Possibility of vulnerability detected (3/3 scanned 2/3 vulnerable)")
+                    else:
+                        commandoo = 'echo pendrive >> /home/' + user + '/s12ingame'
+                        os.system(commandoo)
+                        intenting = url + 'http://' + local_ip + ':1221/s12ingame'
+                        pene = requests.get(intenting)
+                        textpene = pene.text
+                        if "pendrive" in textpene:
+                            results["vulnerable"] = True
+                            results["details"].append("Possibility of vulnerability detected (3/3 scanned 2/3 vulnerable)")
+                        else:
+                            results["details"].append("NO vulnerability detected (3/3 scanned 1/3 vulnerable)")
+    else:
+        results["details"].append("Invalid URL")
+    return results
+"""
 # Configure logging
 dictConfig({
     'version': 1,
@@ -459,6 +605,91 @@ def check_csrf_vulnerabilities(wayback_urls):
 
     return csrf_results
 
+
+def fetch_server_version_info(validated_subdomains):
+    server_info = {}
+    for subdomain in validated_subdomains:
+        try:
+            response = requests.head(subdomain['subdomain'], timeout=5)
+            server_header = response.headers.get('Server', 'Unknown')
+            server_info[subdomain['subdomain']] = server_header
+        except requests.RequestException as e:
+            logging.error(f"Error fetching server info for {subdomain['subdomain']}: {e}")
+            server_info[subdomain['subdomain']] = 'Error'
+    return server_info
+
+def fetch_spf_dmarc_records(validated_subdomains):
+    spf_dmarc_records = {}
+    for subdomain in validated_subdomains:
+        domain = subdomain['subdomain'].split("//")[-1]
+        spf_record = []
+        dmarc_record = []
+        try:
+            answers = dns.resolver.resolve(domain, 'TXT')
+            for rdata in answers:
+                if 'v=spf1' in str(rdata):
+                    spf_record.append(str(rdata))
+        except (dns.resolver.NoAnswer, dns.resolver.NXDOMAIN, dns.resolver.Timeout) as e:
+            logging.error(f"Error fetching SPF record for {domain}: {e}")
+        
+        try:
+            answers = dns.resolver.resolve('_dmarc.' + domain, 'TXT')
+            for rdata in answers:
+                if 'v=DMARC1' in str(rdata):
+                    dmarc_record.append(str(rdata))
+        except (dns.resolver.NoAnswer, dns.resolver.NXDOMAIN, dns.resolver.Timeout) as e:
+            logging.error(f"Error fetching DMARC record for {domain}: {e}")
+
+        spf_dmarc_records[subdomain['subdomain']] = {
+            'spf': spf_record,
+            'dmarc': dmarc_record
+        }
+    return spf_dmarc_records
+
+def run_shcheck(subdomain):
+    original_dir = os.getcwd()
+    try:
+        # Change to the shcheck directory
+        os.chdir('shcheck')
+        # Execute shcheck.py
+        result = subprocess.run(['python', 'shcheck.py', subdomain], capture_output=True, text=True, check=True)
+        # Change back to the original directory
+        os.chdir(original_dir)
+        # Ensure the output is valid
+        output = result.stdout.strip()
+        if output:
+            return parse_shcheck_output(output)
+        else:
+            raise ValueError("Empty output from shcheck")
+    except subprocess.CalledProcessError as e:
+        os.chdir(original_dir)
+        logging.error(f"shcheck failed for {subdomain} with error {e}")
+        return {'error': 'shcheck execution failed'}
+    except Exception as e:
+        os.chdir(original_dir)
+        logging.error(f"Unexpected error: {e}")
+        return {'error': str(e)}
+
+def parse_shcheck_output(output):
+    # Initialize the dictionary to hold the extracted information
+    parsed_output = {"effective_url": "", "missing_headers": []}
+    lines = output.split("\n")
+    
+    for line in lines:
+        if "[*] Effective URL:" in line:
+            parsed_output["effective_url"] = line.split(": ")[1].strip()
+        elif "[!] Missing security header:" in line:
+            parsed_output["missing_headers"].append(line.split(": ")[1].strip())
+    
+    return parsed_output
+
+def fetch_security_headers(validated_subdomains):
+    security_headers = {}
+    for subdomain in validated_subdomains:
+        headers_result = run_shcheck(subdomain['subdomain'])
+        security_headers[subdomain['subdomain']] = headers_result
+    return security_headers
+
 @app.route('/api/subdomains', methods=['POST'])
 def get_subdomains():
     domain = request.json.get('domain')
@@ -491,20 +722,49 @@ def get_subdomains():
     save_data_to_file(domain, wayback403, 'wayback_urls_403_bypass_result.json')
     cors_scanner_result = execute_cors_scanner('subdomains.txt')
     save_data_to_file(domain , cors_scanner_result, 'cors_scanner_result.json')
-    
+
+    server_version_info = fetch_server_version_info(validated_subdomains)
+    save_data_to_file(domain, server_version_info, 'server_version_info.json')
+    spf_dmarc_records = fetch_spf_dmarc_records(validated_subdomains)
+    save_data_to_file(domain, spf_dmarc_records, 'spf_dmarc_records.json')
+      
+    security_headers = fetch_security_headers(validated_subdomains)
+    save_data_to_file(domain, security_headers, 'security_headers.json')
+
     return jsonify({
         'domain': domain,
         'validated_subdomains': validated_subdomains,
+        
         'wayback_urls': wayback_data,
         'paramspider_urls': paramspider_data,
         'csrf_results': csrf_results,
         'ssrf_results': ssrf_results,
         'wayback_403_results': wayback403,
         'cors_scanner_result': cors_scanner_result,
+       
+        'server_version_info': server_version_info,
+        'spf_dmarc_records': spf_dmarc_records, 
+        'security_headers': security_headers,
     })
     
+"""
+@app.route('/api/rfi_scan', methods=['POST'])
+def rfi_scan():
+    data = request.json
+    user = data.get('user')
+    local_ip = data.get('local_ip')
+    url = data.get('url')
 
+    if not user or not local_ip or not url:
+        return jsonify({'error': 'user, local_ip, and url are required fields'}), 400
 
+    # Call the scan_rfi_vulnerability function with the provided data
+    results = scan_rfi_vulnerability(user, local_ip, url)
+
+    return jsonify(results)
+    
+    """
 
 if __name__ == '__main__':
+    #thread.start()  # Start the HTTP server in a separate thread
     app.run(debug=os.getenv('DEBUG', 'False') == 'True')
