@@ -1,0 +1,218 @@
+{
+    "panimalar.ac.in": {
+        "https://panimalar.panimalar.ac.in": {
+            "effective_url": "\u001b[94mhttps://panimalar.panimalar.ac.in\u001b[0m",
+            "missing_headers": [
+                "\u001b[93mX-Frame-Options\u001b[0m",
+                "\u001b[93mX-Content-Type-Options\u001b[0m",
+                "\u001b[91mStrict-Transport-Security\u001b[0m",
+                "\u001b[93mContent-Security-Policy\u001b[0m",
+                "\u001b[93mReferrer-Policy\u001b[0m",
+                "\u001b[93mPermissions-Policy\u001b[0m",
+                "\u001b[93mCross-Origin-Embedder-Policy\u001b[0m",
+                "\u001b[93mCross-Origin-Resource-Policy\u001b[0m",
+                "\u001b[93mCross-Origin-Opener-Policy\u001b[0m"
+            ]
+        },
+        "https://cpcalendars.panimalar.ac.in": {
+            "effective_url": "",
+            "missing_headers": []
+        },
+        "https://panimalar1.panimalar.ac.in": {
+            "effective_url": "\u001b[94mhttps://panimalar1.panimalar.ac.in\u001b[0m",
+            "missing_headers": [
+                "\u001b[93mX-Frame-Options\u001b[0m",
+                "\u001b[93mX-Content-Type-Options\u001b[0m",
+                "\u001b[91mStrict-Transport-Security\u001b[0m",
+                "\u001b[93mContent-Security-Policy\u001b[0m",
+                "\u001b[93mReferrer-Policy\u001b[0m",
+                "\u001b[93mPermissions-Policy\u001b[0m",
+                "\u001b[93mCross-Origin-Embedder-Policy\u001b[0m",
+                "\u001b[93mCross-Origin-Resource-Policy\u001b[0m",
+                "\u001b[93mCross-Origin-Opener-Policy\u001b[0m"
+            ]
+        },
+        "https://www.panimalar.panimalar.ac.in": {
+            "effective_url": "\u001b[94mhttps://www.panimalar.panimalar.ac.in\u001b[0m",
+            "missing_headers": [
+                "\u001b[93mX-Frame-Options\u001b[0m",
+                "\u001b[93mX-Content-Type-Options\u001b[0m",
+                "\u001b[91mStrict-Transport-Security\u001b[0m",
+                "\u001b[93mContent-Security-Policy\u001b[0m",
+                "\u001b[93mReferrer-Policy\u001b[0m",
+                "\u001b[93mPermissions-Policy\u001b[0m",
+                "\u001b[93mCross-Origin-Embedder-Policy\u001b[0m",
+                "\u001b[93mCross-Origin-Resource-Policy\u001b[0m",
+                "\u001b[93mCross-Origin-Opener-Policy\u001b[0m"
+            ]
+        },
+        "https://cpcontacts.panimalar.ac.in": {
+            "effective_url": "",
+            "missing_headers": []
+        },
+        "https://www.panimalar1.panimalar.ac.in": {
+            "effective_url": "\u001b[94mhttps://www.panimalar1.panimalar.ac.in\u001b[0m",
+            "missing_headers": [
+                "\u001b[93mX-Frame-Options\u001b[0m",
+                "\u001b[93mX-Content-Type-Options\u001b[0m",
+                "\u001b[91mStrict-Transport-Security\u001b[0m",
+                "\u001b[93mContent-Security-Policy\u001b[0m",
+                "\u001b[93mReferrer-Policy\u001b[0m",
+                "\u001b[93mPermissions-Policy\u001b[0m",
+                "\u001b[93mCross-Origin-Embedder-Policy\u001b[0m",
+                "\u001b[93mCross-Origin-Resource-Policy\u001b[0m",
+                "\u001b[93mCross-Origin-Opener-Policy\u001b[0m"
+            ]
+        },
+        "https://webdisk.panimalar.ac.in": {
+            "effective_url": "\u001b[94mhttps://webdisk.panimalar.ac.in\u001b[0m",
+            "missing_headers": [
+                "\u001b[93mX-Frame-Options\u001b[0m",
+                "\u001b[93mX-Content-Type-Options\u001b[0m",
+                "\u001b[91mStrict-Transport-Security\u001b[0m",
+                "\u001b[93mContent-Security-Policy\u001b[0m",
+                "\u001b[93mReferrer-Policy\u001b[0m",
+                "\u001b[93mPermissions-Policy\u001b[0m",
+                "\u001b[93mCross-Origin-Embedder-Policy\u001b[0m",
+                "\u001b[93mCross-Origin-Resource-Policy\u001b[0m",
+                "\u001b[93mCross-Origin-Opener-Policy\u001b[0m"
+            ]
+        },
+        "https://cpanel.panimalar.ac.in": {
+            "effective_url": "\u001b[94mhttps://cpanel.panimalar.ac.in\u001b[0m",
+            "missing_headers": [
+                "\u001b[93mX-Frame-Options\u001b[0m",
+                "\u001b[93mX-Content-Type-Options\u001b[0m",
+                "\u001b[91mStrict-Transport-Security\u001b[0m",
+                "\u001b[93mContent-Security-Policy\u001b[0m",
+                "\u001b[93mReferrer-Policy\u001b[0m",
+                "\u001b[93mPermissions-Policy\u001b[0m",
+                "\u001b[93mCross-Origin-Embedder-Policy\u001b[0m",
+                "\u001b[93mCross-Origin-Resource-Policy\u001b[0m",
+                "\u001b[93mCross-Origin-Opener-Policy\u001b[0m"
+            ]
+        },
+        "https://webmail.panimalar.ac.in": {
+            "effective_url": "\u001b[94mhttps://webmail.panimalar.ac.in\u001b[0m",
+            "missing_headers": [
+                "\u001b[93mX-Frame-Options\u001b[0m",
+                "\u001b[93mX-Content-Type-Options\u001b[0m",
+                "\u001b[91mStrict-Transport-Security\u001b[0m",
+                "\u001b[93mContent-Security-Policy\u001b[0m",
+                "\u001b[93mReferrer-Policy\u001b[0m",
+                "\u001b[93mPermissions-Policy\u001b[0m",
+                "\u001b[93mCross-Origin-Embedder-Policy\u001b[0m",
+                "\u001b[93mCross-Origin-Resource-Policy\u001b[0m",
+                "\u001b[93mCross-Origin-Opener-Policy\u001b[0m"
+            ]
+        },
+        "https://webmail.coe.panimalar.ac.in": {
+            "effective_url": "\u001b[94mhttps://webmail.coe.panimalar.ac.in\u001b[0m",
+            "missing_headers": [
+                "\u001b[91mStrict-Transport-Security\u001b[0m",
+                "\u001b[93mContent-Security-Policy\u001b[0m",
+                "\u001b[93mReferrer-Policy\u001b[0m",
+                "\u001b[93mPermissions-Policy\u001b[0m",
+                "\u001b[93mCross-Origin-Embedder-Policy\u001b[0m",
+                "\u001b[93mCross-Origin-Resource-Policy\u001b[0m",
+                "\u001b[93mCross-Origin-Opener-Policy\u001b[0m"
+            ]
+        },
+        "https://cpanel.coe.panimalar.ac.in": {
+            "effective_url": "\u001b[94mhttps://cpanel.coe.panimalar.ac.in\u001b[0m",
+            "missing_headers": [
+                "\u001b[91mStrict-Transport-Security\u001b[0m",
+                "\u001b[93mContent-Security-Policy\u001b[0m",
+                "\u001b[93mReferrer-Policy\u001b[0m",
+                "\u001b[93mPermissions-Policy\u001b[0m",
+                "\u001b[93mCross-Origin-Embedder-Policy\u001b[0m",
+                "\u001b[93mCross-Origin-Resource-Policy\u001b[0m",
+                "\u001b[93mCross-Origin-Opener-Policy\u001b[0m"
+            ]
+        },
+        "https://mail.coe.panimalar.ac.in": {
+            "effective_url": "\u001b[94mhttps://mail.coe.panimalar.ac.in\u001b[0m",
+            "missing_headers": [
+                "\u001b[93mX-Frame-Options\u001b[0m",
+                "\u001b[93mX-Content-Type-Options\u001b[0m",
+                "\u001b[91mStrict-Transport-Security\u001b[0m",
+                "\u001b[93mContent-Security-Policy\u001b[0m",
+                "\u001b[93mReferrer-Policy\u001b[0m",
+                "\u001b[93mPermissions-Policy\u001b[0m",
+                "\u001b[93mCross-Origin-Embedder-Policy\u001b[0m",
+                "\u001b[93mCross-Origin-Resource-Policy\u001b[0m",
+                "\u001b[93mCross-Origin-Opener-Policy\u001b[0m"
+            ]
+        },
+        "https://coe.panimalar.ac.in": {
+            "effective_url": "\u001b[94mhttps://coe.panimalar.ac.in\u001b[0m",
+            "missing_headers": [
+                "\u001b[93mX-Frame-Options\u001b[0m",
+                "\u001b[93mX-Content-Type-Options\u001b[0m",
+                "\u001b[91mStrict-Transport-Security\u001b[0m",
+                "\u001b[93mContent-Security-Policy\u001b[0m",
+                "\u001b[93mReferrer-Policy\u001b[0m",
+                "\u001b[93mPermissions-Policy\u001b[0m",
+                "\u001b[93mCross-Origin-Embedder-Policy\u001b[0m",
+                "\u001b[93mCross-Origin-Resource-Policy\u001b[0m",
+                "\u001b[93mCross-Origin-Opener-Policy\u001b[0m"
+            ]
+        },
+        "https://www.coe.panimalar.ac.in": {
+            "effective_url": "\u001b[94mhttps://www.coe.panimalar.ac.in\u001b[0m",
+            "missing_headers": [
+                "\u001b[93mX-Frame-Options\u001b[0m",
+                "\u001b[93mX-Content-Type-Options\u001b[0m",
+                "\u001b[91mStrict-Transport-Security\u001b[0m",
+                "\u001b[93mContent-Security-Policy\u001b[0m",
+                "\u001b[93mReferrer-Policy\u001b[0m",
+                "\u001b[93mPermissions-Policy\u001b[0m",
+                "\u001b[93mCross-Origin-Embedder-Policy\u001b[0m",
+                "\u001b[93mCross-Origin-Resource-Policy\u001b[0m",
+                "\u001b[93mCross-Origin-Opener-Policy\u001b[0m"
+            ]
+        },
+        "https://panimalar.ac.in": {
+            "effective_url": "\u001b[94mhttps://panimalar.ac.in\u001b[0m",
+            "missing_headers": [
+                "\u001b[93mX-Frame-Options\u001b[0m",
+                "\u001b[93mX-Content-Type-Options\u001b[0m",
+                "\u001b[91mStrict-Transport-Security\u001b[0m",
+                "\u001b[93mContent-Security-Policy\u001b[0m",
+                "\u001b[93mReferrer-Policy\u001b[0m",
+                "\u001b[93mPermissions-Policy\u001b[0m",
+                "\u001b[93mCross-Origin-Embedder-Policy\u001b[0m",
+                "\u001b[93mCross-Origin-Resource-Policy\u001b[0m",
+                "\u001b[93mCross-Origin-Opener-Policy\u001b[0m"
+            ]
+        },
+        "https://mail.panimalar.ac.in": {
+            "effective_url": "\u001b[94mhttps://mail.panimalar.ac.in\u001b[0m",
+            "missing_headers": [
+                "\u001b[93mX-Frame-Options\u001b[0m",
+                "\u001b[93mX-Content-Type-Options\u001b[0m",
+                "\u001b[91mStrict-Transport-Security\u001b[0m",
+                "\u001b[93mContent-Security-Policy\u001b[0m",
+                "\u001b[93mReferrer-Policy\u001b[0m",
+                "\u001b[93mPermissions-Policy\u001b[0m",
+                "\u001b[93mCross-Origin-Embedder-Policy\u001b[0m",
+                "\u001b[93mCross-Origin-Resource-Policy\u001b[0m",
+                "\u001b[93mCross-Origin-Opener-Policy\u001b[0m"
+            ]
+        },
+        "https://www.panimalar.ac.in": {
+            "effective_url": "\u001b[94mhttps://www.panimalar.ac.in\u001b[0m",
+            "missing_headers": [
+                "\u001b[93mX-Frame-Options\u001b[0m",
+                "\u001b[93mX-Content-Type-Options\u001b[0m",
+                "\u001b[91mStrict-Transport-Security\u001b[0m",
+                "\u001b[93mContent-Security-Policy\u001b[0m",
+                "\u001b[93mReferrer-Policy\u001b[0m",
+                "\u001b[93mPermissions-Policy\u001b[0m",
+                "\u001b[93mCross-Origin-Embedder-Policy\u001b[0m",
+                "\u001b[93mCross-Origin-Resource-Policy\u001b[0m",
+                "\u001b[93mCross-Origin-Opener-Policy\u001b[0m"
+            ]
+        }
+    }
+}
