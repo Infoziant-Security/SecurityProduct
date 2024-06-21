@@ -1,0 +1,11 @@
+http://www.infoziant.com:80/
+http://www.infoziant.com:80/.html
+https://infoziant.com/.well-known/ai-plugin.json
+https://infoziant.com/.well-known/assetlinks.json
+https://infoziant.com/.well-known/dnt-policy.txt
+https://infoziant.com/.well-known/gpc.json
+https://infoziant.com/.well-known/nodeinfo
+https://infoziant.com/.well-known/openid-configuration
+https://infoziant.com/.well-known/security.txt
+https://infoziant.com/.well-known/trust.txt
+https://infoziant.com/0.jpg

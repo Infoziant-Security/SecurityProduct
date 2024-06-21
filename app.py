@@ -613,7 +613,7 @@ def get_subdomains():
     subdomains = list(subdomains_assetfinder.union(subdomains_subfinder))
     validated_subdomains = validate_subdomains(subdomains)
     save_data_to_file(domain, validated_subdomains, 'validated_subdomains.json')
-    '''
+    
     wayback_data = fetch_wayback_urls(validated_subdomains)
 
     save_data_to_file(domain, wayback_data, 'wayback_urls.json')
@@ -637,7 +637,7 @@ def get_subdomains():
     save_data_to_file(domain, wayback403, 'wayback_urls_403_bypass_result.json')
     cors_scanner_result = execute_cors_scanner('subdomains.txt')
     save_data_to_file(domain , cors_scanner_result, 'cors_scanner_result.json')
-    '''
+    
     server_version_info = fetch_server_version_info(validated_subdomains)
     save_data_to_file(domain, server_version_info, 'server_version_info.json')
     spf_dmarc_records = fetch_spf_dmarc_records(validated_subdomains)
@@ -649,14 +649,14 @@ def get_subdomains():
     return jsonify({
         'domain': domain,
         'validated_subdomains': validated_subdomains,
-        '''
+        
         'wayback_urls': wayback_data,
         'paramspider_urls': paramspider_data,
         'csrf_results': csrf_results,
         'ssrf_results': ssrf_results,
         'wayback_403_results': wayback403,
         'cors_scanner_result': cors_scanner_result,
-        '''
+        
         'server_version_info': server_version_info,
         'spf_dmarc_records': spf_dmarc_records, 
         'security_headers': security_headers,
@@ -664,5 +664,5 @@ def get_subdomains():
     
 
 if __name__ == '__main__':
-    #thread.start()  # Start the HTTP server in a separate thread
+
     app.run(debug=os.getenv('DEBUG', 'False') == 'True')
