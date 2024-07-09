@@ -3,6 +3,7 @@ import subprocess
 import json
 import dns.resolver
 import os
+import pexpect
 import logging
 from flask import Flask, jsonify, request
 from flask_cors import CORS
@@ -86,7 +87,7 @@ def validate_subdomains(subdomains):
 def fetch_wayback_urls(validated_subdomains):
     wayback_data = {}
     for subdomain in validated_subdomains:
-        if subdomain['status_code'] == '200':
+        if subdomain['status_code'] == '200' or subdomain['status_code'] == '301':
             result = run_subprocess(['waybackurls', subdomain['subdomain']])
             if result:
                 urls = result.stdout.splitlines()
@@ -404,63 +405,48 @@ def check403():
     return 'Wayback 403 Bypass check executed and results saved'\
         
 def get_csrf_token(url):
+    """Fetch CSRF token from a given URL."""
     try:
-        # Fetch the page content
-        response = requests.get(url)       
-        response.raise_for_status()  # Raise an error for HTTP errors
-        # Parse the HTML content to find the CSRF token
+        response = requests.get(url)
+        response.raise_for_status()  # Raise an error for bad responses
         soup = BeautifulSoup(response.text, 'html.parser')
-        csrf_token = None
-        # Example: Find CSRF token by looking for <input> tags with specific attributes
         csrf_input = soup.find('input', {'name': 'csrf_token'})
         if csrf_input:
-            csrf_token = csrf_input.get('value')
-
-        return csrf_token
-    except ConnectionError:
-        logging.error(f"Failed to establish a connection for URL: {url}")
-        return None
-    except Exception as e:
-        logging.error(f"An error occurred while fetching CSRF token for URL {url}: {e}")
+            return csrf_input.get('value')
+        else:
+            logging.warning(f"No CSRF token found at {url}")
+            return None
+    except requests.RequestException as e:
+        logging.error(f"Request failed for URL {url}: {e}")
         return None
 
 def check_csrf_vulnerability(url, csrf_token):
+    """Check if a URL is vulnerable to CSRF."""
     headers = {
         'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36'
     }
-
     data = {
-        'csrf_token': csrf_token,  # Use the retrieved CSRF token
-        'action': 'test_action'     # Replace with any necessary parameters
+        'csrf_token': csrf_token,
+        'action': 'test_action'  # Replace with any necessary parameters
     }
-
-    response = requests.post(url, headers=headers, data=data)
-
-    if response.status_code == 200:
-        return True
-    else:
+    try:
+        response = requests.post(url, headers=headers, data=data)
+        return response.status_code == 200
+    except requests.RequestException as e:
+        logging.error(f"Failed to post data to {url}: {e}")
         return False
 
-def check_csrf_vulnerabilities(wayback_urls):
-    csrf_results = []
-    for url in wayback_urls:
+def check_csrf_vulnerabilities(urls):
+    """Check a list of URLs for CSRF vulnerabilities."""
+    results = []
+    for url in urls:
         csrf_token = get_csrf_token(url)
         if csrf_token:
             is_vulnerable = check_csrf_vulnerability(url, csrf_token)
-            csrf_results.append({
-                'url': url,
-                'csrf_vulnerable': False,
-                'csrf_vulnerable': is_vulnerable
-            })
+            results.append({'url': url, 'csrf_vulnerable': is_vulnerable})
         else:
-            csrf_results.append({
-                'url': url,
-                'csrf_vulnerable': True,
-                'prob': 'CSRF token not found'
-            })
-
-    return csrf_results
-
+            results.append({'url': url, 'csrf_vulnerable': True, 'prob': 'CSRF token not found'})
+    return results
 
 vulnerable_versions = {
     'Apache': [
@@ -587,13 +573,11 @@ def parse_shcheck_output(output):
     # Initialize the dictionary to hold the extracted information
     parsed_output = {"effective_url": "", "missing_headers": []}
     lines = output.split("\n")
-    
     for line in lines:
         if "[*] Effective URL:" in line:
             parsed_output["effective_url"] = line.split(": ")[1].strip()
         elif "[!] Missing security header:" in line:
             parsed_output["missing_headers"].append(line.split(": ")[1].strip())
-    
     return parsed_output
 
 def fetch_security_headers(validated_subdomains):
@@ -602,6 +586,144 @@ def fetch_security_headers(validated_subdomains):
         headers_result = run_shcheck(subdomain['subdomain'])
         security_headers[subdomain['subdomain']] = headers_result
     return security_headers
+
+import pexpect
+
+def run_commix(url):
+    command = f'docker run -it commix --url={url}'
+    child = pexpect.spawn(command)
+    log_output = []
+
+    try:
+        while True:
+            index = child.expect([pexpect.TIMEOUT, pexpect.EOF, 'Do you want to follow? [Y/n] >'])
+            if index == 0:
+                log_output.append(child.before.decode('utf-8'))
+                break
+            elif index == 1:
+                log_output.append(child.before.decode('utf-8'))
+                break
+            elif index == 2:
+                child.sendline('y')
+                log_output.append(child.before.decode('utf-8') + 'y\n')
+    except Exception as e:
+        logging.error(f"Error running commix: {e}")
+
+    # Filter the log output to start from the specified message
+    filtered_output = []
+    start_logging = False
+    for line in log_output:
+        if 'Testing connection to the target URL.' in line:
+            start_logging = True
+        if start_logging:
+            filtered_output.append(line)
+
+    return ''.join(filtered_output)
+
+def run_commix_on_wayback_urls(domain):
+    wayback_urls = read_wayback_urls('wayback_urls.txt')
+    commix_results = []
+    for url in wayback_urls:
+        commix_output = run_commix(url)
+        commix_results.append({
+            'url': url,
+            'output': commix_output
+        })
+    commix_output_file = f'commix_results_{domain}.json'
+    with open(commix_output_file, 'w') as file:
+        json.dump({'commix_output': commix_results}, file, indent=4)
+    return commix_results, commix_output_file
+
+def run_smuggler(input_file):
+    smuggler_dir = 'smuggler'
+    payload_dir = os.path.join(smuggler_dir, 'payload')
+    
+    try:
+        with open(input_file, 'r') as file:
+            urls = file.read().splitlines()
+        
+        for url in urls:
+            command = ['python3', os.path.join(smuggler_dir, 'smuggler.py'), '--url', url]
+            subprocess.run(command, check=True)
+        
+        logging.info(f"Smuggler executed successfully with input file {input_file}")
+    except subprocess.CalledProcessError as e:
+        logging.error(f"Smuggler execution failed: {e}")
+        return None
+    
+    return payload_dir
+
+
+def aggregate_smuggler_results(payload_dir):
+    aggregated_results = {}
+    for filename in os.listdir(payload_dir):
+        file_path = os.path.join(payload_dir, filename)
+        with open(file_path, 'r') as file:
+            content = file.read()
+            aggregated_results[filename] = content
+    
+    output_file = 'smuggler_results.json'
+    with open(output_file, 'w') as json_file:
+        json.dump(aggregated_results, json_file, indent=4)
+    
+    return output_file
+
+def fetch_js_urls_from_website(url):
+    """
+    Fetch JavaScript URLs from the given website URL.
+    
+    Args:
+        url (str): The URL of the website to scan.
+    
+    Returns:
+        list: A list of JavaScript file URLs.
+    """
+    try:
+        response = requests.get(url)
+        response.raise_for_status()
+        soup = BeautifulSoup(response.text, 'html.parser')
+        js_urls = []
+        for script in soup.find_all('script'):
+            src = script.get('src')
+            if src:
+                if src.startswith('http'):
+                    js_urls.append(src)
+                else:
+                    js_urls.append(urllib.parse.urljoin(url, src))
+        return js_urls
+    except requests.RequestException as e:
+        logging.error(f"Failed to fetch JavaScript URLs from {url}: {e}")
+        return []
+
+
+def run_retire_js_on_urls(js_urls):
+    """
+    Run retire.js on the given JavaScript URLs.
+    
+    Args:
+        js_urls (list): List of JavaScript file URLs to scan.
+    
+    Returns:
+        dict: The JSON output from retire.js containing the scan results.
+    """
+    results = {}
+    for js_url in js_urls:
+        command = ['retire', '--path', js_url, '--outputformat', 'json']
+        result = run_subprocess(command)
+        if result:
+            try:
+                retire_js_output = json.loads(result.stdout)
+                results[js_url] = retire_js_output
+            except json.JSONDecodeError as e:
+                logging.error(f"Failed to parse retire.js output for {js_url}: {e}")
+                results[js_url] = {'error': 'Failed to parse retire.js output'}
+        else:
+            logging.error(f"retire.js execution failed for {js_url}")
+            results[js_url] = {'error': 'retire.js execution failed'}
+    return results
+
+
+
 
 @app.route('/api/subdomains', methods=['POST'])
 def get_subdomains():
@@ -613,56 +735,77 @@ def get_subdomains():
     subdomains = list(subdomains_assetfinder.union(subdomains_subfinder))
     validated_subdomains = validate_subdomains(subdomains)
     save_data_to_file(domain, validated_subdomains, 'validated_subdomains.json')
-    
     wayback_data = fetch_wayback_urls(validated_subdomains)
-
     save_data_to_file(domain, wayback_data, 'wayback_urls.json')
     save_urls_to_txt(wayback_data, 'wayback_urls.txt')
     paramspider_data = asyncio.run(fetch_paramspider_urls_async(validated_subdomains))
     save_data_to_file(domain, paramspider_data, 'paramspider_urls.json')
     save_urls_to_txt1(paramspider_data, 'paramspider_urls.txt')
+    
+    retire_js_results = {}
+    for subdomain in validated_subdomains:
+        if subdomain['status_code'] in ['200', '301']:
+            js_urls = fetch_js_urls_from_website(subdomain['subdomain'])
+            if js_urls:
+                retire_js_results[subdomain['subdomain']] = run_retire_js_on_urls(js_urls)
+    save_data_to_file(domain, retire_js_results, 'retire_js_results.json')
+    
+    smuggler_payload_dir = run_smuggler('wayback_urls.txt')
+    if smuggler_payload_dir:
+        smuggler_results_file = aggregate_smuggler_results(smuggler_payload_dir)
+    else:
+        smuggler_results_file = None
+    
+    commix_results, commix_output_file = run_commix_on_wayback_urls(domain)
+
+    server_version_info = fetch_server_version_info(validated_subdomains)
+    save_data_to_file(domain, server_version_info, 'server_version_info.json')
+    spf_dmarc_records = fetch_spf_dmarc_records(validated_subdomains)
+    save_data_to_file(domain, spf_dmarc_records, 'spf_dmarc_records.json')
+    security_headers = fetch_security_headers(validated_subdomains)
+    save_data_to_file(domain, security_headers, 'security_headers.json') 
     wayback_url = read_wayback_urls('wayback_urls.txt')
     csrf_results = check_csrf_vulnerabilities(wayback_url)
     save_data_to_file(domain, csrf_results, 'csrf_results.json')
     process_paramspider_results()
     aggregate_dalfox_results()
-    execute_clickjack()
-    #run_LFI_Finder()
     stdout, stderr = run_ssrf_finder('paramspider_urls.txt')
     if stderr:
         logging.error(f'SSRF Finder execution failed: {stderr}')
     ssrf_results = process_ssrf_output(stdout)
     save_data_to_file(domain, ssrf_results, 'ssrf_finder_results.json')
+
+    execute_clickjack()
+    run_LFI_Finder()
+    
     wayback403 = check403()
     save_data_to_file(domain, wayback403, 'wayback_urls_403_bypass_result.json')
     cors_scanner_result = execute_cors_scanner('subdomains.txt')
     save_data_to_file(domain , cors_scanner_result, 'cors_scanner_result.json')
     
-    server_version_info = fetch_server_version_info(validated_subdomains)
-    save_data_to_file(domain, server_version_info, 'server_version_info.json')
-    spf_dmarc_records = fetch_spf_dmarc_records(validated_subdomains)
-    save_data_to_file(domain, spf_dmarc_records, 'spf_dmarc_records.json')
-      
-    security_headers = fetch_security_headers(validated_subdomains)
-    save_data_to_file(domain, security_headers, 'security_headers.json')
+
+
+    
+
 
     return jsonify({
         'domain': domain,
         'validated_subdomains': validated_subdomains,
-        
         'wayback_urls': wayback_data,
         'paramspider_urls': paramspider_data,
         'csrf_results': csrf_results,
         'ssrf_results': ssrf_results,
         'wayback_403_results': wayback403,
         'cors_scanner_result': cors_scanner_result,
-        
         'server_version_info': server_version_info,
         'spf_dmarc_records': spf_dmarc_records, 
         'security_headers': security_headers,
+        'commix_results': commix_results,
+        'commix_output_file': commix_output_file,
+        'retire_js_results': retire_js_results
+
     })
     
 
 if __name__ == '__main__':
-
-    app.run(debug=os.getenv('DEBUG', 'False') == 'True')
+    app.run(debug=os.getenv('DEBUG', 'False') == 'True')    

