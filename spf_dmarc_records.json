@@ -1,0 +1,42 @@
+{
+    "infoziant.com": {
+        "https://ns1.infoziant.com": {
+            "spf": [],
+            "spf_vulnerable": true,
+            "dmarc": [],
+            "dmarc_vulnerable": true
+        },
+        "https://ns2.infoziant.com": {
+            "spf": [],
+            "spf_vulnerable": true,
+            "dmarc": [],
+            "dmarc_vulnerable": true
+        },
+        "https://mail.infoziant.com": {
+            "spf": [],
+            "spf_vulnerable": true,
+            "dmarc": [],
+            "dmarc_vulnerable": true
+        },
+        "https://www.infoziant.com": {
+            "spf": [],
+            "spf_vulnerable": true,
+            "dmarc": [],
+            "dmarc_vulnerable": true
+        },
+        "http://infoziant.com": {
+            "spf": [],
+            "spf_vulnerable": true,
+            "dmarc": [
+                "\"v=DMARC1; p=none;\""
+            ],
+            "dmarc_vulnerable": true
+        },
+        "https://test.infoziant.com": {
+            "spf": [],
+            "spf_vulnerable": true,
+            "dmarc": [],
+            "dmarc_vulnerable": true
+        }
+    }
+}

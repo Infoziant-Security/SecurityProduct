@@ -1,52 +1,28 @@
 {
-    "kitcbe.com": {
-        "https://portal.kitcbe.com": [],
-        "https://scholarshiptest.kitcbe.com": [],
-        "https://icstem.kitcbe.com": [],
-        "https://kitcbe.com": [
-            "https://kitcbe.com/wp-json/oembed/1.0/embed?url=FUZZ",
-            "http://kitcbe.com/?s=FUZZ",
-            "http://www.kitcbe.com/index.php?Itemid=FUZZ",
-            "http://www.kitcbe.com/index.php?option=FUZZ&view=FUZZ&Itemid=FUZZ&format=FUZZ&type=FUZZ",
-            "http://www.kitcbe.com/index.php?fontstyle=FUZZ",
-            "http://kitcbe.com/?p=FUZZ",
-            "https://kitcbe.com/Error.html?aspxerrorpath=FUZZ",
-            "http://kitcbe.com/wp-json/oembed/1.0/embed?url=FUZZ&format=FUZZ",
-            "http://www.kitcbe.com/index.php?option=FUZZ",
-            "http://www.kitcbe.com/index.php?option=FUZZ&view=FUZZ&Itemid=FUZZ",
-            "http://kitcbe.com/wp-login.php?redirect_to=FUZZ&reauth=FUZZ",
-            "http://www.kitcbe.com/index.php?option=FUZZ&view=FUZZ&id=FUZZ&Itemid=FUZZ",
-            "http://www.kitcbe.com/index.php?option=FUZZ&view=FUZZ&id=FUZZ&itemid=FUZZ",
-            "http://kitcbe.com/index.php?format=FUZZ&type=FUZZ",
-            "http://www.kitcbe.com/Faculties1.asp?dept=FUZZ",
-            "http://www.kitcbe.com/index.php?option=FUZZ&view=FUZZ&id=FUZZ",
-            "http://www.kitcbe.com/index.php?option=FUZZ&view=FUZZ&id=FUZZ&catid=FUZZ&Itemid=FUZZ",
-            "http://www.kitcbe.com/index.php?option=FUZZ&fileid=FUZZ&Itemid=FUZZ",
-            "http://www.kitcbe.com/index.php?option=FUZZ&view=FUZZ&id=FUZZ&catid=FUZZ",
-            "http://kitcbe.com/wp-json/oembed/1.0/embed?url=FUZZ"
+    "infoziant.com": {
+        "https://mail.infoziant.com": [],
+        "https://www.infoziant.com": [
+            "https://infoziant.com/?liquid-header=FUZZ",
+            "http://infoziant.com/onlinetest/generate.php?testids=FUZZ&section=FUZZ&paidTest=FUZZ&type=FUZZ",
+            "http://infoziant.com/onlinetest/test_generator.php?testData=FUZZ",
+            "http://www.infoziant.com/blog-detail.php?id=FUZZ",
+            "http://www.infoziant.com/payroll/index.php?page=FUZZ&Admin=FUZZ",
+            "https://infoziant.com/?liquid-footer=FUZZ",
+            "http://infoziant.com/blog-details.php?blogid=FUZZ",
+            "http://infoziant.com/infoassets/fonts/fontawesome-webfont3e6e.html?v=FUZZ",
+            "http://infoziant.com/blog-detail.php?id=FUZZ"
         ],
-        "https://icaimsre.kitcbe.com": [],
-        "https://www.kitcbe.com": [
-            "http://www.kitcbe.com/index.php?option=FUZZ&view=FUZZ&Itemid=FUZZ",
-            "http://kitcbe.com/?p=FUZZ",
-            "http://kitcbe.com/?s=FUZZ",
-            "http://kitcbe.com/wp-login.php?redirect_to=FUZZ&reauth=FUZZ",
-            "http://www.kitcbe.com/index.php?fontstyle=FUZZ",
-            "http://www.kitcbe.com/Faculties1.asp?dept=FUZZ",
-            "http://www.kitcbe.com/index.php?option=FUZZ&view=FUZZ&id=FUZZ&Itemid=FUZZ",
-            "http://www.kitcbe.com/index.php?option=FUZZ&view=FUZZ&id=FUZZ&catid=FUZZ",
-            "http://www.kitcbe.com/index.php?option=FUZZ&view=FUZZ&id=FUZZ&catid=FUZZ&Itemid=FUZZ",
-            "https://kitcbe.com/Error.html?aspxerrorpath=FUZZ",
-            "http://www.kitcbe.com/index.php?option=FUZZ&view=FUZZ&id=FUZZ&itemid=FUZZ",
-            "http://www.kitcbe.com/index.php?option=FUZZ",
-            "https://kitcbe.com/wp-json/oembed/1.0/embed?url=FUZZ",
-            "http://www.kitcbe.com/index.php?option=FUZZ&view=FUZZ&Itemid=FUZZ&format=FUZZ&type=FUZZ",
-            "http://kitcbe.com/wp-json/oembed/1.0/embed?url=FUZZ",
-            "http://www.kitcbe.com/index.php?Itemid=FUZZ",
-            "http://www.kitcbe.com/index.php?option=FUZZ&fileid=FUZZ&Itemid=FUZZ",
-            "http://www.kitcbe.com/index.php?option=FUZZ&view=FUZZ&id=FUZZ",
-            "http://kitcbe.com/index.php?format=FUZZ&type=FUZZ",
-            "http://kitcbe.com/wp-json/oembed/1.0/embed?url=FUZZ&format=FUZZ"
-        ]
+        "http://infoziant.com": [
+            "http://infoziant.com/infoassets/fonts/fontawesome-webfont3e6e.html?v=FUZZ",
+            "http://infoziant.com/onlinetest/test_generator.php?testData=FUZZ",
+            "http://www.infoziant.com/blog-detail.php?id=FUZZ",
+            "http://infoziant.com/blog-details.php?blogid=FUZZ",
+            "https://infoziant.com/?liquid-header=FUZZ",
+            "http://infoziant.com/onlinetest/generate.php?testids=FUZZ&section=FUZZ&paidTest=FUZZ&type=FUZZ",
+            "http://infoziant.com/blog-detail.php?id=FUZZ",
+            "http://www.infoziant.com/payroll/index.php?page=FUZZ&Admin=FUZZ",
+            "https://infoziant.com/?liquid-footer=FUZZ"
+        ],
+        "https://test.infoziant.com": []
     }
 }

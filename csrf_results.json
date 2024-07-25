@@ -1,0 +1,4764 @@
+{
+    "infoziant.com": [
+        {
+            "url": "",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://www.infoziant.com:80/",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://www.infoziant.com:80/.html",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://infoziant.com/.well-known/ai-plugin.json",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://infoziant.com/.well-known/assetlinks.json",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://infoziant.com/.well-known/dnt-policy.txt",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://infoziant.com/.well-known/gpc.json",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://infoziant.com/.well-known/nodeinfo",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://infoziant.com/.well-known/openid-configuration",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://infoziant.com/.well-known/security.txt",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://infoziant.com/.well-known/trust.txt",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://infoziant.com/0.jpg",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://infoziant.com/?liquid-footer=inner-page-footer-1",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://infoziant.com/?liquid-footer=inner-page-footer-4",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://infoziant.com/?liquid-footer=main-footer",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://infoziant.com/?liquid-header=asymmetric-agency-main-header-inner",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://infoziant.com/?liquid-header=main-header",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://infoziant.com/about-us/",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://www.infoziant.com:80/about-us.php",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com:80/about_1.html",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://www.infoziant.com:80/About_Us",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://www.infoziant.com:80/aboutus.php",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://www.infoziant.com/aboutus/css/bootstrap.css",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://www.infoziant.com/aboutus/css/style.css",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://www.infoziant.com/aboutus/js/script.js",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://infoziant.com/ads.txt",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://www.infoziant.com:80/android_etutor.php",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com/animate.css",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://infoziant.com/app-ads.txt",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com/apple-touch-icon.html",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://www.infoziant.com/appr/appr1.jpg",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://www.infoziant.com/appr/appr2.jpg",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://www.infoziant.com/appr/appr3.jpg",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://www.infoziant.com/appr/appr4.jpg",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://www.infoziant.com/appr/appr5.jpg",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://www.infoziant.com/appr/appr6.jpg",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://infoziant.com/author/admin/",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://infoziant.com/blog/",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://infoziant.com/blog-detail.php",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://www.infoziant.com:80/blog-detail.php?id=1",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com/blog-detail.php?id=10",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com/blog-detail.php?id=11",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com/blog-detail.php?id=12",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com/blog-detail.php?id=13",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com/blog-detail.php?id=14",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com/blog-detail.php?id=15",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com/blog-detail.php?id=16",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com/blog-detail.php?id=17",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com/blog-detail.php?id=18",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com/blog-detail.php?id=19",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://www.infoziant.com:80/blog-detail.php?id=2",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com/blog-detail.php?id=20",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com/blog-detail.php?id=21",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com/blog-detail.php?id=22",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://www.infoziant.com:80/blog-detail.php?id=3",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com/blog-detail.php?id=4",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com/blog-detail.php?id=5",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com/blog-detail.php?id=6",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com/blog-detail.php?id=7",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com/blog-detail.php?id=8",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com/blog-detail.php?id=9",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com:80/blog-details.php",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com/blog-details.php?blogid=1",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com/blog-details.php?blogid=10",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com/blog-details.php?blogid=11",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com/blog-details.php?blogid=12",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com/blog-details.php?blogid=13",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com/blog-details.php?blogid=14",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com/blog-details.php?blogid=15",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com/blog-details.php?blogid=16",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com/blog-details.php?blogid=17",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com/blog-details.php?blogid=18",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com/blog-details.php?blogid=19",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com/blog-details.php?blogid=2",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com/blog-details.php?blogid=20",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com/blog-details.php?blogid=21",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com/blog-details.php?blogid=22",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com/blog-details.php?blogid=3",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com/blog-details.php?blogid=4",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com/blog-details.php?blogid=5",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com/blog-details.php?blogid=6",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com/blog-details.php?blogid=7",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com/blog-details.php?blogid=8",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com/blog-details.php?blogid=9",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://www.infoziant.com:80/blog.html",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com:80/blog.php",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://infoziant.com/blog/ban-1.jpg",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://infoziant.com/blog/ban-2.jpg",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://infoziant.com/blog/ban-3.png",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://infoziant.com/blog/blog-1.jpg",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://infoziant.com/blog/blog-10.jpg",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://infoziant.com/blog/blog-11.jpg",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://infoziant.com/blog/blog-12.jpg",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://infoziant.com/blog/blog-13.jpg",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://infoziant.com/blog/blog-14.jpg",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://infoziant.com/blog/blog-15.jpg",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://infoziant.com/blog/blog-16.jpg",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://infoziant.com/blog/blog-17.jpg",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://infoziant.com/blog/blog-18.jpg",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://infoziant.com/blog/blog-2.jpg",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://infoziant.com/blog/blog-20.jpg",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://infoziant.com/blog/blog-21.jpg",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://infoziant.com/blog/blog-22.jpg",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://infoziant.com/blog/blog-3.jpg",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://infoziant.com/blog/blog-4.jpg",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://infoziant.com/blog/blog-5.jpg",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://infoziant.com/blog/blog-6.jpg",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://infoziant.com/blog/blog-7.jpg",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://infoziant.com/blog/blog-8.jpg",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://infoziant.com/blog/blog-9.jpg",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://infoziant.com/blog/POC/1-poc-1.jpg",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://infoziant.com/blog/POC/1-poc-2.png",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://infoziant.com/blog/POC/1-poc-3.png",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://infoziant.com/blog/POC/1-poc-4.png",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://infoziant.com/blog/POC/2-poc-1.png",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://infoziant.com/blog/POC/3-poc-1.png",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://www.infoziant.com:80/captchacheck",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://infoziant.com/category/blog-single/",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://infoziant.com/category/modern/",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com/cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com/cdnjs.cloudflare.com/ajax/libs/highlight.js/8.6/highlight.min.js",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com/cgi-sys/suspendedpage.cgi",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://www.infoziant.com:80/check",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://www.infoziant.com/clientlogo/didask.jpg",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://www.infoziant.com/clientlogo/dymax.png",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://www.infoziant.com/clientlogo/focus.png",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://www.infoziant.com/clientlogo/hcl.png",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://www.infoziant.com/clientlogo/medall.png",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://www.infoziant.com/clientlogo/mphasis.png",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://www.infoziant.com/clientlogo/oasys.png",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://www.infoziant.com/clientlogo/smartscience.jpg",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://www.infoziant.com/clientlogo/swift.PNG",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://www.infoziant.com/clientlogo/techm.png",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://www.infoziant.com:80/consultingservices.php",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://infoziant.com/contact/",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com:80/contact%20us.html",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://www.infoziant.com:80/contact+us.html",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://www.infoziant.com:80/contact.php",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://www.infoziant.com:80/Contact_Us",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://www.infoziant.com:80/contactus.html",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com:80/contactus.php",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://www.infoziant.com:80/cpanel",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com:80/cpannel",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com:80/cpnel",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com/css/AjaxLoader.html",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://www.infoziant.com/css/animate.min.css",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://www.infoziant.com/css/animate1.min.css",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://www.infoziant.com/css/appr.css",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com/css/bootstrap.min.css",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com/css/breakingNews.css",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://www.infoziant.com/css/carosal.css",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com/css/demo.css",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com/css/div.css",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com/css/easy-sidebar.css",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://www.infoziant.com/css/fancybox.min.css",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com/css/flaticon/css/flaticon.css",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com/css/flaticon/fonts/flaticon.eot",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com/css/flaticon/fonts/flaticon.svg",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com/css/flaticon/fonts/flaticon.ttf",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com/css/flaticon/fonts/flaticon.woff",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://www.infoziant.com/css/flexslider.css",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com/css/font-awesome/css/font-awesome.css",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com/css/font-awesome/css/font-awesome.min.css",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com/css/font-awesome/fonts/fontawesome-webfont.ttf@v=4.2.0",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com/css/font-awesome/fonts/fontawesome-webfont.woff@v=4.2.0",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com/css/font-awesome/fonts/fontawesome-webfontd41d.eot",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com/css/font-awesome/fonts/fontawesome-webfonte0a5.eot?v=4.3.0",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com/css/font-awesome/fonts/fontawesome-webfonte0a5.svg?v=4.3.0",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com/css/font-awesome/fonts/fontawesome-webfonte0a5.ttf?v=4.3.0",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com/css/font-awesome/fonts/fontawesome-webfonte0a5.woff2?v=4.3.0",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com/css/font-awesome/fonts/fontawesome-webfonte0a5.woff?v=4.3.0",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com/css/grabbing.html",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://www.infoziant.com/css/grabbing.png",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://www.infoziant.com/css/icons-fonts.css",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com/css/owl.carousel.css",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com/css/owl.theme.css",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com/css/reset.css",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com/css/responsive-leyouts.css",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com/css/Simple-Line-Icons-Webfont/simple-line-icons.css",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com/css/spinkit/spinkit.css",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com/css/style.css",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://www.infoziant.com/css/topnavscroll.css",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://infoziant.com/cybersecurity-basics-for-cryptocurrency-investors/",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://infoziant.com/demo/agri",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com:80/demo/infoziant",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com:80/demo/infoziant/about_1.html",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com:80/demo/infoziant/contact%20us.html",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com:80/demo/infoziant/Development.html",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com:80/demo/infoziant/Multimedia.html",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com:80/demo/infoziant/security.html",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com:80/demo/onlineexam11",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com:80/demo/project_training",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com:80/demo/studentportal/home.php",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com:80/demo/ufgroup",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com:80/demo/ufgroup/index.html",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com:80/demo/ufgroup1",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://www.infoziant.com/Development/",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com:80/Development.html",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://www.infoziant.com:80/Development.php",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://infoziant.com/digital-safety-nets-exploring-the-impact-of-cybersecurity-on-ux-design/",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://www.infoziant.com:80/digmart.php",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com/dist/css/styles2.css",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://www.infoziant.com:80/dotnetsharepoint.php",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://www.infoziant.com/events/event_1.jpg",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://www.infoziant.com/events/event_10.jpeg",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://www.infoziant.com/events/event_11.jpeg",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://www.infoziant.com/events/event_13.jpeg",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://www.infoziant.com/events/event_2.jpg",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://www.infoziant.com/events/event_2af.jpeg",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://www.infoziant.com/events/event_3.jpeg",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://www.infoziant.com/events/event_4.jpeg",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://www.infoziant.com/events/event_9.jpeg",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://www.infoziant.com/favicon.ico",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://www.infoziant.com/finslider/css/AjaxLoader.gif",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://www.infoziant.com/finslider/css/grabbing.png",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://www.infoziant.com/finslider/css/owl.carousel.min.css",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://www.infoziant.com/finslider/css/owl.theme.min.css",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://www.infoziant.com/finslider/css/team_style.css",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://www.infoziant.com/finslider/js/owl.carousel.min.js",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://www.infoziant.com/finslider/js/script.js",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com/fonts.googleapis.com/css@family=Raleway_3A100,200,300,400,500,600,700,800,900",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com/fonts/codropsicons/codropsicons.eot",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com/fonts/codropsicons/codropsicons.svg",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com/fonts/codropsicons/codropsicons.ttf",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com/fonts/codropsicons/codropsicons.woff",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com/fonts/ecoicons/ecoicon.eot",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com/fonts/ecoicons/ecoicon.svg",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com/fonts/ecoicons/ecoicon.ttf",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com/fonts/ecoicons/ecoicon.woff",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://www.infoziant.com/fonts/ElegantIcons.eot",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://www.infoziant.com/fonts/ElegantIcons.svg",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://www.infoziant.com/fonts/ElegantIcons.ttf",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://www.infoziant.com/fonts/ElegantIcons.woff",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://www.infoziant.com/fonts/ElegantIconsd41d.eot",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://www.infoziant.com/fonts/fontawesome-webfont78ce.eot?v=4.2.0",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://www.infoziant.com/fonts/fontawesome-webfont78ce.svg?v=4.2.0",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://www.infoziant.com/fonts/fontawesome-webfont78ce.ttf?v=4.2.0",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://www.infoziant.com/fonts/fontawesome-webfont78ce.woff?v=4.2.0",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://www.infoziant.com/fonts/fontawesome-webfontd41d.eot",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com/fonts/glyphicons-halflings-regular.eot",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com/fonts/glyphicons-halflings-regular.svg",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com/fonts/glyphicons-halflings-regular.ttf",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com/fonts/glyphicons-halflings-regular.woff",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com/fonts/glyphicons-halflings-regular.woff2",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com/fonts/glyphicons-halflings-regulard41d.eot",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://www.infoziant.com/fonts/linea-icons.eot",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://www.infoziant.com/fonts/linea-icons.svg",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://www.infoziant.com/fonts/linea-icons.ttf",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://www.infoziant.com/fonts/linea-icons.woff",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://www.infoziant.com/fonts/linea-iconsd41d.eot",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://infoziant.com/how-to-defend-your-enterprises-infrastructure-with-firewall-security-assessment/",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://infoziant.com/how-to-ensure-effective-mobile-application-security-testing-in-2020/",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com/html5shim.googlecode.com/svn/trunk/html5.js",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com:80/ieee",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com:80/ieee/index.php",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://infoziant.com/image/1.jpg",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://www.infoziant.com/image/4.jpg",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://www.infoziant.com/image/5.jpg",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://www.infoziant.com/image/6.jpg",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://www.infoziant.com/image/company-logo-bg.jpg",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://www.infoziant.com/image/datascienceside.jpg",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://infoziant.com/image/forblog.jpg",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://www.infoziant.com/image/mobapplication.jpg",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://www.infoziant.com/image/nptelbg.jpg",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://www.infoziant.com/image/nptellogo.PNG",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://infoziant.com/image/swift.PNG",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://www.infoziant.com/image/under_dev.gif",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com/images/01.png",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://infoziant.com/images/1Chameleon%20Virus%20that%20Spreads%20Across%20WiFi%20Access%20Points%20like%20Common%20Cold.png",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://infoziant.com/images/2Chameleon%20Virus%20that%20Spreads%20Across%20WiFi%20Access%20Points%20like%20Common%20Cold.png",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com/images/404.jpg",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com/images/5.jpg",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com/images/9.jpg",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com/images/about.jpg",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://infoziant.com/images/adobe-flash-player-download.png",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://infoziant.com/images/Advance%20Phishing%20Attacks%20using%20HTML5%20Full-screen%20API.png",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://infoziant.com/images/Android%20iBanking%20Trojan%20Source%20Code%20Leaked.jpeg",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://infoziant.com/images/Android%20iBanking%20Trojan%20Source%20Code%20Leaked.png",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com/images/api.jpg",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com/images/bag-ico.html",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com/images/bg/1.jpg",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com/images/bg/11.jpg",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com/images/bg/2.jpg",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com/images/bg/3.jpg",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com/images/bg/5.jpg",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com/images/bg/abt.png",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com/images/bg/bg-counter.jpg",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com/images/bg/bg-video.jpg",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com/images/bg/bullet.png",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com/images/bg/info.png",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com/images/bg/is.png",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com/images/bg/man-img.png",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com/images/bg/p1.png",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com/images/bg/phone.jpg",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com/images/bg/test-bg.jpg",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com/images/blog/1.jpg",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com/images/blog/2.jpg",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com/images/blog/3.jpg",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com/images/blog/apple.jpg",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com/images/blog/Chameleon.jpg",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com/images/blog/cxss.jpg",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com/images/blog/dell.jpg",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com/images/blog/facebook.jpg",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com/images/blog/fbbuy.jpg",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com/images/blog/fbfake.jpg",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com/images/blog/flash.jpg",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com/images/blog/gmailpass.jpg",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com/images/blog/google.jpg",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com/images/blog/hacking.jpg",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com/images/blog/html.jpg",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com/images/blog/ibanking.jpg",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com/images/blog/phishing.jpg",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com/images/blog/reengineering.jpg",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com/images/blog/session-hijack.jpg",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com/images/blog/spoofing.jpg",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com/images/blog/twitter.jpg",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com/images/blog/webcamera.jpg",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://www.infoziant.com/images/box-icons.html",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://www.infoziant.com/images/caret.html",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://infoziant.com/images/Chameleon%20Virus%20that%20Spreads%20Across%20WiFi%20Access%20Points%20like%20Common%20Cold.jpg",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com/images/clientsbg.png",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com/images/countdown.jpg",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com/images/database.jpg",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://infoziant.com/images/Dell-XPS-18-e1439157469296.jpg",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com/images/enterprise.jpg",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com/images/erp.png",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://www.infoziant.com/images/f-box4-bg.html",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com/images/favicon.png",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://www.infoziant.com/images/favicon/apple-touch-icon-114x114.png",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://www.infoziant.com/images/favicon/apple-touch-icon-72x72.png",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://www.infoziant.com/images/favicon/apple-touch-icon.png",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://www.infoziant.com/images/fes2.jpg",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://www.infoziant.com/images/fes3.jpg",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com/images/firewall.jpg",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com/images/footer.jpg",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://infoziant.com/images/Gmail%20Password%20Reset%20Vulnerability%20Rejected%20by%20Google%20Security%20Team%202013.jpg",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://infoziant.com/images/Gmail%20Password%20Reset%20Vulnerability1.jpg",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://infoziant.com/images/Gmail%20Password%20Reset%20Vulnerability3.png",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://infoziant.com/images/Gmail%20Password%20Reset%20Vulnerability5.png",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://infoziant.com/images/Gmail%20Password%20Reset%20Vulnerability6.png",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://infoziant.com/images/Google%20Plus2.png",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://infoziant.com/images/Google%20Plus3.png",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://infoziant.com/images/Google%20Plus4.png",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://infoziant.com/images/Google%20Plus5.png",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://infoziant.com/images/google-plus.jpg",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://infoziant.com/images/google1.jpg",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com/images/graphical%20design.png",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com/images/head/1.jpg",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com/images/head/bg-blog-title.jpg",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com/images/head/bg-page-title.jpg",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com/images/head/bg-shop-title.jpg",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com/images/home/projects/1.jpg",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com/images/home/projects/2.jpg",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com/images/home/projects/3.jpg",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://www.infoziant.com/images/icon-get-theme.html",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com/images/infoziant.png",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://www.infoziant.com/images/list-icons.html",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com/images/logo-light.png",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com/images/logo.png",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://www.infoziant.com/images/logoicon.ico",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com/images/media2.jpg",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com/images/mobile.png",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com/images/mobileapp.png",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com/images/mobtest.jpg",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com/images/network.jpg",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://infoziant.com/images/New%20Phishing%20Attack%20for%20Google%20Drive1.png",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com/images/onlinemarketing.png",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://www.infoziant.com/images/output-onlinepngtools%20(10).png",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com/images/palgero-theme.png",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com/images/pattern.jpg",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com/images/pentest.jpg",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://infoziant.com/images/reverse-engineering.jpg",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com/images/revslider/slider-01.jpg",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com/images/revslider/slider-02.jpg",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com/images/revslider/slider-03.jpg",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com/images/revslider/slider-04.jpg",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com/images/richinternet.png",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com/images/scroll-top-arrow.png",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com/images/security.jpg",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com/images/server.jpg",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com/images/sliders/slide1_bg.jpg",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com/images/sliders/slide2_img1.png",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com/images/sliders/slide3_img1.png",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://infoziant.com/images/Software%20Reverse%20Engineering%20Basics1.png",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://infoziant.com/images/Software%20Reverse%20Engineering%20Basics2.png",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://infoziant.com/images/Software%20Reverse%20Engineering%20Basics3.png",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com/images/sourcecode.jpg",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://infoziant.com/images/SQL%20injection%20in%20itcops%20websiteaa.jpg",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://infoziant.com/images/SQL%20injection%20in%20tamilnadumlas.com.png",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://infoziant.com/images/SQL%20injection%20in%20tamilnadumlasiicom.png",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://www.infoziant.com/images/static-media/img-alfa-wide-1024.png",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://www.infoziant.com/images/static-media/img-alfa-wide-768.png",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://www.infoziant.com/images/static-media/img-alfa-wide.png",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://www.infoziant.com/images/static-media/video-bg.jpg",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://infoziant.com/images/track%20Spoofing%20e-mail.jpg",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://www.infoziant.com/images/under-const.jpg",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com/images/vertical-images/1.html",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com/images/vertical-images/2.html",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com/images/vertical-images/3.html",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com/images/vertical-images/4.html",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://infoziant.com/images/Web%20Camera%20Exploit%20using%20Clickjacking%20Attack1.jpg",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://infoziant.com/images/Web%20Camera%20Exploit%20using%20Clickjacking%20Attack4.png",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com/images/webapp.png",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com/images/webpentest.jpg",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://www.infoziant.com/images/work-proc-bg.jpg",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://infoziant.com/images/xss2.png",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://infoziant.com/images/xss3.png",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://infoziant.com/images/xss4.png",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com/img/bn-arrows.png",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://www.infoziant.com:80/index.html",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com/index.php",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com/infoassets/css/animate.min.css",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com/infoassets/css/bootstrap.min.css",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com/infoassets/css/font-awesome.min.css",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com/infoassets/css/magnific-popup.css",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com/infoassets/css/owl.carousel.min.css",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com/infoassets/css/owl.theme.default.min.css",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com/infoassets/css/owl.video.play.html",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com/infoassets/css/responsive.css",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com/infoassets/css/style.css",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com/infoassets/fonts/fontawesome-webfont3e6e.eot?v=4.7.0",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com/infoassets/fonts/fontawesome-webfont3e6e.html?v=4.7.0",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com/infoassets/fonts/fontawesome-webfont3e6e.svg?v=4.7.0",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com/infoassets/fonts/fontawesome-webfont3e6e.ttf?v=4.7.0",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com/infoassets/fonts/fontawesome-webfont3e6e.woff?v=4.7.0",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com/infoassets/fonts/fontawesome-webfontd41d.eot",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com/infoassets/img/company-logo-bg.jpg",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com/infoassets/img/home-bg1.jpg",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com/infoassets/js/bootstrap.min.js",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com/infoassets/js/counterup.min.js",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com/infoassets/js/jquery-1.12.4.min.js",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com/infoassets/js/jquery.counterup.min.js",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com/infoassets/js/jquery.magnific-popup.min.js",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com/infoassets/js/main.js",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com/infoassets/js/owl.carousel.min.js",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com/infoassets/js/popper.min.js",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com/infoassets/js/wow.min.js",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com/infocss/AjaxLoader.gif",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com/infocss/animations.css",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com/infocss/full-slider.css",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com/infocss/grabbing.png",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com/infocss/header.css",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com/infocss/owl.carousel.min.css",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com/infocss/owl.theme.min.css",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com/infocss/style.css",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com/infocss/timeline.css",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com/infoimages/app.jpg",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com/infoimages/iot.png",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com/infoimages/is1.png",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com/infoimages/isg.png",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com/infoimages/logo.ico",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com/infoimages/logo.png",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com/infoimages/profile.png",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com/infoimages/web.png",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com/infojs/bootstrap.bundle.min.js",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com/infojs/css3-animate-it.js",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com/infojs/owl.carousel.min.js",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com/infojs/script.js",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://www.infoziant.com:80/interns.php",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://www.infoziant.com:80/iothealthcare.php",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://www.infoziant.com:80/is.html",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com:80/is.php",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://www.infoziant.com:80/itsolution.php",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://www.infoziant.com:80/java.html",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com:80/java.php",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://www.infoziant.com:80/javaswms.php",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com/js/accordion/accordion.css",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com/js/accordion/custom.js",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com/js/bootstrap.min.js",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com/js/breakingNews.js",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://www.infoziant.com/js/carosal.js",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://www.infoziant.com/js/contact-form-validation.min.js",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://www.infoziant.com/js/fancybox.min.js",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com/js/flexslider/flexslider.css",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com/js/flexslider/jquery.flexslider.js",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://www.infoziant.com/js/gmap3.min.js",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://www.infoziant.com/js/images/loc-marker.png",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://www.infoziant.com/js/imagesloaded.pkgd.min.js",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://www.infoziant.com/js/isotope.pkgd.min.js",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://www.infoziant.com/js/jquery-1.11.2.min.js",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com/js/jquery-ui.min.js",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://www.infoziant.com/js/jquery.appear.js",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com/js/jquery.cookie.js",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://www.infoziant.com/js/jquery.countTo.js",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com/js/jquery.js",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://www.infoziant.com/js/jquery.magnific-popup.min.js",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com/js/jquery.style.switcher.js",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://www.infoziant.com/js/jquery.validate.min.js",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com/js/main.js",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com/js/mainmenu/bootstrap.min.css",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com/js/mainmenu/bootstrap.min.js",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com/js/mainmenu/customeUI.js",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com/js/mainmenu/demo.css",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com/js/mainmenu/menu.css",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com/js/mainmenu/modernizr.custom.75180.js",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com/js/mainmenu/sticky.css",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://www.infoziant.com/js/masonry.pkgd.min.js",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com/js/modernizr.custom.04022.js",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com/js/owl.carousel.min.js",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com/js/pp/css/prettyPhoto.css",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com/js/pp/images/prettyPhoto/dark_rounded/btnNext.png",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com/js/pp/images/prettyPhoto/dark_rounded/btnPrevious.png",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com/js/pp/images/prettyPhoto/dark_rounded/contentPattern.png",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com/js/pp/images/prettyPhoto/dark_rounded/loader.gif",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com/js/pp/images/prettyPhoto/dark_rounded/sprite.png",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com/js/pp/images/prettyPhoto/dark_square/btnNext.png",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com/js/pp/images/prettyPhoto/dark_square/btnPrevious.png",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com/js/pp/images/prettyPhoto/dark_square/loader.gif",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com/js/pp/images/prettyPhoto/dark_square/sprite.png",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com/js/pp/images/prettyPhoto/default/default_thumb.png",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com/js/pp/images/prettyPhoto/default/loader.gif",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com/js/pp/images/prettyPhoto/default/sprite.png",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com/js/pp/images/prettyPhoto/default/sprite_next.png",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com/js/pp/images/prettyPhoto/default/sprite_prev.png",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com/js/pp/images/prettyPhoto/default/sprite_x.png",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com/js/pp/images/prettyPhoto/default/sprite_y.png",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com/js/pp/images/prettyPhoto/facebook/btnNext.png",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com/js/pp/images/prettyPhoto/facebook/btnPrevious.png",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com/js/pp/images/prettyPhoto/facebook/contentPatternBottom.png",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com/js/pp/images/prettyPhoto/facebook/contentPatternLeft.png",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com/js/pp/images/prettyPhoto/facebook/contentPatternRight.png",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com/js/pp/images/prettyPhoto/facebook/contentPatternTop.png",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com/js/pp/images/prettyPhoto/facebook/default_thumbnail.gif",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com/js/pp/images/prettyPhoto/facebook/loader.gif",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com/js/pp/images/prettyPhoto/facebook/sprite.png",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com/js/pp/images/prettyPhoto/light_rounded/btnNext.png",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com/js/pp/images/prettyPhoto/light_rounded/btnPrevious.png",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com/js/pp/images/prettyPhoto/light_rounded/loader.gif",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com/js/pp/images/prettyPhoto/light_rounded/sprite.png",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com/js/pp/images/prettyPhoto/light_square/btnNext.png",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com/js/pp/images/prettyPhoto/light_square/btnPrevious.png",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com/js/pp/images/prettyPhoto/light_square/sprite.png",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com/js/pp/js/jquery.prettyPhoto.js",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com/js/revolutionslider/css/style.css",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com/js/revolutionslider/custom1.js",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com/js/revolutionslider/rs-plugin/assets/timer.png",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com/js/revolutionslider/rs-plugin/css/settings.css",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com/js/revolutionslider/rs-plugin/js/jquery.themepunch.revolution.min.js",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com/js/revolutionslider/rs-plugin/js/jquery.themepunch.tools.min.js",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com/js/scrolltotop/totop.js",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com/js/tabs/assets/css/responsive-tabs.css",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com/js/tabs/assets/css/responsive-tabs2.css",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com/js/tabs/assets/css/responsive-tabs3.css",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com/js/tabs/assets/js/responsive-tabs.min.js",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com/js/twitter.js",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com/js/universal/jquery.js",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com/js/vendors/isotope/isotope.css",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com/js/vendors/isotope/isotope.pkgd.js",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com/js/vendors/isotope/main.js",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com/js/vendors/jquery.counterup.min.js",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com/js/waypoints.min.js",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com/js/wow.js",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com:80/legacy",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://www.infoziant.com/lightgal/css/lightgallery.css",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://www.infoziant.com/lightgal/fonts/lg.eot",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://www.infoziant.com/lightgal/fonts/lg.eot?n1z373",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://www.infoziant.com/lightgal/fonts/lg.svg?n1z373",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://www.infoziant.com/lightgal/fonts/lg.ttf?n1z373",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://www.infoziant.com/lightgal/fonts/lg.woff?n1z373",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://www.infoziant.com/lightgal/img/loading.gif",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://www.infoziant.com/lightgal/img/video-play.png",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://www.infoziant.com/lightgal/img/vimeo-play.png",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://www.infoziant.com/lightgal/img/youtube-play.png",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://www.infoziant.com/lightgal/js/lightgallery-all.min.js",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com/maintl/10-eggs-Green-for-5-Colonia-Easter-Egg-Colours-660532/",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com:80/maintl/DIY-&-Tools-BARTIUM-Safety-Steel-Toe-Lace-Up-Smart-Work-Men-Boot-UK-Size-612-Safety-&-Security-316844",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://infoziant.com/maxresdefault.jpg",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com:80/medicalbilling",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://www.infoziant.com:80/migration_services.php",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://infoziant.com/mitigating-cybersecurity-risks-in-business-communications/",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://www.infoziant.com:80/Multimedia",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://www.infoziant.com:80/Multimedia.html",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com:80/onlineexam11",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com:80/onlinetest",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com:80/onlinetest/check_pass_admin.php",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com:80/onlinetest/client-register.php",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com:80/onlinetest/Contactus.html",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com:80/onlinetest/demo.php",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com:80/onlinetest/essay_write.php",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com:80/onlinetest/exam.php?",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com:80/onlinetest/generate.php?testids=gen&section=0&curset=&testcpnfid=&tseis=&paidTest=1&qno=&type=new&sset=",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com:80/onlinetest/incompletetest.php",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com:80/onlinetest/index.php",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com:80/onlinetest/index.php/dashboard",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com:80/onlinetest/index.php/login",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com:80/onlinetest/index.php/login/registration",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com:80/onlinetest/index.php/quiz",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com:80/onlinetest/logout.php",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com:80/onlinetest/online-exam.php?",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com:80/onlinetest/register.php",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com:80/onlinetest/save_test_results.php",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com:80/onlinetest/select_test.php",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com:80/onlinetest/sign-in.php",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com:80/onlinetest/state_change.php",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com:80/onlinetest/test_generator.php?testData=c2VjdGlvbj0xJmFtcDtpZHM9LCwmYW1wO2Nob29zZW51bVsxXT0mYW1wO3RlbXBJRFsxXT0xJmFtcDt0ZXN0bmFtZT1BcHRpdHV0ZSZhbXA7c2V0aWQ9JmFtcDtpZHNldD0mYW1wO3Rlc3Rjb25maWc9JmFtcDttcmtwcT0xJmFtcDtuZWdtcms9MCZhbXA7bnVtcXVlcz0mYW1wO3Rlc3R0aW1lPSZhbXA7Y2NjPTE7&currset=",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com:80/onlinetest/view_result.php?",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://www.infoziant.com:80/payroll",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://www.infoziant.com:80/payroll/index.php?",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://www.infoziant.com:80/payroll/index.php?page=home&Admin=forgotpass",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://www.infoziant.com:80/payroll/index.php?page=home&Admin=home",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://www.infoziant.com:80/payroll/index.php?page=home&Admin=loginadmin",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://www.infoziant.com:80/phpmedbill.php",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://www.infoziant.com:80/phponlineexam.php",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://www.infoziant.com:80/portal",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://infoziant.com/portfolio-category/assessment/",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://infoziant.com/portfolio-category/audit/",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://infoziant.com/portfolio-category/branding/",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://infoziant.com/portfolio-category/custom-print/",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://infoziant.com/portfolio-category/cyber/",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://infoziant.com/portfolio-category/digital-design/",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://infoziant.com/portfolio-category/ecommerce/",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://infoziant.com/portfolio-category/email/",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://infoziant.com/portfolio-category/network/",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://infoziant.com/portfolio-category/portfolio-single/",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://infoziant.com/portfolio-category/safety/",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://infoziant.com/portfolio-category/security/",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://infoziant.com/portfolio-category/services/",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://infoziant.com/portfolio/application-security-assessment/",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://infoziant.com/portfolio/auditing/",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://infoziant.com/portfolio/cloud-security/",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://infoziant.com/portfolio/email-protection-system/",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://infoziant.com/portfolio/mobile-security-assessment/",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://infoziant.com/portfolio/security-incident-threat-management/",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://infoziant.com/portfolio/vulnerability-assessment-penetratiogn-testing/",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://infoziant.com/portfolio/wireless-security-assessment/",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://infoziant.com/privacy-policy/",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://infoziant.com/products/",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://www.infoziant.com/project/android_2_short.jpg",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://www.infoziant.com/project/dotnet_small.jpg",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://www.infoziant.com/project/examshort.jpg",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://www.infoziant.com/project/iot_small.jpg",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://www.infoziant.com/project/java_1_short.jpg",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://www.infoziant.com/project/medical_billing_short.jpg",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com/revolution/assets/coloredbg.png",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com/revolution/assets/gridtile.png",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com/revolution/assets/gridtile_3x3.png",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com/revolution/assets/gridtile_3x3_white.png",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com/revolution/assets/gridtile_white.png",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com/revolution/assets/loader.gif",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com/revolution/assets/timer.png",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com/revolution/css/closedhand.cur",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com/revolution/css/navigation.css",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com/revolution/css/openhand.cur",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com/revolution/css/settings.css",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com/revolution/fonts/revicons/revicons90c6.eot?5510888",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com/revolution/fonts/revicons/revicons90c6.svg?5510888",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com/revolution/fonts/revicons/revicons90c6.ttf?5510888",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com/revolution/fonts/revicons/revicons90c6.woff?5510888",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com/revolution/js/extensions/revolution.extension.actions.min.js",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com/revolution/js/extensions/revolution.extension.carousel.min.js",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com/revolution/js/extensions/revolution.extension.kenburn.min.js",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com/revolution/js/extensions/revolution.extension.layeranimation.min.js",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com/revolution/js/extensions/revolution.extension.migration.min.js",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com/revolution/js/extensions/revolution.extension.navigation.min.js",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com/revolution/js/extensions/revolution.extension.parallax.min.js",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com/revolution/js/extensions/revolution.extension.slideanims.min.js",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com/revolution/js/extensions/revolution.extension.video.min.js",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com/revolution/js/jquery.themepunch.revolution.min.js",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com/revolution/js/jquery.themepunch.tools.min.js",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com/robots.txt",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://www.infoziant.com/rs-plugin/assets/arrow_left.png",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://www.infoziant.com/rs-plugin/assets/arrow_left2.png",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://www.infoziant.com/rs-plugin/assets/arrow_right.png",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://www.infoziant.com/rs-plugin/assets/arrow_right2.png",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://www.infoziant.com/rs-plugin/assets/arrowleft.png",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://www.infoziant.com/rs-plugin/assets/arrowright.png",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://www.infoziant.com/rs-plugin/assets/boxed_bgtile.png",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://www.infoziant.com/rs-plugin/assets/bullet.png",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://www.infoziant.com/rs-plugin/assets/bullet_boxed.png",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://www.infoziant.com/rs-plugin/assets/bullets.png",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://www.infoziant.com/rs-plugin/assets/bullets2.png",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://www.infoziant.com/rs-plugin/assets/coloredbg.png",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://www.infoziant.com/rs-plugin/assets/gridtile.png",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://www.infoziant.com/rs-plugin/assets/gridtile_3x3.png",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://www.infoziant.com/rs-plugin/assets/gridtile_3x3_white.png",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://www.infoziant.com/rs-plugin/assets/gridtile_white.png",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://www.infoziant.com/rs-plugin/assets/large_left.png",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://www.infoziant.com/rs-plugin/assets/large_right.png",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://www.infoziant.com/rs-plugin/assets/loader.gif",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://www.infoziant.com/rs-plugin/assets/navigdots.png",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://www.infoziant.com/rs-plugin/assets/navigdots_bgtile.png",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://www.infoziant.com/rs-plugin/assets/shadow1.png",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://www.infoziant.com/rs-plugin/assets/shadow2.png",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://www.infoziant.com/rs-plugin/assets/shadow3.png",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://www.infoziant.com/rs-plugin/assets/small_left.png",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://www.infoziant.com/rs-plugin/assets/small_left_boxed.png",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://www.infoziant.com/rs-plugin/assets/small_right.png",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://www.infoziant.com/rs-plugin/assets/small_right_boxed.png",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://www.infoziant.com/rs-plugin/assets/timer.png",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://www.infoziant.com/rs-plugin/assets/transparent.png",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://www.infoziant.com/rs-plugin/css/settings.min.css",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://www.infoziant.com/rs-plugin/font/revicons90c6.eot?5510888",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://www.infoziant.com/rs-plugin/font/revicons90c6.svg?5510888",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://www.infoziant.com/rs-plugin/font/revicons90c6.ttf?5510888",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://www.infoziant.com/rs-plugin/font/revicons90c6.woff?5510888",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://www.infoziant.com/rs-plugin/js/jquery.themepunch.revolution-parallax.min.js",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://www.infoziant.com/rs-plugin/js/jquery.themepunch.tools.min.js",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://www.infoziant.com/rs-plugin/js/Tweenlight.js",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://www.infoziant.com/rs-plugin/Tweenlight.js",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://infoziant.com/sdk.js",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://www.infoziant.com:80/Security",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://www.infoziant.com:80/security.html",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com:80/security.php",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://infoziant.com/services/",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://infoziant.com/sitemap.xml",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://www.infoziant.com:80/slider.css",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://www.infoziant.com/slider/4upt.jpg",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://www.infoziant.com/slider/5upt.jpg",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://www.infoziant.com/slider/IOT_slider.jpg",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://www.infoziant.com/slider/iotbanuptd.jpg",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://www.infoziant.com/slider/IS_banner_1.jpg",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://www.infoziant.com/slider/IS_slider.jpg",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://www.infoziant.com/slider/recban.jpg",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com/slider/sl/2.jpg",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com/slider/sl/3.jpg",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com/slider/sl/sliders.jpg",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com/static/shield.png",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com:80/studentportal",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://www.infoziant.com:80/studentportal/index.php/dashboard",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://www.infoziant.com:80/studentportal/index.php/Dashboard/jobupdates",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://www.infoziant.com:80/studentportal/index.php/Dashboard/newskill",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://www.infoziant.com:80/studentportal/index.php/login",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://www.infoziant.com:80/studentportal/index.php/login/online_tutorial",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://www.infoziant.com:80/studentportal/index.php/Login/register_account",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://www.infoziant.com:80/studentportal/index.php/login/reply",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://www.infoziant.com:80/studentportal/index.php/Register/check_email_avalibility",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://www.infoziant.com:80/studentportal/index.php/Register/index",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://infoziant.com/tag/cryto/",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://infoziant.com/tag/cybersecurity/",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://infoziant.com/tag/infrastructure/",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://infoziant.com/tag/risk/",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://infoziant.com/tag/safety/",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://infoziant.com/tag/security/",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com:80/test",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://www.infoziant.com:80/tjs",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com:80/tjs/student_initiative.php",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com:80/tr_project",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com:80/tr_project/index.php",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://www.infoziant.com:80/training",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://www.infoziant.com:80/training.html",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com:80/training/courses.php?",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://www.infoziant.com/trophy/tt.png",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://www.infoziant.com/trophy/tt2a.png",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://www.infoziant.com/trophy/tt3.png",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com:80/ufx",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com:80/ufx/demo",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://www.infoziant.com:80/ungraylistcheck",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://www.infoziant.com:80/web.html",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com:80/web.php",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://infoziant.com:80/webmail",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://infoziant.com/what-can-you-do-with-an-online-graduate-certificate-in-cybersecurity/",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://infoziant.com/wp-content/plugins/contact-form-7/includes/css/styles.css?ver=5.8.5",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://infoziant.com/wp-content/plugins/contact-form-7/includes/js/index.js?ver=5.8.5",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://infoziant.com/wp-content/plugins/contact-form-7/includes/swv/js/index.js?ver=5.8.5",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://infoziant.com/wp-content/plugins/elementor-pro/assets/js/60745ddf42fde6647dbc.bundle.min.js",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://infoziant.com/wp-content/plugins/elementor-pro/assets/js/animated-headline.ffb4bb4ce1b16b11446d.bundle.min.js",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://infoziant.com/wp-content/plugins/elementor-pro/assets/js/archive-posts.80f1139e64eb8bd1a74a.bundle.min.js",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://infoziant.com/wp-content/plugins/elementor-pro/assets/js/carousel.9b02b45d7826c1c48f33.bundle.min.js",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://infoziant.com/wp-content/plugins/elementor-pro/assets/js/code-highlight.28a979661569ddbbf60d.bundle.min.js",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://infoziant.com/wp-content/plugins/elementor-pro/assets/js/countdown.b0ef6392ec4ff09ca2f2.bundle.min.js",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://infoziant.com/wp-content/plugins/elementor-pro/assets/js/elements-handlers.min.js?ver=3.16.2",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://infoziant.com/wp-content/plugins/elementor-pro/assets/js/frontend.min.js?ver=3.16.2",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://infoziant.com/wp-content/plugins/elementor-pro/assets/js/gallery.8ca9a354ce039d1ba641.bundle.min.js",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://infoziant.com/wp-content/plugins/elementor-pro/assets/js/hotspot.6ab1751404c381bfe390.bundle.min.js",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://infoziant.com/wp-content/plugins/elementor-pro/assets/js/load-more.064e7e640e7ef9c3fc30.bundle.min.js",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://infoziant.com/wp-content/plugins/elementor-pro/assets/js/loop-carousel.4e8fd6593adbba21698e.bundle.min.js",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://infoziant.com/wp-content/plugins/elementor-pro/assets/js/loop.a9bed2dcd86eddf71249.bundle.min.js",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://infoziant.com/wp-content/plugins/elementor-pro/assets/js/lottie.565b778d23c04461c4ea.bundle.min.js",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://infoziant.com/wp-content/plugins/elementor-pro/assets/js/media-carousel.aca2224ef13e6f999011.bundle.min.js",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://infoziant.com/wp-content/plugins/elementor-pro/assets/js/mega-menu-stretch-content.b203a97f096c18f3d1a2.bundle.min.js",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://infoziant.com/wp-content/plugins/elementor-pro/assets/js/mega-menu.5bb1729d2b7dcb6b22ec.bundle.min.js",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://infoziant.com/wp-content/plugins/elementor-pro/assets/js/menu-title-keyboard-handler.ec514149d506e0fe9c54.bundle.min.js",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://infoziant.com/wp-content/plugins/elementor-pro/assets/js/nav-menu.70d63d6d093f3a45a0c6.bundle.min.js",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://infoziant.com/wp-content/plugins/elementor-pro/assets/js/nested-carousel.9145d6891784d5818672.bundle.min.js",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://infoziant.com/wp-content/plugins/elementor-pro/assets/js/paypal-button.3d0d5af7df85963df32c.bundle.min.js",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://infoziant.com/wp-content/plugins/elementor-pro/assets/js/popup.483b906ddaa1af17ff14.bundle.min.js",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://infoziant.com/wp-content/plugins/elementor-pro/assets/js/portfolio.042905bde20a1afccada.bundle.min.js",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://infoziant.com/wp-content/plugins/elementor-pro/assets/js/posts.e33113a212454e383747.bundle.min.js",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://infoziant.com/wp-content/plugins/elementor-pro/assets/js/product-add-to-cart.023d7d31fbf96c3dbdfc.bundle.min.js",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://infoziant.com/wp-content/plugins/elementor-pro/assets/js/progress-tracker.e19e2547639d7d9dac17.bundle.min.js",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://infoziant.com/wp-content/plugins/elementor-pro/assets/js/search-form.6eb419c467197ca411a7.bundle.min.js",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://infoziant.com/wp-content/plugins/elementor-pro/assets/js/share-buttons.81497e7fccd4fa77b6b9.bundle.min.js",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://infoziant.com/wp-content/plugins/elementor-pro/assets/js/slides.fb6b9afd278bb9c5e75b.bundle.min.js",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://infoziant.com/wp-content/plugins/elementor-pro/assets/js/social.2d2e44e8608690943f29.bundle.min.js",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://infoziant.com/wp-content/plugins/elementor-pro/assets/js/stripe-button.2acbca466dfeb9585680.bundle.min.js",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://infoziant.com/wp-content/plugins/elementor-pro/assets/js/table-of-contents.4c244acf62929782146e.bundle.min.js",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://infoziant.com/wp-content/plugins/elementor-pro/assets/js/taxonomy-filter.9df78f10e131a7423313.bundle.min.js",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://infoziant.com/wp-content/plugins/elementor-pro/assets/js/video-playlist.74fca1f2470fa6474595.bundle.min.js",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://infoziant.com/wp-content/plugins/elementor-pro/assets/js/webpack-pro.runtime.min.js?ver=3.16.2",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://infoziant.com/wp-content/plugins/elementor-pro/assets/js/woocommerce-cart.fc30c6cb753d4098eff5.bundle.min.js",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://infoziant.com/wp-content/plugins/elementor-pro/assets/js/woocommerce-checkout-page.b18af78282979b6f74e4.bundle.min.js",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://infoziant.com/wp-content/plugins/elementor-pro/assets/js/woocommerce-menu-cart.faa7b80e9ba9e5072070.bundle.min.js",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://infoziant.com/wp-content/plugins/elementor-pro/assets/js/woocommerce-my-account.3ee10d01e625dad87f73.bundle.min.js",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://infoziant.com/wp-content/plugins/elementor-pro/assets/js/woocommerce-notices.da27b22c491f7cbe9158.bundle.min.js",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://infoziant.com/wp-content/plugins/elementor-pro/assets/js/woocommerce-purchase-summary.46445ab1120a8c28c05c.bundle.min.js",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://infoziant.com/wp-content/plugins/elementor-pro/assets/lib/lottie/lottie.min.js?ver=5.6.6",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://infoziant.com/wp-content/plugins/elementor/assets/js/-negative.svg",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://infoziant.com/wp-content/plugins/elementor/assets/js/accordion.8799675460c73eb48972.bundle.min.js",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://infoziant.com/wp-content/plugins/elementor/assets/js/alert.cbc2a0fee74ee3ed0419.bundle.min.js",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://infoziant.com/wp-content/plugins/elementor/assets/js/container.284c9bf9b36eadd05080.bundle.min.js",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://infoziant.com/wp-content/plugins/elementor/assets/js/counter.02cef29c589e742d4c8c.bundle.min.js",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://infoziant.com/wp-content/plugins/elementor/assets/js/frontend-modules.min.js?ver=3.18.3",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://infoziant.com/wp-content/plugins/elementor/assets/js/frontend.min.js?ver=3.18.3",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://infoziant.com/wp-content/plugins/elementor/assets/js/image-carousel.4455c6362492d9067512.bundle.min.js",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://infoziant.com/wp-content/plugins/elementor/assets/js/lightbox.1b6e05e0607040eb8929.bundle.min.js",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://infoziant.com/wp-content/plugins/elementor/assets/js/tabs.c2af5be7f9cb3cdcf3d5.bundle.min.js",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://infoziant.com/wp-content/plugins/elementor/assets/js/text-editor.2c35aafbe5bf0e127950.bundle.min.js",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://infoziant.com/wp-content/plugins/elementor/assets/js/text-path.b50b3e74488a4e302613.bundle.min.js",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://infoziant.com/wp-content/plugins/elementor/assets/js/toggle.31881477c45ff5cf9d4d.bundle.min.js",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://infoziant.com/wp-content/plugins/elementor/assets/js/webpack.runtime.min.js?ver=3.18.3",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://infoziant.com/wp-content/plugins/elementor/assets/js/wp-audio.75f0ced143febb8cd31a.bundle.min.js",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://infoziant.com/wp-content/plugins/elementor/assets/lib/font-awesome/css/font-awesome.min.css?ver=4.7.0",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://infoziant.com/wp-content/plugins/elementor/assets/lib/font-awesome/fonts/fontawesome-webfont.eot",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://infoziant.com/wp-content/plugins/elementor/assets/lib/font-awesome/fonts/fontawesome-webfont.eot?v=4.7.0",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://infoziant.com/wp-content/plugins/elementor/assets/lib/font-awesome/fonts/fontawesome-webfont.svg?v=4.7.0",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://infoziant.com/wp-content/plugins/elementor/assets/lib/font-awesome/fonts/fontawesome-webfont.ttf?v=4.7.0",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://infoziant.com/wp-content/plugins/elementor/assets/lib/font-awesome/fonts/fontawesome-webfont.woff2?v=4.7.0",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://infoziant.com/wp-content/plugins/elementor/assets/lib/font-awesome/fonts/fontawesome-webfont.woff?v=4.7.0",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://infoziant.com/wp-content/plugins/elementor/assets/lib/swiper/v8/css/swiper.min.css?ver=8.4.5",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://infoziant.com/wp-content/plugins/elementor/assets/lib/waypoints/waypoints.min.js?ver=4.0.2",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://infoziant.com/wp-content/plugins/hub-elementor-addons/assets/css/theme-elementor.min.css?ver=4.2.4",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://infoziant.com/wp-content/plugins/liquid-gdpr/assets/css/liquid-gdpr.min.css?ver=6.5.2",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://infoziant.com/wp-content/plugins/liquid-gdpr/assets/js/liquid-gdpr.min.js?ver=1.0.0",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://infoziant.com/wp-content/plugins/revslider/public/assets/assets/coloredbg.png",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://infoziant.com/wp-content/plugins/revslider/public/assets/assets/gridtile.png",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://infoziant.com/wp-content/plugins/revslider/public/assets/assets/gridtile_3x3.png",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://infoziant.com/wp-content/plugins/revslider/public/assets/assets/gridtile_3x3_white.png",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://infoziant.com/wp-content/plugins/revslider/public/assets/assets/gridtile_white.png",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://infoziant.com/wp-content/plugins/revslider/public/assets/assets/loader.gif",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://infoziant.com/wp-content/plugins/revslider/public/assets/css/closedhand.cur",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://infoziant.com/wp-content/plugins/revslider/public/assets/css/openhand.cur",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://infoziant.com/wp-content/plugins/revslider/public/assets/css/rs6.css?ver=6.6.18",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://infoziant.com/wp-content/plugins/revslider/public/assets/fonts/revicons/revicons.eot?5510888",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://infoziant.com/wp-content/plugins/revslider/public/assets/fonts/revicons/revicons.svg?5510888",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://infoziant.com/wp-content/plugins/revslider/public/assets/fonts/revicons/revicons.ttf?5510888",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://infoziant.com/wp-content/plugins/revslider/public/assets/fonts/revicons/revicons.woff?5510888",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://infoziant.com/wp-content/plugins/revslider/public/assets/js/assets/dummy.png",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://infoziant.com/wp-content/plugins/revslider/public/assets/js/assets/transparent.png",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://infoziant.com/wp-content/plugins/revslider/public/assets/js/dummy.png",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://infoziant.com/wp-content/plugins/revslider/public/assets/js/images/transparent.png",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://infoziant.com/wp-content/plugins/revslider/public/assets/js/rbtools.min.js?ver=6.6.18",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://infoziant.com/wp-content/plugins/revslider/public/assets/js/rs6.min.js?ver=6.6.18",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://infoziant.com/wp-content/plugins/wpforms-lite/assets/js/integrations/elementor/frontend.min.js?ver=1.8.5.4",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://infoziant.com/wp-content/themes/hub/assets/css/elements/base/typography.css",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://infoziant.com/wp-content/themes/hub/assets/js/animated-blob/liquidAnimatedBlob.min.js",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://infoziant.com/wp-content/themes/hub/assets/js/draw-shape/liquidDrawShape.min.js",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://infoziant.com/wp-content/themes/hub/assets/js/theme.min.js",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://infoziant.com/wp-content/themes/hub/assets/vendors/bootstrap/css/bootstrap.min.css",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://infoziant.com/wp-content/themes/hub/assets/vendors/bootstrap/js/bootstrap.min.js",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://infoziant.com/wp-content/themes/hub/assets/vendors/fastdom/fastdom.min.js",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://infoziant.com/wp-content/themes/hub/assets/vendors/flickity/flickity-fade.min.js",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://infoziant.com/wp-content/themes/hub/assets/vendors/flickity/flickity.pkgd.min.js",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://infoziant.com/wp-content/themes/hub/assets/vendors/fontfaceobserver.js",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://infoziant.com/wp-content/themes/hub/assets/vendors/fresco/css/fresco.css",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://infoziant.com/wp-content/themes/hub/assets/vendors/fresco/fresco-skins/sprite.png",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://infoziant.com/wp-content/themes/hub/assets/vendors/fresco/fresco-skins/sprite.svg",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://infoziant.com/wp-content/themes/hub/assets/vendors/fresco/js/fresco.js",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://infoziant.com/wp-content/themes/hub/assets/vendors/gsap/minified/DrawSVGPlugin.min.js",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://infoziant.com/wp-content/themes/hub/assets/vendors/gsap/minified/gsap.min.js",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://infoziant.com/wp-content/themes/hub/assets/vendors/gsap/minified/ScrollTrigger.min.js",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://infoziant.com/wp-content/themes/hub/assets/vendors/gsap/utils/CustomEase.min.js",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://infoziant.com/wp-content/themes/hub/assets/vendors/gsap/utils/SplitText.min.js",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://infoziant.com/wp-content/themes/hub/assets/vendors/intersection-observer.js",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://infoziant.com/wp-content/themes/hub/assets/vendors/isotope/isotope.pkgd.min.js",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://infoziant.com/wp-content/themes/hub/assets/vendors/isotope/packery-mode.pkgd.min.js",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://infoziant.com/wp-content/themes/hub/assets/vendors/jquery-ui/jquery-ui.min.js",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://infoziant.com/wp-content/themes/hub/assets/vendors/lazyload.min.js",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://infoziant.com/wp-content/themes/hub/assets/vendors/liquid-icon/lqd-essentials/fonts/lqd-essentials.woff2",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://infoziant.com/wp-content/themes/hub/assets/vendors/liquid-icon/lqd-essentials/lqd-essentials.min.css",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://infoziant.com/wp-content/themes/hub/assets/vendors/liquid-icon/lqd-essentials/lqd-essentials.min.css?ver=1.0.0",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://infoziant.com/wp-content/themes/hub/assets/vendors/lity/lity.min.js",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://infoziant.com/wp-content/themes/hub/assets/vendors/particles.min.js",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://infoziant.com/wp-content/themes/hub/assets/vendors/tinycolor-min.js",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://infoziant.com/wp-content/themes/hub/style.css",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://infoziant.com/wp-content/uploads/2018/08/6491945.jpg",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://infoziant.com/wp-content/uploads/2018/08/back-view-dangerous-team-hackers-working-new-malware-e1705476480331.jpg",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://infoziant.com/wp-content/uploads/2018/08/business-people-binary-code-sharing-technology-concept.jpg",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://infoziant.com/wp-content/uploads/2018/08/network-graphic-overlay-banner-background.jpg",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://infoziant.com/wp-content/uploads/2020/04/hand.svg",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://infoziant.com/wp-content/uploads/2020/04/lines-bg.svg",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://infoziant.com/wp-content/uploads/2022/06/Add-a-heading-3.png",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://infoziant.com/wp-content/uploads/2022/06/INFOZIANT-removebg-preview-300x150.png",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://infoziant.com/wp-content/uploads/2022/06/INFOZIANT-removebg-preview.png",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://infoziant.com/wp-content/uploads/2023/12/20550-700x450.jpg",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://infoziant.com/wp-content/uploads/2023/12/3d-internet-secuirty-badge.jpg",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://infoziant.com/wp-content/uploads/2023/12/standard-quality-control-collage-concept-700x450.jpg",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://infoziant.com/wp-content/uploads/2024/01/1631312381470.jpg",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://infoziant.com/wp-content/uploads/2024/01/181166.png",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://infoziant.com/wp-content/uploads/2024/01/2560px-ISC%C2%B2_logo_vectorized.svg.png",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://infoziant.com/wp-content/uploads/2024/01/3820574.jpg",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://infoziant.com/wp-content/uploads/2024/01/Apple_logo_grey.svg-e1704743902658.png",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://infoziant.com/wp-content/uploads/2024/01/Aspire-System_New-Logo_108550.jpg",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://infoziant.com/wp-content/uploads/2024/01/BlackBerry-logo.jpg",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://infoziant.com/wp-content/uploads/2024/01/caucasian-businessman-holding-old-fashioned-metal-stopwatch-generated-by-ai.jpg",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://infoziant.com/wp-content/uploads/2024/01/chessman-is-changed-shadow-crown.jpg",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://infoziant.com/wp-content/uploads/2024/01/cropped-Untitled-design-180x180.png",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://infoziant.com/wp-content/uploads/2024/01/cropped-Untitled-design-192x192.png",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://infoziant.com/wp-content/uploads/2024/01/cropped-Untitled-design-32x32.png",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://infoziant.com/wp-content/uploads/2024/01/cropped-Untitled-design.png",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://infoziant.com/wp-content/uploads/2024/01/Dell-Logo-700x394-1.png",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://infoziant.com/wp-content/uploads/2024/01/download-1.png",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://infoziant.com/wp-content/uploads/2024/01/download.png",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://infoziant.com/wp-content/uploads/2024/01/Erasmus-universiteit-tile-612x300-1.png",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://infoziant.com/wp-content/uploads/2024/01/favicon-info.png",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://infoziant.com/wp-content/uploads/2024/01/FM-Logo-RGB-1.png",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://infoziant.com/wp-content/uploads/2024/01/Geniebelt-logo1.png",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://infoziant.com/wp-content/uploads/2024/01/Google-Logo-700x394-1.png",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://infoziant.com/wp-content/uploads/2024/01/images.png",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://infoziant.com/wp-content/uploads/2024/01/invision-logo-vector.png",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://infoziant.com/wp-content/uploads/2024/01/issuu-vector-logo.png",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://infoziant.com/wp-content/uploads/2024/01/logo-1.png",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://infoziant.com/wp-content/uploads/2024/01/Microsoft-Logo-700x394-1.png",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://infoziant.com/wp-content/uploads/2024/01/Nciipc_Logo-e1704743713310.png",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://infoziant.com/wp-content/uploads/2024/01/NEI-logo.svg.png",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://infoziant.com/wp-content/uploads/2024/01/Netgear-Logo-500x281-1.png",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://infoziant.com/wp-content/uploads/2024/01/oasys-e1704644938961.png",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://infoziant.com/wp-content/uploads/2024/01/og-grootan-ba42b86aed1a71bc869263782bd6aaf4.jpg",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://infoziant.com/wp-content/uploads/2024/01/ogimage.png",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://infoziant.com/wp-content/uploads/2024/01/Picture5.jpg",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://infoziant.com/wp-content/uploads/2024/01/SAP-Logo-700x394-1.png",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://infoziant.com/wp-content/uploads/2024/01/Sony-Logo-700x394-1.png",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://infoziant.com/wp-content/uploads/2024/01/Sophos-Logo.wine_.png",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://infoziant.com/wp-content/uploads/2024/01/system-background-compromised-by-hacking-3d-illustration.jpg",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://infoziant.com/wp-content/uploads/2024/01/techworm_cover.jpg",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://infoziant.com/wp-content/uploads/2024/01/UN-Logo-700x394-1.png",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://infoziant.com/wp-content/uploads/2024/01/Western_Union_logo.svg.png",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://infoziant.com/wp-content/uploads/2024/01/World-Health-Organization-WHO-Logo.png",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://infoziant.com/wp-content/uploads/2024/01/zH16y4lZ_400x400.jpg",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://infoziant.com/wp-content/uploads/2024/01/Zogo-Logo.png",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://infoziant.com/wp-content/uploads/elementor/css/custom-frontend-lite.min.css?ver=1706273596",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://infoziant.com/wp-content/uploads/elementor/css/custom-pro-frontend-lite.min.css?ver=1706273598",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://infoziant.com/wp-includes/js/dist/hooks.min.js?ver=2810c76e705dd1a53b18",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://infoziant.com/wp-includes/js/dist/i18n.min.js?ver=5e580eb46a90c2b997e6",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://infoziant.com/wp-includes/js/dist/vendor/regenerator-runtime.min.js?ver=0.14.0",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://infoziant.com/wp-includes/js/dist/vendor/wp-polyfill-inert.min.js?ver=3.1.2",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://infoziant.com/wp-includes/js/dist/vendor/wp-polyfill.min.js?ver=3.15.0",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://infoziant.com/wp-includes/js/imagesloaded.min.js?ver=5.0.0",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://infoziant.com/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.1",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://infoziant.com/wp-includes/js/jquery/jquery.min.js?ver=3.7.1",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://infoziant.com/wp-includes/js/jquery/ui/core.min.js?ver=1.13.2",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://infoziant.com/wp-includes/js/underscore.min.js?ver=1.13.4",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://infoziant.com/wp-includes/js/wp-util.min.js?ver=6.5.2",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://www.infoziant.com/www.google-analytics.com/analytics.js",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://inventory.infoziant.com/",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://inventory.infoziant.com:80/index.php?",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://inventory.infoziant.com:80/index.php?module=auth&view=login",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://inventory.infoziant.com/robots.txt",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "http://www.onlinetracker.infoziant.com:80/robots.txt",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        },
+        {
+            "url": "https://test.infoziant.com/",
+            "csrf_vulnerable": true,
+            "prob": "CSRF token not found"
+        }
+    ]
+}

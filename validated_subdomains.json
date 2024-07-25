@@ -1,27 +1,27 @@
 {
-    "kitcbe.com": [
+    "infoziant.com": [
         {
-            "subdomain": "https://portal.kitcbe.com",
+            "subdomain": "https://ns1.infoziant.com",
+            "status_code": "403"
+        },
+        {
+            "subdomain": "https://ns2.infoziant.com",
+            "status_code": "403"
+        },
+        {
+            "subdomain": "https://mail.infoziant.com",
             "status_code": "200"
         },
         {
-            "subdomain": "https://scholarshiptest.kitcbe.com",
-            "status_code": "200"
+            "subdomain": "https://www.infoziant.com",
+            "status_code": "301"
         },
         {
-            "subdomain": "https://icstem.kitcbe.com",
-            "status_code": "200"
+            "subdomain": "http://infoziant.com",
+            "status_code": "301"
         },
         {
-            "subdomain": "https://kitcbe.com",
-            "status_code": "200"
-        },
-        {
-            "subdomain": "https://icaimsre.kitcbe.com",
-            "status_code": "200"
-        },
-        {
-            "subdomain": "https://www.kitcbe.com",
+            "subdomain": "https://test.infoziant.com",
             "status_code": "200"
         }
     ]

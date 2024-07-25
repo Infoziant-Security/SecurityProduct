@@ -1,0 +1,28 @@
+{
+    "infoziant.com": {
+        "https://ns1.infoziant.com": {
+            "server": "Error",
+            "vulnerable": true
+        },
+        "https://ns2.infoziant.com": {
+            "server": "Error",
+            "vulnerable": true
+        },
+        "https://mail.infoziant.com": {
+            "server": "Error",
+            "vulnerable": true
+        },
+        "https://www.infoziant.com": {
+            "server": "Apache",
+            "vulnerable": false
+        },
+        "http://infoziant.com": {
+            "server": "Apache",
+            "vulnerable": false
+        },
+        "https://test.infoziant.com": {
+            "server": "Apache",
+            "vulnerable": false
+        }
+    }
+}

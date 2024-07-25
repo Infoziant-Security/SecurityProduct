@@ -99,7 +99,7 @@ def fetch_wayback_urls(validated_subdomains):
 async def fetch_paramspider_urls_async(validated_subdomains):
     paramspider_data = {}
     for subdomain in validated_subdomains:
-        if subdomain['status_code'] == '200':
+        if subdomain['status_code'] == '200' or subdomain['status_code'] == '301':
             domain_name = subdomain['subdomain'].split("//")[-1]
             result = run_subprocess(['paramspider', '-d', domain_name])
             if result:
@@ -634,6 +634,7 @@ def run_commix_on_wayback_urls(domain):
         json.dump({'commix_output': commix_results}, file, indent=4)
     return commix_results, commix_output_file
 
+
 def run_smuggler(input_file):
     smuggler_dir = 'smuggler'
     payload_dir = os.path.join(smuggler_dir, 'payload')
@@ -742,22 +743,6 @@ def get_subdomains():
     save_data_to_file(domain, paramspider_data, 'paramspider_urls.json')
     save_urls_to_txt1(paramspider_data, 'paramspider_urls.txt')
     
-    retire_js_results = {}
-    for subdomain in validated_subdomains:
-        if subdomain['status_code'] in ['200', '301']:
-            js_urls = fetch_js_urls_from_website(subdomain['subdomain'])
-            if js_urls:
-                retire_js_results[subdomain['subdomain']] = run_retire_js_on_urls(js_urls)
-    save_data_to_file(domain, retire_js_results, 'retire_js_results.json')
-    
-    smuggler_payload_dir = run_smuggler('wayback_urls.txt')
-    if smuggler_payload_dir:
-        smuggler_results_file = aggregate_smuggler_results(smuggler_payload_dir)
-    else:
-        smuggler_results_file = None
-    
-    commix_results, commix_output_file = run_commix_on_wayback_urls(domain)
-
     server_version_info = fetch_server_version_info(validated_subdomains)
     save_data_to_file(domain, server_version_info, 'server_version_info.json')
     spf_dmarc_records = fetch_spf_dmarc_records(validated_subdomains)
@@ -777,16 +762,27 @@ def get_subdomains():
 
     execute_clickjack()
     run_LFI_Finder()
+    retire_js_results = {}
+    for subdomain in validated_subdomains:
+        if subdomain['status_code'] in ['200', '301']:
+            js_urls = fetch_js_urls_from_website(subdomain['subdomain'])
+            if js_urls:
+                retire_js_results[subdomain['subdomain']] = run_retire_js_on_urls(js_urls)
+    save_data_to_file(domain, retire_js_results, 'retire_js_results.json')
+    
+    smuggler_payload_dir = run_smuggler('wayback_urls.txt')
+    if smuggler_payload_dir:
+        smuggler_results_file = aggregate_smuggler_results(smuggler_payload_dir)
+    else:
+        smuggler_results_file = None
+    
+    commix_results, commix_output_file = run_commix_on_wayback_urls(domain)
     
     wayback403 = check403()
     save_data_to_file(domain, wayback403, 'wayback_urls_403_bypass_result.json')
     cors_scanner_result = execute_cors_scanner('subdomains.txt')
     save_data_to_file(domain , cors_scanner_result, 'cors_scanner_result.json')
     
-
-
-    
-
 
     return jsonify({
         'domain': domain,

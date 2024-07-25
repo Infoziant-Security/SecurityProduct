@@ -1,0 +1,76 @@
+{
+    "infoziant.com": [
+        {
+            "url": "to fetch: http://www.infoziant.com/blog-detail.php?id=FUZZ (Get \"http://www.infoziant.com/blog-detail.php?id=http://omeg0ivn7k95wloyezah7zcqghm7aw.burpcollaborator.net\": context deadline exceeded (Client.Timeout exceeded while awaiting headers))",
+            "message": "failed"
+        },
+        {
+            "url": "to fetch: http://infoziant.com/onlinetest/test_generator.php?testData=FUZZ (Get \"http://infoziant.com/onlinetest/test_generator.php?testData=http://omeg0ivn7k95wloyezah7zcqghm7aw.burpcollaborator.net\": context deadline exceeded (Client.Timeout exceeded while awaiting headers))",
+            "message": "failed"
+        },
+        {
+            "url": "to fetch: http://infoziant.com/infoassets/fonts/fontawesome-webfont3e6e.html?v=FUZZ (Get \"http://infoziant.com/infoassets/fonts/fontawesome-webfont3e6e.html?v=http://omeg0ivn7k95wloyezah7zcqghm7aw.burpcollaborator.net\": context deadline exceeded (Client.Timeout exceeded while awaiting headers))",
+            "message": "failed"
+        },
+        {
+            "url": "to fetch: http://infoziant.com/infoassets/fonts/fontawesome-webfont3e6e.html?v=FUZZ (Get \"http://infoziant.com/infoassets/fonts/fontawesome-webfont3e6e.html?v=http://omeg0ivn7k95wloyezah7zcqghm7aw.burpcollaborator.net\": context deadline exceeded (Client.Timeout exceeded while awaiting headers))",
+            "message": "failed"
+        },
+        {
+            "url": "to fetch: http://infoziant.com/onlinetest/test_generator.php?testData=FUZZ (Get \"http://infoziant.com/onlinetest/test_generator.php?testData=http://omeg0ivn7k95wloyezah7zcqghm7aw.burpcollaborator.net\": context deadline exceeded (Client.Timeout exceeded while awaiting headers))",
+            "message": "failed"
+        },
+        {
+            "url": "to fetch: http://infoziant.com/blog-details.php?blogid=FUZZ (Get \"http://infoziant.com/blog-details.php?blogid=http://omeg0ivn7k95wloyezah7zcqghm7aw.burpcollaborator.net\": context deadline exceeded (Client.Timeout exceeded while awaiting headers))",
+            "message": "failed"
+        },
+        {
+            "url": "to fetch: https://infoziant.com/?liquid-header=FUZZ (Get \"https://infoziant.com/?liquid-header=http://omeg0ivn7k95wloyezah7zcqghm7aw.burpcollaborator.net\": context deadline exceeded (Client.Timeout exceeded while awaiting headers))",
+            "message": "failed"
+        },
+        {
+            "url": "to fetch: http://infoziant.com/onlinetest/generate.php?testids=FUZZ&section=FUZZ&paidTest=FUZZ&type=FUZZ (Get \"http://infoziant.com/onlinetest/generate.php?testids=http://omeg0ivn7k95wloyezah7zcqghm7aw.burpcollaborator.net&section=FUZZ&paidTest=FUZZ&type=FUZZ\": context deadline exceeded (Client.Timeout exceeded while awaiting headers))",
+            "message": "failed"
+        },
+        {
+            "url": "to fetch: http://www.infoziant.com/payroll/index.php?page=FUZZ&Admin=FUZZ (Get \"http://www.infoziant.com/payroll/index.php?page=http://omeg0ivn7k95wloyezah7zcqghm7aw.burpcollaborator.net&Admin=FUZZ\": context deadline exceeded (Client.Timeout exceeded while awaiting headers))",
+            "message": "failed"
+        },
+        {
+            "url": "to fetch: https://infoziant.com/?liquid-footer=FUZZ (Get \"https://infoziant.com/?liquid-footer=http://omeg0ivn7k95wloyezah7zcqghm7aw.burpcollaborator.net\": context deadline exceeded (Client.Timeout exceeded while awaiting headers))",
+            "message": "failed"
+        },
+        {
+            "url": "to fetch: http://infoziant.com/blog-detail.php?id=FUZZ (Get \"http://infoziant.com/blog-detail.php?id=http://omeg0ivn7k95wloyezah7zcqghm7aw.burpcollaborator.net\": context deadline exceeded (Client.Timeout exceeded while awaiting headers))",
+            "message": "failed"
+        },
+        {
+            "url": "to fetch: http://www.infoziant.com/blog-detail.php?id=FUZZ (Get \"http://www.infoziant.com/blog-detail.php?id=http://omeg0ivn7k95wloyezah7zcqghm7aw.burpcollaborator.net\": context deadline exceeded (Client.Timeout exceeded while awaiting headers))",
+            "message": "failed"
+        },
+        {
+            "url": "to fetch: https://infoziant.com/?liquid-footer=FUZZ (Get \"https://infoziant.com/?liquid-footer=http://omeg0ivn7k95wloyezah7zcqghm7aw.burpcollaborator.net\": context deadline exceeded (Client.Timeout exceeded while awaiting headers))",
+            "message": "failed"
+        },
+        {
+            "url": "to fetch: https://infoziant.com/?liquid-header=FUZZ (Get \"https://infoziant.com/?liquid-header=http://omeg0ivn7k95wloyezah7zcqghm7aw.burpcollaborator.net\": context deadline exceeded (Client.Timeout exceeded while awaiting headers))",
+            "message": "failed"
+        },
+        {
+            "url": "to fetch: http://infoziant.com/onlinetest/generate.php?testids=FUZZ&section=FUZZ&paidTest=FUZZ&type=FUZZ (Get \"http://infoziant.com/onlinetest/generate.php?testids=http://omeg0ivn7k95wloyezah7zcqghm7aw.burpcollaborator.net&section=FUZZ&paidTest=FUZZ&type=FUZZ\": context deadline exceeded (Client.Timeout exceeded while awaiting headers))",
+            "message": "failed"
+        },
+        {
+            "url": "to fetch: http://infoziant.com/blog-details.php?blogid=FUZZ (Get \"http://infoziant.com/blog-details.php?blogid=http://omeg0ivn7k95wloyezah7zcqghm7aw.burpcollaborator.net\": context deadline exceeded (Client.Timeout exceeded while awaiting headers))",
+            "message": "failed"
+        },
+        {
+            "url": "to fetch: http://infoziant.com/blog-detail.php?id=FUZZ (Get \"http://infoziant.com/blog-detail.php?id=http://omeg0ivn7k95wloyezah7zcqghm7aw.burpcollaborator.net\": context deadline exceeded (Client.Timeout exceeded while awaiting headers))",
+            "message": "failed"
+        },
+        {
+            "url": "to fetch: http://www.infoziant.com/payroll/index.php?page=FUZZ&Admin=FUZZ (Get \"http://www.infoziant.com/payroll/index.php?page=http://omeg0ivn7k95wloyezah7zcqghm7aw.burpcollaborator.net&Admin=FUZZ\": context deadline exceeded (Client.Timeout exceeded while awaiting headers))",
+            "message": "failed"
+        }
+    ]
+}
