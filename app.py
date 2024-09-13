@@ -54,6 +54,7 @@ def strip_ansi_codes(text):
     ansi_escape = re.compile(r'\x1B(?:[@-Z\\-_]|\[[0-?]*[ -/]*[@-~])')
     return ansi_escape.sub('', text)
 
+
 def find_subdomains(domain, tool):
     subdomains = set()
     command = ['assetfinder', domain] if tool == 'assetfinder' else ['subfinder', '-d', domain]
@@ -165,6 +166,7 @@ def process_paramspider_results():
             input_path = os.path.join(results_dir, filename)
             output_path = os.path.join(dalfox_results_dir, f'dalfox_{filename}')
             run_dalfox(input_path, output_path)
+
 
 def aggregate_dalfox_results():
     dalfox_results_dir = './dalfox_results'
@@ -724,6 +726,205 @@ def run_retire_js_on_urls(js_urls):
     return results
 
 
+def run_autopoisoner(subdomain):
+    """
+    Runs the AutoPoisoner tool for the given subdomain and captures the output.
+    
+    Args:
+        subdomain (str): The subdomain to run AutoPoisoner on.
+    
+    Returns:
+        dict: The parsed result from AutoPoisoner.
+    """
+    try:
+        # Command to run AutoPoisoner
+        command = ['python3', 'autopoisoner.py', '--url', subdomain]
+        result = subprocess.run(command, capture_output=True, text=True, check=True)
+
+        # Parse the JSON output
+        output = result.stdout.strip()
+        if output:
+            parsed_output = json.loads(output)
+            return parsed_output
+        else:
+            logging.error(f"No output from AutoPoisoner for {subdomain}")
+            return {'url': subdomain, 'vulnerable': False, 'error': 'No output from AutoPoisoner'}
+    except subprocess.CalledProcessError as e:
+        logging.error(f"AutoPoisoner execution failed for {subdomain}: {e}")
+        return {'url': subdomain, 'vulnerable': False, 'error': 'Execution failed'}
+    except Exception as e:
+        logging.error(f"Unexpected error running AutoPoisoner on {subdomain}: {e}")
+        return {'url': subdomain, 'vulnerable': False, 'error': str(e)}
+
+
+def fetch_autopoisoner_results(validated_subdomains):
+    """
+    Run AutoPoisoner for each validated subdomain and collect the results.
+    
+    Args:
+        validated_subdomains (list): List of validated subdomains.
+    
+    Returns:
+        dict: The AutoPoisoner results for each subdomain.
+    """
+    autopoisoner_results = {}
+    for subdomain in validated_subdomains:
+        subdomain_url = subdomain['subdomain']
+        autopoisoner_result = run_autopoisoner(subdomain_url)
+        autopoisoner_results[subdomain_url] = autopoisoner_result
+    
+    return autopoisoner_results
+
+def run_sqlmap_on_paramspider_urls(domain):
+    sqlmap_dir = 'sqlmap'  # Directory where sqlmap.py is located
+    paramspider_urls_file = 'paramspider_urls.txt'
+    sqlmap_results = []
+
+    try:
+        with open(paramspider_urls_file, 'r') as file:
+            paramspider_urls = file.read().splitlines()
+
+        for url in paramspider_urls:
+            command = ['python3', os.path.join(sqlmap_dir, 'sqlmap.py'), '-u', url, '--batch', '--forms', '--output-format=json']
+            result = subprocess.run(command, capture_output=True, text=True)
+
+            # Parse and store the SQLMap results
+            if result.stdout:
+                try:
+                    sqlmap_output = json.loads(result.stdout)  # Assuming SQLMap outputs JSON
+                    sqlmap_results.append({
+                        'url': url,
+                        'vulnerable': bool(sqlmap_output.get('vulnerabilities', [])),
+                        'details': sqlmap_output
+                    })
+                except json.JSONDecodeError:
+                    logging.error(f"Failed to parse SQLMap output for {url}")
+                    sqlmap_results.append({
+                        'url': url,
+                        'vulnerable': False,
+                        'details': 'Error parsing output'
+                    })
+            else:
+                logging.error(f"No output from SQLMap for {url}")
+                sqlmap_results.append({
+                    'url': url,
+                    'vulnerable': False,
+                    'details': 'No output'
+                })
+
+        # Save the results to a JSON file
+        output_file = f'sqlmap_results_{domain}.json'
+        with open(output_file, 'w') as json_file:
+            json.dump({'sqlmap_output': sqlmap_results}, json_file, indent=4)
+
+        return sqlmap_results, output_file
+
+    except Exception as e:
+        logging.error(f"Error running SQLMap on ParamSpider URLs: {e}")
+        return None, None
+
+def run_nmap_on_paramspider_urls(domain):
+    nmap_results = []
+    paramspider_urls_file = 'paramspider_urls.txt'
+
+    try:
+        with open(paramspider_urls_file, 'r') as file:
+            paramspider_urls = file.read().splitlines()
+
+        for url in paramspider_urls:
+            command = ['nmap', '-Pn', '-sV', '-oX', '-', url]  # XML output from Nmap
+            result = subprocess.run(command, capture_output=True, text=True)
+
+            # Parse Nmap XML output and convert it to JSON
+            if result.stdout:
+                try:
+                    nmap_xml = result.stdout
+                    # Parsing the XML output from Nmap using xmltodict
+                    nmap_data = xmltodict.parse(nmap_xml)
+                    nmap_results.append({
+                        'url': url,
+                        'ports': nmap_data.get('nmaprun', {}).get('host', {}).get('ports', {}),
+                        'vulnerable': bool(nmap_data.get('nmaprun', {}).get('host', {}).get('ports', {}).get('port'))
+                    })
+                except Exception as e:
+                    logging.error(f"Failed to parse Nmap output for {url}: {e}")
+                    nmap_results.append({
+                        'url': url,
+                        'vulnerable': False,
+                        'details': 'Error parsing output'
+                    })
+            else:
+                logging.error(f"No output from Nmap for {url}")
+                nmap_results.append({
+                    'url': url,
+                    'vulnerable': False,
+                    'details': 'No output'
+                })
+
+        # Save the results to a JSON file
+        output_file = f'nmap_results_{domain}.json'
+        with open(output_file, 'w') as json_file:
+            json.dump({'nmap_output': nmap_results}, json_file, indent=4)
+
+        return nmap_results, output_file
+
+    except Exception as e:
+        logging.error(f"Error running Nmap on ParamSpider URLs: {e}")
+        return None, None
+
+def run_sstimap_on_paramspider_urls(domain):
+    sstimap_results = []
+    paramspider_urls_file = 'paramspider_urls.txt'
+
+    try:
+        with open(paramspider_urls_file, 'r') as file:
+            paramspider_urls = file.read().splitlines()
+
+        for url in paramspider_urls:
+            command = ['python3', 'sstimap.py', '-u', url]  # Run SSTImap with the URL
+            result = subprocess.run(command, capture_output=True, text=True, cwd='SSTImap')  # Ensure SSTImap directory
+
+            if result.stdout:
+                try:
+                    # Parse SSTImap output (assuming it's in plain text or JSON format)
+                    sstimap_output = result.stdout.strip()
+                    if 'Vulnerable' in sstimap_output:
+                        sstimap_results.append({
+                            'url': url,
+                            'vulnerable': True,
+                            'details': sstimap_output
+                        })
+                    else:
+                        sstimap_results.append({
+                            'url': url,
+                            'vulnerable': False,
+                            'details': sstimap_output
+                        })
+                except Exception as e:
+                    logging.error(f"Failed to parse SSTImap output for {url}: {e}")
+                    sstimap_results.append({
+                        'url': url,
+                        'vulnerable': False,
+                        'details': 'Error parsing output'
+                    })
+            else:
+                logging.error(f"No output from SSTImap for {url}")
+                sstimap_results.append({
+                    'url': url,
+                    'vulnerable': False,
+                    'details': 'No output'
+                })
+
+        # Save the results to a JSON file
+        output_file = f'sstimap_results_{domain}.json'
+        with open(output_file, 'w') as json_file:
+            json.dump({'sstimap_output': sstimap_results}, json_file, indent=4)
+
+        return sstimap_results, output_file
+
+    except Exception as e:
+        logging.error(f"Error running SSTImap on ParamSpider URLs: {e}")
+        return None, None
 
 
 @app.route('/api/subdomains', methods=['POST'])
@@ -742,7 +943,6 @@ def get_subdomains():
     paramspider_data = asyncio.run(fetch_paramspider_urls_async(validated_subdomains))
     save_data_to_file(domain, paramspider_data, 'paramspider_urls.json')
     save_urls_to_txt1(paramspider_data, 'paramspider_urls.txt')
-    
     server_version_info = fetch_server_version_info(validated_subdomains)
     save_data_to_file(domain, server_version_info, 'server_version_info.json')
     spf_dmarc_records = fetch_spf_dmarc_records(validated_subdomains)
@@ -759,7 +959,6 @@ def get_subdomains():
         logging.error(f'SSRF Finder execution failed: {stderr}')
     ssrf_results = process_ssrf_output(stdout)
     save_data_to_file(domain, ssrf_results, 'ssrf_finder_results.json')
-
     execute_clickjack()
     run_LFI_Finder()
     retire_js_results = {}
@@ -769,21 +968,23 @@ def get_subdomains():
             if js_urls:
                 retire_js_results[subdomain['subdomain']] = run_retire_js_on_urls(js_urls)
     save_data_to_file(domain, retire_js_results, 'retire_js_results.json')
-    
     smuggler_payload_dir = run_smuggler('wayback_urls.txt')
     if smuggler_payload_dir:
         smuggler_results_file = aggregate_smuggler_results(smuggler_payload_dir)
     else:
         smuggler_results_file = None
-    
     commix_results, commix_output_file = run_commix_on_wayback_urls(domain)
-    
     wayback403 = check403()
     save_data_to_file(domain, wayback403, 'wayback_urls_403_bypass_result.json')
     cors_scanner_result = execute_cors_scanner('subdomains.txt')
     save_data_to_file(domain , cors_scanner_result, 'cors_scanner_result.json')
+    autopoisoner_results = fetch_autopoisoner_results(validated_subdomains)
+    save_data_to_file(domain, autopoisoner_results, 'autopoisoner_results.json')
+    sqlmap_results, sqlmap_output_file = run_sqlmap_on_paramspider_urls(domain)
+    nmap_results, nmap_output_file = run_nmap_on_paramspider_urls(domain)
+    sstimap_results, sstimap_output_file = run_sstimap_on_paramspider_urls(domain)
     
-
+    
     return jsonify({
         'domain': domain,
         'validated_subdomains': validated_subdomains,
@@ -798,8 +999,14 @@ def get_subdomains():
         'security_headers': security_headers,
         'commix_results': commix_results,
         'commix_output_file': commix_output_file,
-        'retire_js_results': retire_js_results
-
+        'retire_js_results': retire_js_results,
+        'sqlmap_results': sqlmap_results,  
+        'sqlmap_output_file': sqlmap_output_file,
+        'autopoisoner_results': autopoisoner_results, 
+        'nmap_results': nmap_results, 
+        'nmap_output_file': nmap_output_file,  
+        'sstimap_results': sstimap_results,  
+        'sstimap_output_file': sstimap_output_file, 
     })
     
 

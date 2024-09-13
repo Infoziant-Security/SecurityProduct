@@ -25,4 +25,108 @@
             "status_code": "200"
         }
     ]
+}{
+    "infoziant.com": [
+        {
+            "subdomain": "https://ns1.infoziant.com",
+            "status_code": "403"
+        },
+        {
+            "subdomain": "https://ns2.infoziant.com",
+            "status_code": "403"
+        },
+        {
+            "subdomain": "https://mail.infoziant.com",
+            "status_code": "200"
+        },
+        {
+            "subdomain": "https://www.infoziant.com",
+            "status_code": "301"
+        },
+        {
+            "subdomain": "http://infoziant.com",
+            "status_code": "301"
+        },
+        {
+            "subdomain": "https://test.infoziant.com",
+            "status_code": "200"
+        }
+    ],
+    "vulnweb.com": [
+        {
+            "subdomain": "http://testphp.vulnweb.com",
+            "status_code": "200"
+        },
+        {
+            "subdomain": "http://testhtml5.vulnweb.com",
+            "status_code": "200"
+        },
+        {
+            "subdomain": "http://vulnweb.com",
+            "status_code": "200"
+        },
+        {
+            "subdomain": "http://rest.vulnweb.com",
+            "status_code": "200"
+        },
+        {
+            "subdomain": "http://www.vulnweb.com",
+            "status_code": "200"
+        },
+        {
+            "subdomain": "http://testasp.vulnweb.com",
+            "status_code": "200"
+        },
+        {
+            "subdomain": "http://testaspnet.vulnweb.com",
+            "status_code": "200"
+        }
+    ]
+}{
+    "infoziant.com": [
+        {
+            "subdomain": "https://ns2.infoziant.com",
+            "status_code": "403"
+        },
+        {
+            "subdomain": "https://template.infoziant.com",
+            "status_code": "200"
+        },
+        {
+            "subdomain": "https://enbott.infoziant.com",
+            "status_code": "403"
+        },
+        {
+            "subdomain": "https://infoziant.com",
+            "status_code": "200"
+        },
+        {
+            "subdomain": "https://www.infoziant.com",
+            "status_code": "200"
+        },
+        {
+            "subdomain": "https://ns1.infoziant.com",
+            "status_code": "403"
+        },
+        {
+            "subdomain": "https://test.infoziant.com",
+            "status_code": "404"
+        },
+        {
+            "subdomain": "https://demo.infoziant.com",
+            "status_code": "404"
+        },
+        {
+            "subdomain": "https://mail.infoziant.com",
+            "status_code": "200"
+        },
+        {
+            "subdomain": "https://backup.infoziant.com",
+            "status_code": "404"
+        },
+        {
+            "subdomain": "https://web.infoziant.com",
+            "status_code": "404"
+        }
+    ]
 }

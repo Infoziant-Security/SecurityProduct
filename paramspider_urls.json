@@ -25,4 +25,169 @@
         ],
         "https://test.infoziant.com": []
     }
+}{
+    "infoziant.com": {
+        "https://mail.infoziant.com": [],
+        "https://www.infoziant.com": [
+            "https://infoziant.com/?liquid-header=FUZZ",
+            "http://infoziant.com/onlinetest/generate.php?testids=FUZZ&section=FUZZ&paidTest=FUZZ&type=FUZZ",
+            "http://infoziant.com/onlinetest/test_generator.php?testData=FUZZ",
+            "http://www.infoziant.com/blog-detail.php?id=FUZZ",
+            "http://www.infoziant.com/payroll/index.php?page=FUZZ&Admin=FUZZ",
+            "https://infoziant.com/?liquid-footer=FUZZ",
+            "http://infoziant.com/blog-details.php?blogid=FUZZ",
+            "http://infoziant.com/infoassets/fonts/fontawesome-webfont3e6e.html?v=FUZZ",
+            "http://infoziant.com/blog-detail.php?id=FUZZ"
+        ],
+        "http://infoziant.com": [
+            "http://infoziant.com/infoassets/fonts/fontawesome-webfont3e6e.html?v=FUZZ",
+            "http://infoziant.com/onlinetest/test_generator.php?testData=FUZZ",
+            "http://www.infoziant.com/blog-detail.php?id=FUZZ",
+            "http://infoziant.com/blog-details.php?blogid=FUZZ",
+            "https://infoziant.com/?liquid-header=FUZZ",
+            "http://infoziant.com/onlinetest/generate.php?testids=FUZZ&section=FUZZ&paidTest=FUZZ&type=FUZZ",
+            "http://infoziant.com/blog-detail.php?id=FUZZ",
+            "http://www.infoziant.com/payroll/index.php?page=FUZZ&Admin=FUZZ",
+            "https://infoziant.com/?liquid-footer=FUZZ"
+        ],
+        "https://test.infoziant.com": []
+    },
+    "vulnweb.com": {
+        "http://testphp.vulnweb.com": [
+            "http://testphp.vulnweb.com/product.php?pic=FUZZ&hkNi=FUZZ",
+            "http://testphp.vulnweb.com/showimage.php?file=FUZZ&size=FUZZ",
+            "http://testphp.vulnweb.com/artists.php?+artist=FUZZ",
+            "http://testphp.vulnweb.com/AJAX/infoartist.php?id=FUZZ&YVeN=FUZZ",
+            "http://testphp.vulnweb.com/index.zipA01http://testphp.vulnweb.com/listproducts.php?artist=FUZZ",
+            "http://testphp.vulnweb.com/?%3Fid=FUZZ",
+            "http://testphp.vulnweb.com/hpp/params.php?p=FUZZ",
+            "http://testphp.vulnweb.com/hpp/params.php?p=FUZZ&pp=FUZZ",
+            "http://testphp.vulnweb.com/?cmd=FUZZ",
+            "http://testphp.vulnweb.com/?id=FUZZ",
+            "http://testphp.vulnweb.com/product.php?pic=FUZZ",
+            "http://testphp.vulnweb.com/bxss/vuln.php?id=FUZZ",
+            "http://testphp.vulnweb.com/redir.php?r=FUZZ&user=FUZZ",
+            "http://testphp.vulnweb.com/categories.php/listproducts.php?cat=FUZZ",
+            "http://testphp.vulnweb.com/Mod_Rewrite_Shop/buy.php?id=FUZZ",
+            "http://testphp.vulnweb.com/listproducts.php?artist=FUZZ&asdf=FUZZ&cat=FUZZ",
+            "http://testphp.vulnweb.com/comment.php?aid=FUZZ",
+            "http://testphp.vulnweb.com/secured/phpinfo.php?=FUZZ",
+            "http://testphp.vulnweb.com/artists.php?oqXf=FUZZ",
+            "http://testphp.vulnweb.com/Mod_Rewrite_Shop/details.php?id=FUZZ",
+            "http://testphp.vulnweb.com/hpp/params.php?aaaa%2F=FUZZ",
+            "http://testphp.vulnweb.com/listproducts.php?artist=FUZZ",
+            "http://testphp.vulnweb.com/login.php?id=FUZZ&NtFH=FUZZ",
+            "http://testphp.vulnweb.com/AJAX/infoartist.php?id=FUZZ&DUMM=FUZZ",
+            "http://testphp.vulnweb.com/?trk=FUZZ",
+            "http://testphp.vulnweb.com/showimage.php?%EF%AC%81le=FUZZ",
+            "http://testphp.vulnweb.com/artist.php?artist=FUZZ",
+            "http://testphp.vulnweb.com/listproducts.php?artist=FUZZ&amp%3Basdf=FUZZ&amp%3Bcat=FUZZ",
+            "http://testphp.vulnweb.com/hpp/params.php?aaaa%2F=FUZZ&p=FUZZ&pp=FUZZ",
+            "http://testphp.vulnweb.com/listproducts.php?cat=FUZZ",
+            "http://testphp.vulnweb.com/?%3Fcmd=FUZZ",
+            "http://testphp.vulnweb.com/redir.php?r=FUZZ&view=FUZZ&task=FUZZ&id=FUZZ",
+            "http://testphp.vulnweb.com/showimage.php?file=FUZZ",
+            "http://testphp.vulnweb.com/listproducts.php?id=FUZZ",
+            "http://testphp.vulnweb.com/login.php?id=FUZZ",
+            "http://testphp.vulnweb.com/Mod_Rewrite_Shop/details.php?id=FUZZ&mjqN=FUZZ",
+            "http://testphp.vulnweb.com/AJAX/infocateg.php?id=FUZZ",
+            "http://testphp.vulnweb.com/index.php?%25id%25=FUZZ&user=FUZZ",
+            "http://testphp.vulnweb.com/admin/?C=FUZZ",
+            "http://testphp.vulnweb.com/?source=FUZZ",
+            "http://testphp.vulnweb.com/artists.php?artist=FUZZ",
+            "http://testphp.vulnweb.com/login.php?id=FUZZ&SlFY=FUZZ",
+            "http://testphp.vulnweb.com/artists.php?artist+=FUZZ",
+            "http://testphp.vulnweb.com/product.php?pic=FUZZ&tdRI=FUZZ",
+            "http://testphp.vulnweb.com/artists.php?file=FUZZ",
+            "http://testphp.vulnweb.com/AJAX/infoartist.php?id=FUZZ",
+            "http://testphp.vulnweb.com/hpp/?pp=FUZZ",
+            "http://testphp.vulnweb.com/redir.php?r=FUZZ",
+            "http://testphp.vulnweb.com/hpp/index.php?pp=FUZZ",
+            "http://testphp.vulnweb.com/AJAX/infoartist.php?id=FUZZ&fYij=FUZZ",
+            "http://testphp.vulnweb.com/comment.php?pid=FUZZ",
+            "http://testphp.vulnweb.com/search.php?test=FUZZ",
+            "http://testphp.vulnweb.com/showimage.php?%EF%AC%81le=FUZZ&size=FUZZ",
+            "http://testphp.vulnweb.com/index.php?id=FUZZ&user=FUZZ",
+            "http://testphp.vulnweb.com/Mod_Rewrite_Shop/rate.php?id=FUZZ",
+            "http://testphp.vulnweb.com/listproducts.php?cat=FUZZ&zfdfasdf=FUZZ",
+            "http://testphp.vulnweb.com/pictures/credentials.txtA01http://testphp.vulnweb.com/product.php?pic=FUZZ",
+            "http://testphp.vulnweb.com/search.php?test=FUZZ&cat=FUZZ&ppl=FUZZ",
+            "http://testphp.vulnweb.com/search.php?cookie=FUZZ",
+            "http://testphp.vulnweb.com/hpp/params.php?aaaa%2F=FUZZ&p=FUZZ"
+        ],
+        "http://testhtml5.vulnweb.com": [
+            "http://testhtml5.vulnweb.com/comment?id=FUZZ",
+            "http://testhtml5.vulnweb.com/like?id=FUZZ",
+            "http://testhtml5.vulnweb.com/ajax/popular?offset=FUZZ",
+            "http://testhtml5.vulnweb.com/ajax/latest?offset=FUZZ",
+            "http://testhtml5.vulnweb.com/report?id=FUZZ"
+        ],
+        "http://vulnweb.com": [
+            "http://vulnweb.com/account.php?id=FUZZ",
+            "http://vulnweb.com/?p=FUZZ",
+            "http://www.vulnweb.com/?rev=FUZZ",
+            "http://www.vulnweb.com/https://torproject.org/https://en.wikipedia.org/wiki/.onionhttps://security.stackexchange.com/questions/78682/https://www.torproject.org/projects/torbrowser.html.enhttps://tails.boum.org/https://www.whonix.org/https://www.whonix.org/wiki/VirtualBoxhttps://www.virtualbox.org/https://www.whonix.org/wiki/Downloadhttps://panopticlick.eff.org/http://maill4dnx45yrtsy.onion/https://www.torproject.org/docs/hidden-services.html.enhttps://security.stackexchange.com/questions/79438/https://en.wikipedia.org/wiki/Forward_secrecyhttps://en.wikipedia.org/wiki/Off-the-Record_Messaginghttps://whispersystems.org/blog/asynchronous-security/https://f5.com/glossary/ssl-offloadinghttp://en.wikipedia.org/wiki/SSL_accelerationhttp://nginx.com/blog/nginx-ssl/http://www.pcgamer.com/dota-2-esports-league-suspended-after-players-hit-by-ddos-attacks/https://security.stackexchange.com/a/79363/12https://security.stackexchange.com/a/31846/39623https://hashcat.net/oclhashcat/https://security.stackexchange.com/a/51080/39623https://www.ietf.org/rfc/rfc2898.txthttps://www.ietf.org/rfc/rfc2104.txthttps://hashcat.net/oclhashcat/https://hashcat.net/wiki/doku.php?id=FUZZ",
+            "http://vulnweb.com/2012/09/24/hello-world/?replytocom=FUZZ",
+            "http://vulnweb.com/artists.php?artist=FUZZ",
+            "http://vulnweb.com/redir.php?r=FUZZ",
+            "http://www.vulnweb.com/?ref=FUZZ"
+        ],
+        "http://rest.vulnweb.com": [],
+        "http://www.vulnweb.com": [
+            "http://vulnweb.com/2012/09/24/hello-world/?replytocom=FUZZ",
+            "http://vulnweb.com/redir.php?r=FUZZ",
+            "http://vulnweb.com/account.php?id=FUZZ",
+            "http://vulnweb.com/artists.php?artist=FUZZ",
+            "http://www.vulnweb.com/?rev=FUZZ",
+            "http://vulnweb.com/?p=FUZZ",
+            "http://www.vulnweb.com/?ref=FUZZ",
+            "http://www.vulnweb.com/https://torproject.org/https://en.wikipedia.org/wiki/.onionhttps://security.stackexchange.com/questions/78682/https://www.torproject.org/projects/torbrowser.html.enhttps://tails.boum.org/https://www.whonix.org/https://www.whonix.org/wiki/VirtualBoxhttps://www.virtualbox.org/https://www.whonix.org/wiki/Downloadhttps://panopticlick.eff.org/http://maill4dnx45yrtsy.onion/https://www.torproject.org/docs/hidden-services.html.enhttps://security.stackexchange.com/questions/79438/https://en.wikipedia.org/wiki/Forward_secrecyhttps://en.wikipedia.org/wiki/Off-the-Record_Messaginghttps://whispersystems.org/blog/asynchronous-security/https://f5.com/glossary/ssl-offloadinghttp://en.wikipedia.org/wiki/SSL_accelerationhttp://nginx.com/blog/nginx-ssl/http://www.pcgamer.com/dota-2-esports-league-suspended-after-players-hit-by-ddos-attacks/https://security.stackexchange.com/a/79363/12https://security.stackexchange.com/a/31846/39623https://hashcat.net/oclhashcat/https://security.stackexchange.com/a/51080/39623https://www.ietf.org/rfc/rfc2898.txthttps://www.ietf.org/rfc/rfc2104.txthttps://hashcat.net/oclhashcat/https://hashcat.net/wiki/doku.php?id=FUZZ"
+        ],
+        "http://testasp.vulnweb.com": [
+            "http://testasp.vulnweb.com/showforum.asp?id=FUZZ",
+            "http://testasp.vulnweb.com/Search.asp?tfSearch=FUZZ",
+            "http://testasp.vulnweb.com/t/fit.txt%3F.com/search?hl=FUZZ&q=FUZZ",
+            "http://testasp.vulnweb.com/Login.asp?RetURL=FUZZ",
+            "http://testasp.vulnweb.com/Register.asp?RetURL=FUZZ",
+            "http://testasp.vulnweb.com/t/xss.html?%00.jpg%3Fid_menu=FUZZ",
+            "http://testasp.vulnweb.com/Login.asp?RetURL=FUZZ&XNYy=FUZZ",
+            "http://testasp.vulnweb.com/Templatize.asp?item=FUZZ",
+            "http://testasp.vulnweb.com/showthread.asp?id=FUZZ",
+            "http://testasp.vulnweb.com/search.asp?tfSearch=FUZZ"
+        ],
+        "http://testaspnet.vulnweb.com": [
+            "http://testaspnet.vulnweb.com/ReadNews.aspx?id=FUZZ",
+            "http://testaspnet.vulnweb.com/Comments.aspx?id=FUZZ",
+            "http://testaspnet.vulnweb.com/test/vuln.cgi?par1=FUZZ",
+            "http://testaspnet.vulnweb.com/ReadNews.aspx?id=FUZZ&NewsAd=FUZZ",
+            "http://testaspnet.vulnweb.com/test/vuln.cgi?par1=FUZZ&par2=FUZZ"
+        ]
+    }
+}{
+    "infoziant.com": {
+        "https://template.infoziant.com": [],
+        "https://infoziant.com": [
+            "https://infoziant.com/?liquid-header=FUZZ",
+            "http://infoziant.com/blog-detail.php?id=FUZZ",
+            "https://infoziant.com/?liquid-footer=FUZZ",
+            "http://infoziant.com/infoassets/fonts/fontawesome-webfont3e6e.html?v=FUZZ",
+            "http://www.infoziant.com/payroll/index.php?page=FUZZ&Admin=FUZZ",
+            "http://infoziant.com/onlinetest/test_generator.php?testData=FUZZ",
+            "http://www.infoziant.com/blog-detail.php?id=FUZZ",
+            "http://infoziant.com/onlinetest/generate.php?testids=FUZZ&section=FUZZ&paidTest=FUZZ&type=FUZZ",
+            "http://infoziant.com/blog-details.php?blogid=FUZZ"
+        ],
+        "https://www.infoziant.com": [
+            "https://infoziant.com/?liquid-footer=FUZZ",
+            "https://infoziant.com/?liquid-header=FUZZ",
+            "http://infoziant.com/onlinetest/test_generator.php?testData=FUZZ",
+            "http://www.infoziant.com/payroll/index.php?page=FUZZ&Admin=FUZZ",
+            "http://www.infoziant.com/blog-detail.php?id=FUZZ",
+            "http://infoziant.com/blog-details.php?blogid=FUZZ",
+            "http://infoziant.com/onlinetest/generate.php?testids=FUZZ&section=FUZZ&paidTest=FUZZ&type=FUZZ",
+            "http://infoziant.com/blog-detail.php?id=FUZZ",
+            "http://infoziant.com/infoassets/fonts/fontawesome-webfont3e6e.html?v=FUZZ"
+        ],
+        "https://mail.infoziant.com": []
+    }
 }

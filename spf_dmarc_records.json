@@ -39,4 +39,166 @@
             "dmarc_vulnerable": true
         }
     }
+}{
+    "infoziant.com": {
+        "https://ns1.infoziant.com": {
+            "spf": [],
+            "spf_vulnerable": true,
+            "dmarc": [],
+            "dmarc_vulnerable": true
+        },
+        "https://ns2.infoziant.com": {
+            "spf": [],
+            "spf_vulnerable": true,
+            "dmarc": [],
+            "dmarc_vulnerable": true
+        },
+        "https://mail.infoziant.com": {
+            "spf": [],
+            "spf_vulnerable": true,
+            "dmarc": [],
+            "dmarc_vulnerable": true
+        },
+        "https://www.infoziant.com": {
+            "spf": [],
+            "spf_vulnerable": true,
+            "dmarc": [],
+            "dmarc_vulnerable": true
+        },
+        "http://infoziant.com": {
+            "spf": [],
+            "spf_vulnerable": true,
+            "dmarc": [
+                "\"v=DMARC1; p=none;\""
+            ],
+            "dmarc_vulnerable": true
+        },
+        "https://test.infoziant.com": {
+            "spf": [],
+            "spf_vulnerable": true,
+            "dmarc": [],
+            "dmarc_vulnerable": true
+        }
+    },
+    "vulnweb.com": {
+        "http://testphp.vulnweb.com": {
+            "spf": [],
+            "spf_vulnerable": true,
+            "dmarc": [],
+            "dmarc_vulnerable": true
+        },
+        "http://testhtml5.vulnweb.com": {
+            "spf": [
+                "\"v=spf1 -all\""
+            ],
+            "spf_vulnerable": false,
+            "dmarc": [],
+            "dmarc_vulnerable": true
+        },
+        "http://vulnweb.com": {
+            "spf": [],
+            "spf_vulnerable": true,
+            "dmarc": [],
+            "dmarc_vulnerable": true
+        },
+        "http://rest.vulnweb.com": {
+            "spf": [],
+            "spf_vulnerable": true,
+            "dmarc": [],
+            "dmarc_vulnerable": true
+        },
+        "http://www.vulnweb.com": {
+            "spf": [
+                "\"v=spf1 -all\""
+            ],
+            "spf_vulnerable": false,
+            "dmarc": [],
+            "dmarc_vulnerable": true
+        },
+        "http://testasp.vulnweb.com": {
+            "spf": [
+                "\"v=spf1 -all\""
+            ],
+            "spf_vulnerable": false,
+            "dmarc": [],
+            "dmarc_vulnerable": true
+        },
+        "http://testaspnet.vulnweb.com": {
+            "spf": [
+                "\"v=spf1 -all\""
+            ],
+            "spf_vulnerable": false,
+            "dmarc": [],
+            "dmarc_vulnerable": true
+        }
+    }
+}{
+    "infoziant.com": {
+        "https://ns2.infoziant.com": {
+            "spf": [],
+            "spf_vulnerable": true,
+            "dmarc": [],
+            "dmarc_vulnerable": true
+        },
+        "https://template.infoziant.com": {
+            "spf": [],
+            "spf_vulnerable": true,
+            "dmarc": [],
+            "dmarc_vulnerable": true
+        },
+        "https://enbott.infoziant.com": {
+            "spf": [],
+            "spf_vulnerable": true,
+            "dmarc": [],
+            "dmarc_vulnerable": true
+        },
+        "https://infoziant.com": {
+            "spf": [],
+            "spf_vulnerable": true,
+            "dmarc": [],
+            "dmarc_vulnerable": true
+        },
+        "https://www.infoziant.com": {
+            "spf": [],
+            "spf_vulnerable": true,
+            "dmarc": [],
+            "dmarc_vulnerable": true
+        },
+        "https://ns1.infoziant.com": {
+            "spf": [],
+            "spf_vulnerable": true,
+            "dmarc": [],
+            "dmarc_vulnerable": true
+        },
+        "https://test.infoziant.com": {
+            "spf": [],
+            "spf_vulnerable": true,
+            "dmarc": [],
+            "dmarc_vulnerable": true
+        },
+        "https://demo.infoziant.com": {
+            "spf": [],
+            "spf_vulnerable": true,
+            "dmarc": [],
+            "dmarc_vulnerable": true
+        },
+        "https://mail.infoziant.com": {
+            "spf": [],
+            "spf_vulnerable": true,
+            "dmarc": [],
+            "dmarc_vulnerable": true
+        },
+        "https://backup.infoziant.com": {
+            "spf": [],
+            "spf_vulnerable": true,
+            "dmarc": [],
+            "dmarc_vulnerable": true
+        },
+        "https://web.infoziant.com": {
+            "spf": [],
+            "spf_vulnerable": true,
+            "dmarc": [],
+            "dmarc_vulnerable": true
+        }
+    }
 }

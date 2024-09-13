@@ -25,4 +25,108 @@
             "vulnerable": false
         }
     }
+}{
+    "infoziant.com": {
+        "https://ns1.infoziant.com": {
+            "server": "Error",
+            "vulnerable": true
+        },
+        "https://ns2.infoziant.com": {
+            "server": "Error",
+            "vulnerable": true
+        },
+        "https://mail.infoziant.com": {
+            "server": "Error",
+            "vulnerable": true
+        },
+        "https://www.infoziant.com": {
+            "server": "Apache",
+            "vulnerable": false
+        },
+        "http://infoziant.com": {
+            "server": "Apache",
+            "vulnerable": false
+        },
+        "https://test.infoziant.com": {
+            "server": "Apache",
+            "vulnerable": false
+        }
+    },
+    "vulnweb.com": {
+        "http://testphp.vulnweb.com": {
+            "server": "nginx/1.19.0",
+            "vulnerable": false
+        },
+        "http://testhtml5.vulnweb.com": {
+            "server": "nginx/1.19.0",
+            "vulnerable": false
+        },
+        "http://vulnweb.com": {
+            "server": "nginx/1.19.0",
+            "vulnerable": false
+        },
+        "http://rest.vulnweb.com": {
+            "server": "Apache/2.4.25 (Debian)",
+            "vulnerable": false
+        },
+        "http://www.vulnweb.com": {
+            "server": "nginx/1.19.0",
+            "vulnerable": false
+        },
+        "http://testasp.vulnweb.com": {
+            "server": "Microsoft-IIS/8.5",
+            "vulnerable": true
+        },
+        "http://testaspnet.vulnweb.com": {
+            "server": "Microsoft-IIS/8.5",
+            "vulnerable": true
+        }
+    }
+}{
+    "infoziant.com": {
+        "https://ns2.infoziant.com": {
+            "server": "Error",
+            "vulnerable": true
+        },
+        "https://template.infoziant.com": {
+            "server": "Apache",
+            "vulnerable": false
+        },
+        "https://enbott.infoziant.com": {
+            "server": "Apache",
+            "vulnerable": false
+        },
+        "https://infoziant.com": {
+            "server": "Apache",
+            "vulnerable": false
+        },
+        "https://www.infoziant.com": {
+            "server": "Apache",
+            "vulnerable": false
+        },
+        "https://ns1.infoziant.com": {
+            "server": "Error",
+            "vulnerable": true
+        },
+        "https://test.infoziant.com": {
+            "server": "Apache",
+            "vulnerable": false
+        },
+        "https://demo.infoziant.com": {
+            "server": "Apache",
+            "vulnerable": false
+        },
+        "https://mail.infoziant.com": {
+            "server": "nginx",
+            "vulnerable": false
+        },
+        "https://backup.infoziant.com": {
+            "server": "Apache",
+            "vulnerable": false
+        },
+        "https://web.infoziant.com": {
+            "server": "Apache",
+            "vulnerable": false
+        }
+    }
 }

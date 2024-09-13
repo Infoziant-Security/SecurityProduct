@@ -1,0 +1,5 @@
+http://testaspnet.vulnweb.com/ReadNews.aspx?id=FUZZ
+http://testaspnet.vulnweb.com/Comments.aspx?id=FUZZ
+http://testaspnet.vulnweb.com/test/vuln.cgi?par1=FUZZ
+http://testaspnet.vulnweb.com/ReadNews.aspx?id=FUZZ&NewsAd=FUZZ
+http://testaspnet.vulnweb.com/test/vuln.cgi?par1=FUZZ&par2=FUZZ

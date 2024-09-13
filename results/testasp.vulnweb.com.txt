@@ -1,0 +1,10 @@
+http://testasp.vulnweb.com/showforum.asp?id=FUZZ
+http://testasp.vulnweb.com/Search.asp?tfSearch=FUZZ
+http://testasp.vulnweb.com/t/fit.txt%3F.com/search?hl=FUZZ&q=FUZZ
+http://testasp.vulnweb.com/Login.asp?RetURL=FUZZ
+http://testasp.vulnweb.com/Register.asp?RetURL=FUZZ
+http://testasp.vulnweb.com/t/xss.html?%00.jpg%3Fid_menu=FUZZ
+http://testasp.vulnweb.com/Login.asp?RetURL=FUZZ&XNYy=FUZZ
+http://testasp.vulnweb.com/Templatize.asp?item=FUZZ
+http://testasp.vulnweb.com/showthread.asp?id=FUZZ
+http://testasp.vulnweb.com/search.asp?tfSearch=FUZZ

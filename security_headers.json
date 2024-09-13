@@ -34,4 +34,276 @@
             ] 
         }
     }
+}{
+    "infoziant.com": {
+        "https://ns1.infoziant.com": {
+            "effective_url": "",
+            "missing_headers": []
+        },
+        "https://ns2.infoziant.com": {
+            "effective_url": "",
+            "missing_headers": []
+        },
+        "https://mail.infoziant.com": {
+            "effective_url": "",
+            "missing_headers": []
+        },
+        "https://www.infoziant.com": {
+            "effective_url": "",
+            "missing_headers": []
+        },
+        "http://infoziant.com": {
+            "effective_url": "",
+            "missing_headers": []
+        },
+        "https://test.infoziant.com": {
+            "effective_url": "\u001b[94mhttps://test.infoziant.com\u001b[0m",
+            "missing_headers": [
+                "\u001b[93mX-Frame-Options\u001b[0m",
+                "\u001b[93mX-Content-Type-Options\u001b[0m",
+                "\u001b[91mStrict-Transport-Security\u001b[0m",
+                "\u001b[93mContent-Security-Policy\u001b[0m",
+                "\u001b[93mPermissions-Policy\u001b[0m",
+                "\u001b[93mCross-Origin-Embedder-Policy\u001b[0m",
+                "\u001b[93mCross-Origin-Resource-Policy\u001b[0m",
+                "\u001b[93mCross-Origin-Opener-Policy\u001b[0m"
+            ]
+        }
+    },
+    "vulnweb.com": {
+        "http://testphp.vulnweb.com": {
+            "effective_url": "\u001b[94mhttp://testphp.vulnweb.com\u001b[0m",
+            "missing_headers": [
+                "\u001b[93mX-Frame-Options\u001b[0m",
+                "\u001b[93mX-Content-Type-Options\u001b[0m",
+                "\u001b[91mStrict-Transport-Security\u001b[0m",
+                "\u001b[93mContent-Security-Policy\u001b[0m",
+                "\u001b[93mReferrer-Policy\u001b[0m",
+                "\u001b[93mPermissions-Policy\u001b[0m",
+                "\u001b[93mCross-Origin-Embedder-Policy\u001b[0m",
+                "\u001b[93mCross-Origin-Resource-Policy\u001b[0m",
+                "\u001b[93mCross-Origin-Opener-Policy\u001b[0m"
+            ]
+        },
+        "http://testhtml5.vulnweb.com": {
+            "effective_url": "\u001b[94mhttp://testhtml5.vulnweb.com\u001b[0m",
+            "missing_headers": [
+                "\u001b[93mX-Frame-Options\u001b[0m",
+                "\u001b[93mX-Content-Type-Options\u001b[0m",
+                "\u001b[91mStrict-Transport-Security\u001b[0m",
+                "\u001b[93mContent-Security-Policy\u001b[0m",
+                "\u001b[93mReferrer-Policy\u001b[0m",
+                "\u001b[93mPermissions-Policy\u001b[0m",
+                "\u001b[93mCross-Origin-Embedder-Policy\u001b[0m",
+                "\u001b[93mCross-Origin-Resource-Policy\u001b[0m",
+                "\u001b[93mCross-Origin-Opener-Policy\u001b[0m"
+            ]
+        },
+        "http://vulnweb.com": {
+            "effective_url": "\u001b[94mhttp://vulnweb.com\u001b[0m",
+            "missing_headers": [
+                "\u001b[93mX-Frame-Options\u001b[0m",
+                "\u001b[93mX-Content-Type-Options\u001b[0m",
+                "\u001b[91mStrict-Transport-Security\u001b[0m",
+                "\u001b[93mContent-Security-Policy\u001b[0m",
+                "\u001b[93mReferrer-Policy\u001b[0m",
+                "\u001b[93mPermissions-Policy\u001b[0m",
+                "\u001b[93mCross-Origin-Embedder-Policy\u001b[0m",
+                "\u001b[93mCross-Origin-Resource-Policy\u001b[0m",
+                "\u001b[93mCross-Origin-Opener-Policy\u001b[0m"
+            ]
+        },
+        "http://rest.vulnweb.com": {
+            "effective_url": "\u001b[94mhttp://rest.vulnweb.com\u001b[0m",
+            "missing_headers": [
+                "\u001b[93mX-Frame-Options\u001b[0m",
+                "\u001b[93mX-Content-Type-Options\u001b[0m",
+                "\u001b[91mStrict-Transport-Security\u001b[0m",
+                "\u001b[93mContent-Security-Policy\u001b[0m",
+                "\u001b[93mReferrer-Policy\u001b[0m",
+                "\u001b[93mPermissions-Policy\u001b[0m",
+                "\u001b[93mCross-Origin-Embedder-Policy\u001b[0m",
+                "\u001b[93mCross-Origin-Resource-Policy\u001b[0m",
+                "\u001b[93mCross-Origin-Opener-Policy\u001b[0m"
+            ]
+        },
+        "http://www.vulnweb.com": {
+            "effective_url": "\u001b[94mhttp://www.vulnweb.com\u001b[0m",
+            "missing_headers": [
+                "\u001b[93mX-Frame-Options\u001b[0m",
+                "\u001b[93mX-Content-Type-Options\u001b[0m",
+                "\u001b[91mStrict-Transport-Security\u001b[0m",
+                "\u001b[93mContent-Security-Policy\u001b[0m",
+                "\u001b[93mReferrer-Policy\u001b[0m",
+                "\u001b[93mPermissions-Policy\u001b[0m",
+                "\u001b[93mCross-Origin-Embedder-Policy\u001b[0m",
+                "\u001b[93mCross-Origin-Resource-Policy\u001b[0m",
+                "\u001b[93mCross-Origin-Opener-Policy\u001b[0m"
+            ]
+        },
+        "http://testasp.vulnweb.com": {
+            "effective_url": "\u001b[94mhttp://testasp.vulnweb.com\u001b[0m",
+            "missing_headers": [
+                "\u001b[93mX-Frame-Options\u001b[0m",
+                "\u001b[93mX-Content-Type-Options\u001b[0m",
+                "\u001b[91mStrict-Transport-Security\u001b[0m",
+                "\u001b[93mContent-Security-Policy\u001b[0m",
+                "\u001b[93mReferrer-Policy\u001b[0m",
+                "\u001b[93mPermissions-Policy\u001b[0m",
+                "\u001b[93mCross-Origin-Embedder-Policy\u001b[0m",
+                "\u001b[93mCross-Origin-Resource-Policy\u001b[0m",
+                "\u001b[93mCross-Origin-Opener-Policy\u001b[0m"
+            ]
+        },
+        "http://testaspnet.vulnweb.com": {
+            "effective_url": "\u001b[94mhttp://testaspnet.vulnweb.com\u001b[0m",
+            "missing_headers": [
+                "\u001b[93mX-Frame-Options\u001b[0m",
+                "\u001b[93mX-Content-Type-Options\u001b[0m",
+                "\u001b[91mStrict-Transport-Security\u001b[0m",
+                "\u001b[93mContent-Security-Policy\u001b[0m",
+                "\u001b[93mReferrer-Policy\u001b[0m",
+                "\u001b[93mPermissions-Policy\u001b[0m",
+                "\u001b[93mCross-Origin-Embedder-Policy\u001b[0m",
+                "\u001b[93mCross-Origin-Resource-Policy\u001b[0m",
+                "\u001b[93mCross-Origin-Opener-Policy\u001b[0m"
+            ]
+        }
+    }
+}{
+    "infoziant.com": {
+        "https://ns2.infoziant.com": {
+            "effective_url": "",
+            "missing_headers": []
+        },
+        "https://template.infoziant.com": {
+            "effective_url": "\u001b[94mhttps://template.infoziant.com\u001b[0m",
+            "missing_headers": [
+                "\u001b[93mX-Frame-Options\u001b[0m",
+                "\u001b[93mX-Content-Type-Options\u001b[0m",
+                "\u001b[91mStrict-Transport-Security\u001b[0m",
+                "\u001b[93mContent-Security-Policy\u001b[0m",
+                "\u001b[93mReferrer-Policy\u001b[0m",
+                "\u001b[93mPermissions-Policy\u001b[0m",
+                "\u001b[93mCross-Origin-Embedder-Policy\u001b[0m",
+                "\u001b[93mCross-Origin-Resource-Policy\u001b[0m",
+                "\u001b[93mCross-Origin-Opener-Policy\u001b[0m"
+            ]
+        },
+        "https://enbott.infoziant.com": {
+            "effective_url": "\u001b[94mhttps://enbott.infoziant.com\u001b[0m",
+            "missing_headers": [
+                "\u001b[93mX-Frame-Options\u001b[0m",
+                "\u001b[93mX-Content-Type-Options\u001b[0m",
+                "\u001b[91mStrict-Transport-Security\u001b[0m",
+                "\u001b[93mContent-Security-Policy\u001b[0m",
+                "\u001b[93mReferrer-Policy\u001b[0m",
+                "\u001b[93mPermissions-Policy\u001b[0m",
+                "\u001b[93mCross-Origin-Embedder-Policy\u001b[0m",
+                "\u001b[93mCross-Origin-Resource-Policy\u001b[0m",
+                "\u001b[93mCross-Origin-Opener-Policy\u001b[0m"
+            ]
+        },
+        "https://infoziant.com": {
+            "effective_url": "\u001b[94mhttps://infoziant.com\u001b[0m",
+            "missing_headers": [
+                "\u001b[93mX-Frame-Options\u001b[0m",
+                "\u001b[93mX-Content-Type-Options\u001b[0m",
+                "\u001b[91mStrict-Transport-Security\u001b[0m",
+                "\u001b[93mContent-Security-Policy\u001b[0m",
+                "\u001b[93mReferrer-Policy\u001b[0m",
+                "\u001b[93mPermissions-Policy\u001b[0m",
+                "\u001b[93mCross-Origin-Embedder-Policy\u001b[0m",
+                "\u001b[93mCross-Origin-Resource-Policy\u001b[0m",
+                "\u001b[93mCross-Origin-Opener-Policy\u001b[0m"
+            ]
+        },
+        "https://www.infoziant.com": {
+            "effective_url": "\u001b[94mhttps://www.infoziant.com\u001b[0m",
+            "missing_headers": [
+                "\u001b[93mX-Frame-Options\u001b[0m",
+                "\u001b[93mX-Content-Type-Options\u001b[0m",
+                "\u001b[91mStrict-Transport-Security\u001b[0m",
+                "\u001b[93mContent-Security-Policy\u001b[0m",
+                "\u001b[93mReferrer-Policy\u001b[0m",
+                "\u001b[93mPermissions-Policy\u001b[0m",
+                "\u001b[93mCross-Origin-Embedder-Policy\u001b[0m",
+                "\u001b[93mCross-Origin-Resource-Policy\u001b[0m",
+                "\u001b[93mCross-Origin-Opener-Policy\u001b[0m"
+            ]
+        },
+        "https://ns1.infoziant.com": {
+            "effective_url": "",
+            "missing_headers": []
+        },
+        "https://test.infoziant.com": {
+            "effective_url": "\u001b[94mhttps://test.infoziant.com\u001b[0m",
+            "missing_headers": [
+                "\u001b[93mX-Frame-Options\u001b[0m",
+                "\u001b[93mX-Content-Type-Options\u001b[0m",
+                "\u001b[91mStrict-Transport-Security\u001b[0m",
+                "\u001b[93mContent-Security-Policy\u001b[0m",
+                "\u001b[93mReferrer-Policy\u001b[0m",
+                "\u001b[93mPermissions-Policy\u001b[0m",
+                "\u001b[93mCross-Origin-Embedder-Policy\u001b[0m",
+                "\u001b[93mCross-Origin-Resource-Policy\u001b[0m",
+                "\u001b[93mCross-Origin-Opener-Policy\u001b[0m"
+            ]
+        },
+        "https://demo.infoziant.com": {
+            "effective_url": "\u001b[94mhttps://demo.infoziant.com\u001b[0m",
+            "missing_headers": [
+                "\u001b[93mX-Frame-Options\u001b[0m",
+                "\u001b[93mX-Content-Type-Options\u001b[0m",
+                "\u001b[91mStrict-Transport-Security\u001b[0m",
+                "\u001b[93mContent-Security-Policy\u001b[0m",
+                "\u001b[93mReferrer-Policy\u001b[0m",
+                "\u001b[93mPermissions-Policy\u001b[0m",
+                "\u001b[93mCross-Origin-Embedder-Policy\u001b[0m",
+                "\u001b[93mCross-Origin-Resource-Policy\u001b[0m",
+                "\u001b[93mCross-Origin-Opener-Policy\u001b[0m"
+            ]
+        },
+        "https://mail.infoziant.com": {
+            "effective_url": "\u001b[94mhttps://mail.infoziant.com\u001b[0m",
+            "missing_headers": [
+                "\u001b[93mX-Content-Type-Options\u001b[0m",
+                "\u001b[91mStrict-Transport-Security\u001b[0m",
+                "\u001b[93mContent-Security-Policy\u001b[0m",
+                "\u001b[93mReferrer-Policy\u001b[0m",
+                "\u001b[93mPermissions-Policy\u001b[0m",
+                "\u001b[93mCross-Origin-Embedder-Policy\u001b[0m",
+                "\u001b[93mCross-Origin-Resource-Policy\u001b[0m",
+                "\u001b[93mCross-Origin-Opener-Policy\u001b[0m"
+            ]
+        },
+        "https://backup.infoziant.com": {
+            "effective_url": "\u001b[94mhttps://backup.infoziant.com\u001b[0m",
+            "missing_headers": [
+                "\u001b[93mX-Frame-Options\u001b[0m",
+                "\u001b[93mX-Content-Type-Options\u001b[0m",
+                "\u001b[91mStrict-Transport-Security\u001b[0m",
+                "\u001b[93mContent-Security-Policy\u001b[0m",
+                "\u001b[93mReferrer-Policy\u001b[0m",
+                "\u001b[93mPermissions-Policy\u001b[0m",
+                "\u001b[93mCross-Origin-Embedder-Policy\u001b[0m",
+                "\u001b[93mCross-Origin-Resource-Policy\u001b[0m",
+                "\u001b[93mCross-Origin-Opener-Policy\u001b[0m"
+            ]
+        },
+        "https://web.infoziant.com": {
+            "effective_url": "\u001b[94mhttps://web.infoziant.com\u001b[0m",
+            "missing_headers": [
+                "\u001b[93mX-Frame-Options\u001b[0m",
+                "\u001b[93mX-Content-Type-Options\u001b[0m",
+                "\u001b[91mStrict-Transport-Security\u001b[0m",
+                "\u001b[93mContent-Security-Policy\u001b[0m",
+                "\u001b[93mReferrer-Policy\u001b[0m",
+                "\u001b[93mPermissions-Policy\u001b[0m",
+                "\u001b[93mCross-Origin-Embedder-Policy\u001b[0m",
+                "\u001b[93mCross-Origin-Resource-Policy\u001b[0m",
+                "\u001b[93mCross-Origin-Opener-Policy\u001b[0m"
+            ]
+        }
+    }
 }
